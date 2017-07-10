@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="" class="_cms">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>JS CMS 管理画面</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="./css/libs.css" />
+<link rel="stylesheet" type="text/css" href="./css/cms.css" />
+
+<script type="text/javascript" src="./setting/setting.js"></script>
+<script type="text/javascript" src="./js/libs.js"></script>
+<script type="text/javascript" src="./js/cms.js"></script>
+<script type="text/javascript" src="./js/cms.free.js"></script>
+<script>
+
+/**
+ * 設定について
+ * 
+ * 各種設定については、以下のファイルで設定できます。
+ * _cms/setting/setting.js  - デフォルトHTMLディレクトリの設定と、管理画面の設定など
+ * _cms/setting/setting.php - ログインID,パスワードの変更など
+*/
+
+//デフォルトHTMLディレクトリのCSSロード
+if(window["ASSET_CSS_DIRS"] == undefined) ASSET_CSS_DIRS = [];
+for (var i = 0; i <  ASSET_CSS_DIRS.length ; i++) {
+	document.write('<link rel="stylesheet" class="asset" type="text/css" href="'+ ASSET_CSS_DIRS[i]+'" />');
+}
+</script>
+</head>
+<body>
+	<div class="_loading">ロード中です...</div>
+</body>
+</html>

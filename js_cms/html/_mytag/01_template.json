@@ -1,0 +1,812 @@
+{
+	"meta": {
+		"name": "UI用(ヘッダなど)",
+		"wide": 940
+	},
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.p",
+						"data": "このページでは、サイト全体で利用できる共用パーツを定義できます。\nサイトUI関連のパーツを定義して、テンプレートHTMLで利用するほか各ページ内でも利用できます。\n自由に定義してください。",
+						"attr": {
+							"css": "default ",
+							"class": "default "
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h2",
+							"main": {
+								"text": "メタテキストなど",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default",
+							"class": "default"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "HTMLファイルのヘッダ部の情報を定義してください。\nこのページで定義した情報は、サイト全体で利用されるほか、個別ページで情報を変更したい場合は、以下のブロックを個別ページへコピペして利用できます。",
+						"attr": {
+							"css": "default ",
+							"class": "default "
+						}
+					},
+					{
+						"type": "object.replaceTexts",
+						"data": {
+							"texts": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"id": "HEAD_TITLE",
+										"val": "株式会社サンプルサイト | {{PAGE_NAME}}",
+										"_state": [],
+										"memo": "HTMLヘッダの＜TITLE＞タグで使用。{{PAGE_NAME}}部分は、ページ情報タグです。各ページの名前に変更されます。"
+									},
+									{
+										"publicData": "1",
+										"id": "HEAD_KEYWORD",
+										"val": "サンプルの文書ですので、ご注意ください",
+										"_state": [],
+										"memo": "HTMLヘッダの＜META＞タグのkeywordで使用。"
+									},
+									{
+										"publicData": "1",
+										"id": "HEAD_DESCRIPTION",
+										"val": "サンプルの文書ですので、ご注意くださいサンプルの文書ですので、ご注意ください",
+										"_state": [],
+										"memo": "HTMLヘッダの＜META＞タグのdescriptionで使用。"
+									}
+								],
+								"_state": {
+									"currentRow": 2,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							},
+							"images": {
+								"texts": {},
+								"grid": [],
+								"_state": {
+									"currentRow": -1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							},
+							"links": {
+								"texts": {},
+								"grid": [],
+								"_state": {
+									"currentRow": -1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": "1,1"
+								}
+							}
+						},
+						"attr": {
+							"css": "default",
+							"class": "default",
+							"narrow": ""
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h2",
+							"main": {
+								"text": "bodyタグ属性",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default",
+							"class": "default"
+						}
+					},
+					{
+						"type": "object.replaceTexts",
+						"data": {
+							"texts": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"id": "BODY_ID",
+										"_state": [
+											"val"
+										],
+										"memo": "bodyタグのID属性。CSSでカスタマイズする際のフック",
+										"val": "{{PAGE_ID}}"
+									},
+									{
+										"publicData": "1",
+										"id": "BODY_CLASS",
+										"val": "gloup_{{PAGE_GROUP_IDS[0]}}",
+										"_state": [],
+										"memo": "bodyタグのClass属性。CSSでカスタマイズする際のフック"
+									}
+								],
+								"_state": {
+									"currentRow": 1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": "1,1,1"
+								}
+							},
+							"images": {
+								"texts": {},
+								"grid": [],
+								"_state": {
+									"currentRow": -1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							},
+							"links": {
+								"texts": {},
+								"grid": [],
+								"_state": {
+									"currentRow": -1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": "default",
+							"class": "default"
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h2",
+							"main": {
+								"text": "ヘッダ・フッダ要素",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default ",
+							"class": "default "
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "テンプレートHTMLで利用します。\n主にヘッダやフッダ部などの共通UIの情報を定義します。",
+						"attr": {
+							"css": "default ",
+							"class": "default "
+						}
+					},
+					{
+						"type": "replace.div",
+						"data": [
+							{
+								"type": "tag.margin",
+								"data": "110px",
+								"attr": {
+									"css": "default",
+									"class": "default"
+								}
+							},
+							{
+								"type": "layout.div",
+								"data": [
+									{
+										"type": "tag.img",
+										"data": {
+											"img": "width:200,height:140",
+											"link": {
+												"href": "index.html",
+												"target": "",
+												"attr": ""
+											},
+											"isZoom": false,
+											"isLayoutMode": true,
+											"layout": {
+												"canvas": {
+													"width": 400,
+													"height": 100,
+													"background": "",
+													"color": "",
+													"dark": false,
+													"grid": 0
+												},
+												"list": [
+													{
+														"type": "item.text",
+														"hide": false,
+														"rect": {
+															"left": 1.57,
+															"top": 12,
+															"width": 97.25,
+															"height": 20,
+															"opacity": "1",
+															"rotate": "0",
+															"link": {},
+															"attr": "",
+															"class": "header_read",
+															"style": ""
+														},
+														"data": {
+															"text": "このサイトは株式会社EXAMPLEのコーポーレートサイトです",
+															"size": "12px",
+															"color": "",
+															"align": "center",
+															"line": "1.4",
+															"font": "",
+															"bold": "",
+															"sdw": "",
+															"bmp": "",
+															"bmpData": ""
+														},
+														"pixel": {
+															"top": 12,
+															"left": 6.28,
+															"width": 389,
+															"height": 20
+														},
+														"date": 1475162278365
+													},
+													{
+														"type": "item.text",
+														"hide": false,
+														"rect": {
+															"left": 4.31,
+															"top": 39,
+															"width": 92.25,
+															"height": 43,
+															"opacity": "1",
+															"rotate": "0",
+															"link": {},
+															"attr": "",
+															"class": "header_name",
+															"style": ""
+														},
+														"data": {
+															"text": "EXAMPLE COMPANY",
+															"size": "32px",
+															"color": "",
+															"align": "center",
+															"line": "1.4",
+															"font": "",
+															"bold": "bold",
+															"sdw": "",
+															"bmp": "",
+															"bmpData": ""
+														},
+														"pixel": {
+															"top": 39,
+															"left": 17.24,
+															"width": 369,
+															"height": 43
+														},
+														"date": 1475162278365
+													}
+												]
+											}
+										},
+										"extra": {
+											"caption": "",
+											"width": "",
+											"margin": "",
+											"layout_width": ""
+										},
+										"attr": {
+											"css": "default ",
+											"class": "default "
+										}
+									}
+								],
+								"attr": {
+									"class": "text-center",
+									"css": "text-center",
+									"style": ""
+								},
+								"extra": {
+									"bg": {
+										"img": "",
+										"color": "",
+										"use": false
+									}
+								}
+							}
+						],
+						"attr": {
+							"class": " _cms_replace",
+							"css": " _cms_replace",
+							"style": "",
+							"replaceID": "HEADER",
+							"replaceTitle": "ヘッダエリア",
+							"narrow": ""
+						}
+					},
+					{
+						"type": "replace.div",
+						"data": [
+							{
+								"type": "tag.img",
+								"data": {
+									"img": "width:200,height:140",
+									"link": {
+										"href": "index.html",
+										"target": "",
+										"attr": ""
+									},
+									"isZoom": false,
+									"isLayoutMode": true,
+									"layout": {
+										"canvas": {
+											"width": 250,
+											"height": 50,
+											"background": "",
+											"color": "",
+											"dark": false,
+											"grid": 0
+										},
+										"list": [
+											{
+												"type": "item.text",
+												"hide": false,
+												"rect": {
+													"left": 4.21,
+													"top": 22,
+													"width": 86,
+													"height": 72,
+													"opacity": "1",
+													"rotate": "0",
+													"link": {},
+													"attr": "",
+													"class": "",
+													"style": ""
+												},
+												"data": {
+													"text": "EXAMPLE COMPANY",
+													"size": "20px",
+													"color": "",
+													"align": "left",
+													"line": "1.4",
+													"font": "",
+													"bold": "bold",
+													"sdw": "",
+													"bmp": "",
+													"bmpData": ""
+												},
+												"pixel": {
+													"top": 11,
+													"left": 10.524999999999999,
+													"width": 215,
+													"height": 36
+												},
+												"date": 1474527999939
+											}
+										]
+									}
+								},
+								"extra": {
+									"caption": "",
+									"width": "",
+									"margin": "",
+									"layout_width": ""
+								},
+								"attr": {
+									"css": "default ",
+									"class": "default "
+								}
+							}
+						],
+						"attr": {
+							"class": " _cms_replace",
+							"css": " _cms_replace",
+							"style": "",
+							"replaceID": "MOBILE_HEADER",
+							"replaceTitle": "スマホ時のヘッダエリア",
+							"narrow": ""
+						}
+					},
+					{
+						"type": "replace.div",
+						"data": [
+							{
+								"type": "layout.cols",
+								"data": [
+									{
+										"type": "layout.div",
+										"attr": {
+											"style": "",
+											"css": " text-center",
+											"class": " text-center"
+										},
+										"data": [
+											{
+												"type": "tag.p",
+												"attr": {
+													"class": "default",
+													"css": "default"
+												},
+												"data": "このサイトは、株式会社EXAMPLEのコーポーレートサイトです。\nサンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+											}
+										]
+									},
+									{
+										"type": "layout.div",
+										"attr": {
+											"style": "",
+											"css": " text-center",
+											"class": " text-center"
+										},
+										"data": [
+											{
+												"type": "tag.margin",
+												"data": "20px",
+												"attr": {
+													"css": "default",
+													"class": "default"
+												}
+											},
+											{
+												"type": "object.btnList",
+												"data": {
+													"list": {
+														"texts": {},
+														"grid": [
+															{
+																"publicData": "1",
+																"anchor": {
+																	"href": "http://www.google.com",
+																	"target": "",
+																	"text": "<i class=\"fa fa-2x fa-facebook-square fa-lg\"></i> Facebook",
+																	"class_": "btn_size_S",
+																	"image": ""
+																},
+																"t1": "",
+																"_state": [
+																	"anchor"
+																]
+															},
+															{
+																"publicData": "1",
+																"anchor": {
+																	"href": "http://www.google.com",
+																	"target": "",
+																	"text": "<i class=\"fa fa-2x fa-twitter-square fa-lg\"></i> Twitter  ",
+																	"class_": "btn_size_S",
+																	"image": ""
+																},
+																"t1": "",
+																"_state": [
+																	"anchor"
+																]
+															},
+															{
+																"publicData": "",
+																"anchor": {
+																	"href": "#",
+																	"target": "",
+																	"text": "<i class=\"fa fa-2x fa-sitemap \"></i> SITEMAP",
+																	"class_": "btn_size_S",
+																	"image": ""
+																},
+																"t1": "",
+																"_state": [
+																	"anchor",
+																	"publicData"
+																]
+															}
+														],
+														"_state": {
+															"currentRow": 2,
+															"currentPage": 0,
+															"fitWide": true,
+															"hideCols": ""
+														}
+													}
+												},
+												"attr": {
+													"css": " yoko",
+													"style": "",
+													"class": " yoko"
+												}
+											}
+										]
+									}
+								],
+								"attr": {
+									"css": "w100p column-2",
+									"class": "w100p column-2",
+									"narrow": ""
+								}
+							}
+						],
+						"attr": {
+							"class": " _cms_replace",
+							"css": " _cms_replace",
+							"style": "",
+							"replaceID": "FOOTER_TEXT",
+							"replaceTitle": "フッターリンク",
+							"narrow": ""
+						}
+					},
+					{
+						"type": "replace.div",
+						"data": [
+							{
+								"type": "tag.p",
+								"data": "© 2016 example company corporation. ",
+								"attr": {
+									"css": "default  text-center",
+									"class": "default  text-center"
+								}
+							}
+						],
+						"attr": {
+							"class": " _cms_replace",
+							"css": " _cms_replace",
+							"style": "",
+							"replaceID": "COPYRIGHT",
+							"replaceTitle": "コピーライト",
+							"narrow": ""
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h2",
+							"main": {
+								"text": "ナビ要素",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default ",
+							"class": "default "
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "ナビ要素については、このページで、出力されるHTMLの構造を定義できます。見た目のデザインについては、外部CSSファイルで定義してください。",
+						"attr": {
+							"css": "default ",
+							"class": "default "
+						}
+					},
+					{
+						"type": "replace.div",
+						"data": [
+							{
+								"type": "tag.note",
+								"data": "見た目のデザインについては、出力されるHTMLに合わせて、外部CSSファイルで定義してください。",
+								"attr": {}
+							},
+							{
+								"type": "object.tree",
+								"data": {
+									"previewPage": {
+										"id": "index",
+										"dir": "/"
+									},
+									"targetTag": "",
+									"targetDir": "",
+									"setting": {
+										"useToggle": false,
+										"onlyCurrent": false,
+										"isFlat": false,
+										"hasDate": false,
+										"isReverse": false,
+										"limitSub": "",
+										"indent": "3",
+										"add": {
+											"list": {
+												"texts": {},
+												"grid": [],
+												"_state": {
+													"currentRow": -1,
+													"currentPage": 0,
+													"fitWide": true,
+													"hideCols": ""
+												}
+											},
+											"list2": {
+												"texts": {},
+												"grid": [
+													{
+														"publicData": "1",
+														"text": "お問い合わせ",
+														"anchor": {
+															"href": "contact.html",
+															"target": "",
+															"attr": ""
+														},
+														"_state": [
+															"publicData",
+															"text",
+															"anchor"
+														]
+													}
+												],
+												"_state": {
+													"currentRow": 0,
+													"currentPage": 0,
+													"fitWide": true,
+													"hideCols": ""
+												}
+											}
+										}
+									},
+									"css": {
+										"clearfix": true,
+										"current": true,
+										"ownCurrent": true,
+										"hasSub": true,
+										"underconst": true,
+										"type": true,
+										"level": true,
+										"no": true,
+										"sum": true
+									},
+									"levels": [
+										{
+											"isShow": true,
+											"isOpen": true,
+											"dir": "<a href=\"{HREF}\" target=\"{TAR}\" class=\"{CSS.B}\"><span class=\"t1\">{NAME[0]}</span><span class=\"t2\">{NAME[1]}</span></a>",
+											"page": "<a href=\"{HREF}\" target=\"{TAR}\" class=\"{CSS.B}\"><span class=\"t1\">{NAME[0]}</span><span class=\"t2\">{NAME[1]}</span></a>",
+											"add": "<a href=\"{HREF}\" target=\"{TAR}\" class=\"{CSS.B}\"><span class=\"t1\">{NAME[0]}</span><span class=\"t2\">{NAME[1]}</span></a>"
+										},
+										{
+											"isShow": false,
+											"isOpen": false
+										},
+										{
+											"isShow": false,
+											"isOpen": false
+										},
+										{
+											"isShow": false,
+											"isOpen": false
+										},
+										{
+											"isShow": false,
+											"isOpen": false
+										}
+									]
+								},
+								"attr": {
+									"css": "",
+									"style": "",
+									"class": ""
+								}
+							}
+						],
+						"attr": {
+							"class": " _cms_replace",
+							"css": " _cms_replace",
+							"style": "",
+							"replaceID": "MENU_GNAVI",
+							"replaceTitle": "グローバルナビのHTML定義",
+							"narrow": ""
+						}
+					},
+					{
+						"type": "replace.div",
+						"data": [
+							{
+								"type": "tag.note",
+								"data": "見た目のデザインについては、出力されるHTMLに合わせて、外部CSSファイルで定義してください。",
+								"attr": {}
+							},
+							{
+								"type": "object.tree",
+								"data": {
+									"previewPage": {
+										"id": "products",
+										"dir": ""
+									},
+									"targetTag": "",
+									"targetDir": "",
+									"setting": {
+										"useToggle": true,
+										"onlyCurrent": false,
+										"isFlat": false,
+										"hasDate": false,
+										"isReverse": false,
+										"limitSub": "",
+										"indent": "3"
+									},
+									"css": {
+										"clearfix": false,
+										"current": true,
+										"ownCurrent": true,
+										"hasSub": true,
+										"underconst": true,
+										"type": true,
+										"level": true,
+										"no": false,
+										"sum": false
+									},
+									"levels": [
+										{
+											"isShow": true,
+											"isOpen": false,
+											"dir": "<a href=\"{HREF}\" target=\"{TAR}\">{I.D} {NAME}</a>",
+											"page": "<a href=\"{HREF}\" target=\"{TAR}\">{NAME}</a>"
+										},
+										{
+											"isShow": true,
+											"isOpen": false,
+											"dir": "<a href=\"{HREF}\" target=\"{TAR}\">{I.D} {NAME}</a>",
+											"page": "<a href=\"{HREF}\" target=\"{TAR}\">{NAME}</a>"
+										},
+										{
+											"isShow": true,
+											"isOpen": false,
+											"dir": "<a href=\"{HREF}\" target=\"{TAR}\">{I.D} {NAME}</a>",
+											"page": "<a href=\"{HREF}\" target=\"{TAR}\">{NAME}</a>"
+										},
+										{
+											"isShow": true,
+											"isOpen": false,
+											"dir": "<a href=\"{HREF}\" target=\"{TAR}\">{I.D} {NAME}</a>",
+											"page": "<a href=\"{HREF}\" target=\"{TAR}\">{NAME}</a>"
+										},
+										{
+											"isShow": true,
+											"isOpen": false,
+											"dir": "<a href=\"{HREF}\" target=\"{TAR}\">{I.D} {NAME}</a>",
+											"page": "<a href=\"{HREF}\" target=\"{TAR}\">{NAME}</a>"
+										}
+									]
+								},
+								"attr": {
+									"css": "",
+									"style": "",
+									"class": "",
+									"narrow": ""
+								}
+							}
+						],
+						"attr": {
+							"class": " _cms_replace",
+							"css": " _cms_replace",
+							"style": "",
+							"replaceID": "MOBILE_MENU",
+							"replaceTitle": "スマホ時のメニューのHTML定義",
+							"narrow": ""
+						}
+					}
+				]
+			}
+		]
+	}
+}

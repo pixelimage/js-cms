@@ -1,0 +1,220 @@
+{
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h1",
+							"main": {
+								"text": "問い合わせ",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default ",
+							"narrow": "",
+							"class": "default ",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "お問い合わせは、こちらのフォームから受け付けています。\n以下の項目を入力していただき、送信してください。",
+						"attr": {
+							"css": "default ",
+							"narrow": "",
+							"class": "default ",
+							"hide": ""
+						}
+					},
+					{
+						"type": "object.formMail",
+						"data": {
+							"setting": {
+								"texts": {
+									"mail": "sample@example.com",
+									"php": "html/php/mail.php",
+									"last_midashi": "ありがとうございました",
+									"last_read": "近日中に返答いたします"
+								},
+								"grid": []
+							},
+							"forms": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"label": "問い合わせ",
+										"type": "html",
+										"_state": [],
+										"note": ""
+									},
+									{
+										"publicData": "1",
+										"label": "ご用件",
+										"type": "checkbox",
+										"req": "",
+										"sels": "サービスについて\n製品について\n採用について\nそのほか",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"label": "お問い合わせ内容",
+										"type": "textarea",
+										"req": "1",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"label": "登録者情報",
+										"type": "html",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"label": "貴社名",
+										"type": "text",
+										"req": "",
+										"note": "※法人の方は、入力してください。",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"label": "お名前",
+										"type": "text",
+										"req": "1",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"label": "メールアドレス",
+										"type": "email",
+										"req": "1",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"label": "住所",
+										"type": "address",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"label": "電話番号",
+										"type": "tel",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"label": "個人情報保護について",
+										"type": "html",
+										"req": "",
+										"sels": "",
+										"note": "",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"label": "ラベル名",
+										"type": "embed",
+										"req": "",
+										"sels": "#kiyaku",
+										"note": "",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"label": "個人情報について",
+										"type": "checkbox",
+										"req": "1",
+										"sels": "「個人情報のお取り扱いについて」を確認し、同意します。 ",
+										"note": "",
+										"_state": []
+									}
+								],
+								"_state": {
+									"currentRow": 3,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": "default",
+							"class": "default"
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.p",
+								"attr": {
+									"class": "default",
+									"css": "default"
+								},
+								"data": "<b>プライバシーポリシー（個人情報保護方針）</b>\n\n株式会社 ●●●（以下「当社」）は、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築し、全従業員に個人情報保護の重要性の認識と取組みを徹底させることにより、個人情報の保護を推進致します。\n\n■個人情報の管理\n当社は、個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。\n\n■個人情報の利用目的\nお客さまからお預かりした個人情報は、当社からのご連絡や業務のご案内やご質問に対する回答などに電子メールや資料を利用します。\n\n■個人情報の第三者への開示・提供の禁止\n当社は、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。\n\n- お客さまの同意がある場合\n- お客さまが希望されるサービスを行なうために当社が業務を委託する業者に対して開示する場合\n- 法令に基づき開示することが必要である場合\n\n\n■個人情報の安全対策\n当社は、個人情報の正確性及び安全性確保のために、セキュリティに万全の対策を講じています。\n\n■ご本人の照会\nお客さまがご本人の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させていただきます。\n\n■法令、規範の遵守と見直し\n当社は、保有する個人情報に関して適用される日本の法令、その他規範を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。\n\n\n■お問い合せ\n当社の個人情報の取扱に関するお問い合せは下記までご連絡ください。\n\n株式会社 ●●●"
+							}
+						],
+						"attr": {
+							"class": " default p10 waku",
+							"css": " default p10 waku",
+							"style": "overflow:scroll;\nheight:200px;",
+							"id": "kiyaku"
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h2",
+							"main": {
+								"text": "メール・電話でのお問い合わせ",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default ",
+							"narrow": "",
+							"class": "default ",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.html",
+						"data": "{{問い合わせ}}",
+						"attr": {
+							"preview": "",
+							"narrow": "",
+							"class": "",
+							"hide": ""
+						}
+					}
+				]
+			}
+		]
+	},
+	"meta": {
+		"template": "default.html"
+	}
+}

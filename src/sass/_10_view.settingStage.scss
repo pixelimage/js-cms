@@ -1,0 +1,367 @@
+
+
+/* ! ---------- #CMS_AssetStage ---------- ---------- ---------- ---------- */
+
+#CMS_AssetStage {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 40px;
+	bottom: 0;
+	height: 500px;
+	background: #444;
+}
+
+#CMS_AssetStage ._selectHeader { display: none; position: absolute; top: -40px; left: 0; right: 0; height: 80px; background: #222; color: #ccc; padding: 12px 0 0 20px;}
+#CMS_AssetStage ._selectHeader ._bg { position: absolute; top: 0px; left:0px; width: 220px; bottom: 0px; background: #111;}
+#CMS_AssetStage ._selectHeader ._title { position: absolute; top: 20px; left:20px; line-height: 40px; color: #888;}
+#CMS_AssetStage ._selectHeader ._path { position: absolute; top: 20px; left: 220px; display: inline-block; line-height: 40px; padding: 0 20px; font-size:18px;}
+#CMS_AssetStage ._selectHeader ._btn_select { position: absolute; top: 20px; right: 130px; width: 150px; background: #4A66A0; color: #00ffff; line-height: 40px; font-size:14px; text-align: center;}
+#CMS_AssetStage ._selectHeader ._btn_close { position: absolute; top: 20px; right: 20px; width: 100px; background: #666; color: #ccc; line-height: 40px; font-size:14px; text-align: center;}
+
+#CMS_AssetStage ._btn_full_on { position: absolute; top: 8px; right: 2px; width: 30px; height: 30px; color: #fff; cursor: pointer;}
+#CMS_AssetStage ._btn_full_off { position: absolute; top: 7px; right: 2px; width: 30px; height: 30px; color: #fff; cursor: pointer;}
+
+._assetStageFull #CMS_AssetStage { top:0px;}
+._assetStageFull #CMS_Header,
+._assetStageFull #CMS_AssetStageResizeView,
+._assetStageFull #InspectView{ visibility: hidden;}
+
+
+/* ! ---------- #CMS_AssetStage ---------- ---------- ---------- ---------- */
+
+#CMS_AssetStageClose { position: fixed; left: 0; right: 0; bottom: 0; height: 40px;}
+#CMS_AssetStageClose ._dont_use { color: #888; line-height: 40px; padding: 0 0 0 10px;}
+#CMS_AssetStageCloseBG { position: fixed; left: 0; right: 0; bottom: 0; height: 40px; background: #222;}
+
+#CMS_AssetStageClose ._header { position: absolute; top: 0px; left: 0px; bottom:0 ; background:#222; cursor: pointer;}
+#CMS_AssetStageClose ._headerBg { position: absolute; top: 0; left: 0; right:0; bottom:0; background:#444444 ;}
+#CMS_AssetStageClose ._header ._title { padding: 0 0 0 10px; line-height: 40px; color: #999; font-size:14px; font-weight: bold;}
+#CMS_AssetStageClose ._header ._btn_close { position: absolute; top: 10px; right: 10px; width: 20px; height: 20px; background: #999; color: #222; line-height: 20px; text-align: center;}
+#CMS_AssetStageClose ._header:hover ._btn_close { background: #ccc;}
+#CMS_AssetStageResizeView { position: fixed; left: 0; right: 0; top: 0; height: 15px; cursor: row-resize; opacity: 0; }
+#CMS_AssetStageResizeView ._bar { position: absolute; top: -4px; left: 0px; right: 0px; bottom: 0px; height: 8px; border: 1px solid #000; background: #4A66A0;}
+#CMS_AssetStageResizeView:hover { opacity: 1;}
+
+body._wideNavi #CMS_AssetStageClose{}
+
+/* ! ---------- #CMS_AssetStageSideBG ---------- ---------- ---------- ---------- */
+
+#CMS_AssetStageSideBG { display: none; position: fixed; left: 0; right: 0; bottom: 0; height: 500px; background: #2c2c2c;}
+#CMS_AssetStageSideBG span { position: absolute; left: 0; right: 0; height: 40px; background: #222;}
+
+
+/* ! ---------- #CMS_AssetStageBG ---------- ---------- ---------- ---------- */
+
+#CMS_AssetStageBG { display: none; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgba(73,103,161,0.75);}
+body._modalAsset #CMS_AssetStageBG { display: block;}
+body._modalAsset #CMS_AssetStage { right: 0px; }
+body._modalAsset #CMS_AssetStageBG,
+body._modalAsset #CMS_AssetStage { z-index: 50000;}
+
+
+/* ! ---------- #CMS_Asset_DirArea ---------- ---------- ---------- ---------- */
+
+#CMS_Asset_DirArea { position: absolute; top: 0; left: 0; bottom: 0; background: #333; color: #aaa;}
+#CMS_Asset_DirArea ._btn_reload {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	font-size:14px;
+	cursor: pointer;
+}
+#CMS_Asset_DirArea ._btn_reload:hover{
+	color: #fff;
+}
+#CMS_Asset_DirArea ._header { position: absolute; top: 0; left: 0; right: 0; height: 40px; background:#222 url(../images/bg_shadow.png) left top repeat-x; cursor: pointer;}
+#CMS_Asset_DirArea ._header { position: absolute; top: 0; left: 0; right: 0; height: 40px; background:#222 url(../images/bg_shadow.png) left top repeat-x; cursor: pointer;}
+#CMS_Asset_DirArea ._header ._title { padding: 0 0 0 10px; line-height: 40px; color: #aaa; font-size:14px; font-weight: bold;}
+#CMS_Asset_DirArea ._header ._btn_close { position: absolute; top: 10px; right: 10px; width: 20px; height: 20px; background: #999; color: #222; line-height: 20px; text-align: center;}
+#CMS_Asset_DirArea ._header:hover ._btn_close { background: #ccc;}
+
+#CMS_Asset_DirArea ._body { position: absolute; top: 40px; left: 0; right: 0; bottom: 0; padding: 10px 0 30px 10px; font-size:12px; overflow-y: scroll;}
+#CMS_Asset_DirArea ._current { background: #444; color: #fff;}
+
+#CMS_Asset_DirArea ._body ._btn_dir { cursor: pointer;}
+#CMS_Asset_DirArea ._body ._btn_dir:hover{color: #fff;}
+#CMS_Asset_DirArea ._body ._btn_dir._current { color: #ff8;background: #444;}
+#CMS_Asset_DirArea ._body ._btn_dir span { display: inline-block; vertical-align: middle;}
+#CMS_Asset_DirArea ._body ._btn_dir ._label{padding: 3px 0 0 0;font-size:10px;color: #666;}
+#CMS_Asset_DirArea ._body ._title { font-weight: bold; margin-top: 10px;}
+
+
+/* ! ---------- #CMS_Asset_FilesArea ---------- ---------- ---------- ---------- */
+
+#CMS_Asset_FilesArea { position: absolute; top: 0; right:0; bottom: 0; background: #444; color: #aaa;}
+
+
+/* ! ---------- #CMS_Asset_FileListView ---------- ---------- ---------- ---------- */
+
+#CMS_Asset_FileListView { position: absolute; top: 0; left:0; width:180px; bottom: 0; font-size: 12px; line-height: 1.4; color: #aaa;}
+#CMS_Asset_FileListView {line-height: 1;}
+body._assetList_normal2 #CMS_Asset_FileListView { width:70%;}
+body._assetList_thumb #CMS_Asset_FileListView { width:70%;}
+
+/* _replaceFile */
+#CMS_Asset_FileListView ._header { position: absolute; left: 0; right: 0; top: 0; padding: 15px 10px 0 10px; height:40px; box-sizing: border-box; background:#444 url(../images/bg_shadow.png) left top repeat-x; border-bottom: 1px solid #333;}
+#CMS_Asset_FileListView ._header ._current { background: #333;color: #ff8;}
+#CMS_Asset_FileListView ._header ._btn_icon { padding: 2px 2px; cursor: pointer; font-size:14px;}
+#CMS_Asset_FileListView ._header ._btn_icon:hover { background: #333;color: #fff;}
+#CMS_Asset_FileListView ._header ._normalList {}
+#CMS_Asset_FileListView ._header ._normalList i { transform: scale(0.7 ,1);}
+
+#CMS_Asset_FileListView ._body { position: absolute; left: 0; right: 0; top:80px; bottom:40px; overflow: scroll; background: #444;}
+#CMS_Asset_FileListView ._body ._filelistArea {padding: 10px 0 30px 10px;}
+
+
+/* ._header2 */
+#CMS_Asset_FileListView ._header2 { position: absolute; left: 0px; right: 0px; top: 40px; height: 40px; border-bottom: 1px solid #333; background: #444; padding: 7px;}
+#CMS_Asset_FileListView ._header2 ._btn_parent { display: inline-block; padding: 7px; cursor: pointer;}
+#CMS_Asset_FileListView ._header2 ._btn_parent i { font-size:14px;}
+#CMS_Asset_FileListView ._header2 ._btn_parent:hover { color: #fff; background: #333;}
+
+/* ._bottom_btns */
+#CMS_Asset_FileListView ._bottom_btns { position: absolute; left: 0px; right: 0px; bottom: 0px; height: 40px; border-top: 1px solid #333; background: #444; padding: 7px;}
+#CMS_Asset_FileListView ._bottom_btns ._btn_add_file { display: inline-block; padding: 7px; cursor: pointer;}
+#CMS_Asset_FileListView ._bottom_btns ._btn_upload { display: inline-block; padding: 7px; cursor: pointer;}
+#CMS_Asset_FileListView ._bottom_btns ._btn_add_file:hover { color: #fff; background: #333;}
+#CMS_Asset_FileListView ._bottom_btns ._btn_upload:hover { color: #fff; background: #333;}
+
+
+#CMS_Asset_FileListView ._replaceFile {}
+#CMS_Asset_FileListView ._process {opacity: 0.5;}
+#CMS_Asset_FileListView ._selectListType ._btn { display: inline-block; padding: 10px 20px 5px 20px; background: #4A66A0; color:#fff; cursor:pointer;}
+#CMS_Asset_FileListView ._sizeList { position: absolute; top: 7px; right: 32px;}
+#CMS_Asset_FileListView ._sizeList ._btn { display: inline-block; padding: 5px 10px 3px 10px; border: 1px solid #666; border-radius:2px; cursor:pointer}
+#CMS_Asset_FileListView ._sizeList ._btn._current { color: #ff8; font-weight: bold;}
+#CMS_Asset_FileListView ._btn_reload { position: absolute; top: 7px; right: 5px; padding: 5px; font-size:14px; cursor: pointer;}
+#CMS_Asset_FileListView ._btn_reload:hover{color: #fff;}
+
+#CMS_Asset_FileListView ._update { margin: 20px 0 10px 0; line-height: 1.2;}
+#CMS_Asset_FileListView ._note { margin: 20px 5px 10px 0; line-height: 1.4;color: #888;}
+#CMS_Asset_FileListView ul ul { margin: 0 0 0 20px }
+
+/* _imagelist */
+#CMS_Asset_FileListView ._imagelist { margin:0 0 10px 0; padding: 0 0 10px 0; border-bottom: 1px solid #333;}
+#CMS_Asset_FileListView ._imagelist ._anno{color: red;font-size:16px;margin: 20px 0;}
+
+#CMS_Asset_FileListView ._imagelist ._btn_file { position: relative; margin: 0 4px 4px 0; padding: 4px; cursor:pointer; display: inline-block; vertical-align: top;}
+#CMS_Asset_FileListView ._imagelist ._btn_file:hover {color: #fff; background: rgba(0,0,0,0.1);}
+#CMS_Asset_FileListView ._imagelist ._btn_file._current { color: #ff8; background: #333; outline: 2px solid #ff8;}
+#CMS_Asset_FileListView ._imagelist ._btn_file._current:hover { color: #ff8;}
+#CMS_Asset_FileListView._S ._imagelist ._btn_file._current { outline: 2px solid #ff8;}
+
+#CMS_Asset_FileListView ._imagelist ._btn_file { line-height: 1.2; }
+#CMS_Asset_FileListView ._imagelist img { max-width: 100px; max-height: 100px;}
+#CMS_Asset_FileListView._S ._imagelist img { max-width: 50px; max-height: 50px;}
+#CMS_Asset_FileListView._L ._imagelist img { max-width: 200px; max-height: 200px;}
+
+#CMS_Asset_FileListView ._imagelist ._img { width: 100px; height:100px; background: #333;}
+#CMS_Asset_FileListView ._imagelist ._img{display: table-cell;text-align: center;vertical-align: middle;}
+#CMS_Asset_FileListView._S ._imagelist ._img { width: 50px; height:50px;}
+#CMS_Asset_FileListView._L ._imagelist ._img { width: 200px; height:200px;}
+
+#CMS_Asset_FileListView._S ._imagelist ._img_big,
+#CMS_Asset_FileListView._M ._imagelist ._img_big,
+#CMS_Asset_FileListView._L ._imagelist ._img_big{background: #666;color:#ccc;text-align: center;display: table-cell;vertical-align: middle;}
+#CMS_Asset_FileListView._S ._imagelist ._img_big i{margin:2px;}
+#CMS_Asset_FileListView ._imagelist ._img_big i{margin:5px;}
+#CMS_Asset_FileListView ._imagelist ._name{margin: 5px 0;}
+#CMS_Asset_FileListView ._imagelist ._name{width: 100px;}
+#CMS_Asset_FileListView._S ._imagelist ._name{width: 50px;}
+#CMS_Asset_FileListView._L ._imagelist ._name{width: 200px;}
+
+#CMS_Asset_FileListView ._imagelist ._date{font-size: 10px;color:#888;}
+#CMS_Asset_FileListView ._imagelist ._size{font-size: 10px;color:#888;}
+#CMS_Asset_FileListView._S ._imagelist ._name{display: none;}
+#CMS_Asset_FileListView._S ._imagelist ._date{display: none;}
+#CMS_Asset_FileListView._S ._imagelist ._size{display: none;}
+#CMS_Asset_FileListView ._filelistArea { min-height:200px;}
+
+#CMS_Asset_FileListView ._imagelist ._thumb_btns { text-align:right;margin:5px 0 0 0 }
+#CMS_Asset_FileListView._S ._imagelist ._thumb_btns { display: none; }
+#CMS_Asset_FileListView ._date,
+#CMS_Asset_FileListView ._size { font-size: 10px; color:#888;text-align: right;}
+/*
+#CMS_Asset_FileListView ._imagelist ._btn_file ._btn_add { position: absolute; top: 0px; right: 0px; padding: 5px; background: #4A66A0; color: #00ffff; font-size: 12px; border-radius:2px; cursor: pointer; text-align: center;}
+#CMS_Asset_FileListView ._imagelist ._btn_file ._btn_add {display: none;}
+#CMS_Asset_FileListView ._imagelist ._btn_file:hover ._btn_add {display: block;}
+#CMS_Asset_FileListView ._imagelist ._btn_file ._btn_add:hover {color: #ff0;}
+*/
+
+/* _filelist */
+#CMS_Asset_FileListView ._filelist { width: 100%;}
+#CMS_Asset_FileListView ._filelist {table-layout: fixed;}
+#CMS_Asset_FileListView ._filelist th { padding:3px; font-size:10px;}
+#CMS_Asset_FileListView ._filelist tr:hover {background: rgba(0,0,0,0.1);}
+#CMS_Asset_FileListView ._filelist td { padding:3px; vertical-align: middle;}
+
+#CMS_Asset_FileListView ._filelist ._btn_dir {cursor: pointer;}
+#CMS_Asset_FileListView ._filelist ._btn_dir:hover {color: #fff;}
+#CMS_Asset_FileListView ._filelist ._btn_file { padding: 2px 0;line-height: 1.2; color: #aaa;cursor: pointer; }
+#CMS_Asset_FileListView ._filelist ._btn_file:hover { color: #fff;}
+#CMS_Asset_FileListView ._filelist tr._current  { background: #333; color: #fff;}
+#CMS_Asset_FileListView ._filelist tr._current ._btn_file{ color: #ff8;}
+
+#CMS_Asset_FileListView ._filelist ._btn_rename { display: inline-block; padding: 4px; background: #4A66A0; color: #00ffff; font-size: 10px; border-radius:2px; cursor: pointer;}
+#CMS_Asset_FileListView ._filelist ._btn_del { display: inline-block; padding: 4px 6px; background: red; color: #fff; font-size: 10px; border-radius:2px; cursor: pointer;}
+#CMS_Asset_FileListView ._cnt {
+	padding: 0 4px;
+	margin: 0 0 0 5px;
+	background: #666;
+	color: #333;
+	font-size:10px;
+	border-radius:10px;
+}
+/*
+#CMS_Asset_FileListView ._filelist ._btn_add { display: inline-block; padding: 4px; background: #4A66A0; color: #00ffff; font-size: 10px; border-radius:2px; cursor: pointer; text-align: center;}
+*/
+
+
+/* ! ---------- #CMS_Asset_FileDetailView ---------- ---------- ---------- ---------- */
+	
+#CMS_Asset_FileDetailView { position: absolute; top: 0; left:180px; right:0; bottom: 0; background:#333;}
+body._assetList_normal2 #CMS_Asset_FileDetailView { left:70%;}
+body._assetList_thumb #CMS_Asset_FileDetailView { left:70%;}
+body._assetList_normal #CMS_Asset_FileListView ._hideNarrow {display: none;}
+
+/* ! ---------- #CMS_Asset_FilePreviewView ---------- ---------- ---------- ---------- */
+	
+#CMS_Asset_FilePreviewView { position: absolute; top: 0; left:0; right:0; bottom: 0; font-size:12px;}
+#CMS_Asset_FilePreviewView ._header { position: absolute; top: 0; left: 0; right: 0; height: 40px; background: url(../images/bg_shadow.png) left top repeat-x; border-bottom: 1px solid #222;}
+#CMS_Asset_FilePreviewView ._header_inner { position: absolute; top: 0; left: 0; right: 30px; height: 40px;}
+#CMS_Asset_FilePreviewView ._header ._title { padding: 0 0 0 10px; line-height: 40px; color: #ccc; font-weight: bold;}
+#CMS_Asset_FilePreviewView ._body { position: absolute; top: 40px; left: 0; right: 0; bottom: 0; overflow: scroll;}
+#CMS_Asset_FilePreviewView ._body img {max-width:100%;}
+#CMS_Asset_FilePreviewView ._body video { max-width:100% ;}
+#CMS_Asset_FilePreviewView ._body_core {padding: 10px;}
+#CMS_Asset_FilePreviewView ._body_core ._anno{padding: 10px;font-size:16px;color: red;}
+#CMS_Asset_FilePreviewView ._body iframe._preview { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;}
+
+
+/* ! ---------- #CMS_Asset_FileEditorView ---------- ---------- ---------- ---------- */
+	
+#CMS_Asset_FileEditorView { position: absolute; top: 0; left:0; right:0; bottom: 0; font-size:12px;}
+
+#CMS_Asset_FileEditorView ._main { position: absolute; top: 0; left: 0; right: 0; bottom:0;}
+/*
+#CMS_Asset_FileEditorView ._main { position: absolute; top: 0; left: 0; right: 140px; bottom:0;}
+#CMS_Asset_FileEditorView ._sub { position: absolute; top: 0px; right: 0; width: 140px; bottom:0px; background: #444444; line-height: 1.4; padding: 10px;}
+#CMS_Asset_FileEditorView ._sub p { margin: 10px 0;}
+#CMS_Asset_FileEditorView ._sub ._btn_common { padding:5px; margin: 10px 0; cursor: pointer;}
+#CMS_Asset_FileEditorView ._sub ._btn_common:hover { background: #333; color: #fff;}
+#CMS_Asset_FileEditorView ._sub ._side_title { border-bottom:2px solid #666;padding: 5px 0;}
+#CMS_Asset_FileEditorView ._sub ._side_title {color: #fff;font-weight: bold;}
+#CMS_Asset_FileEditorView ._sub ._btn_mytag {cursor: pointer;}
+#CMS_Asset_FileEditorView ._sub ._btn_mytag:hover {color: #fff;}
+#CMS_Asset_FileEditorView ._sub ._cssState { font-size: 18px; width: 100%; margin: 0 0 5px 0;}
+#CMS_Asset_FileEditorView ._sub ._btn_designCss { margin-top: 5px; background: #00ffff; color: #4A66A0; padding-top: 2px; line-height: 24px; text-align: center;}
+*/
+#CMS_Asset_FileEditorView ._header { position: absolute; top: 0; left: 0; height: 40px; right: 0; background: url(../images/bg_shadow.png) left top repeat-x; border-bottom: 1px solid #222;}
+#CMS_Asset_FileEditorView ._header_inner { position: absolute; top: 0; left: 0; right: 30px; height: 40px;}
+#CMS_Asset_FileEditorView ._header ._title { padding: 0 0 0 10px; line-height: 40px; color: #ccc; font-weight: bold;}
+#CMS_Asset_FileEditorView ._header ._btn_close { padding: 10px; background: #888; display: inline-block;}
+
+#CMS_Asset_FileEditorView ._footer { position: absolute; bottom: 0; left: 0; height: 40px; right: 0; border-top: 1px solid #222;}
+#CMS_Asset_FileEditorView ._footer ._btns { position: absolute; top: 5px; right: 105px; background: #333; padding: 5px;}
+#CMS_Asset_FileEditorView ._footer ._btns ._btn { display: inline-block; text-align: center; margin: 0 5px 0 0; color: #aaa; font-size:12px; line-height: 24px; cursor: pointer;}
+
+#CMS_Asset_FileEditorView ._footer ._page_pubs { position: absolute; top: 5px; right: 95px;}
+#CMS_Asset_FileEditorView ._footer ._page_pubs ._btn_save { position: absolute; left: 0; top: 0; width: 90px; height: 30px; background: #4A66A0; color: #00ffff; line-height: 30px; padding: 0 0 0 30px; font-size:12px;}
+#CMS_Asset_FileEditorView ._footer ._page_pubs ._btn_save i { position: absolute; top: 6px; left: 8px; font-size:18px;}
+#CMS_Asset_FileEditorView ._footer ._page_pubs ._btn_save_pre { position: absolute; left: 0; top: 0; width: 90px; height: 30px; background: #4A66A0; color: #ff0; line-height: 30px; padding: 0 0 0 30px; font-size:12px;}
+#CMS_Asset_FileEditorView ._footer ._page_pubs ._btn_save_pre i { position: absolute; top: 6px; left: 8px; font-size:18px;}
+#CMS_Asset_FileEditorView ._footer ._page_pubs ._btn_saveing { position: absolute; left: 0; top: 0; width: 90px; height: 30px; background: rgba(0,0,0,0.7); text-align: center; box-sizing: border-box; padding:8px 0; color: #fff;}
+
+#CMS_Asset_FileEditorView ._addText { position: absolute; bottom: 50px; right: 20px; background: #fff; z-index: 10; border-radius:5px; padding: 5px;}
+#CMS_Asset_FileEditorView ._addText ._btn_close { float: right; padding: 3px; color: #4A66A0; cursor: pointer;}
+#CMS_Asset_FileEditorView ._addText ._label { padding: 5px 0; color: #4A66A0; font-size:12px;}
+#CMS_Asset_FileEditorView ._addText textarea { width: 300px; font-size:14px;}
+
+#CMS_Asset_FileEditorView ._body { position: absolute; top: 40px; left: 0; right: 0; bottom: 40px; background: #333;}
+
+
+/* ! ---------- #CMS_Asset_CreateFileView ---------- ---------- ---------- ---------- */
+
+#CMS_Asset_CreateFileView { position: absolute; left: 5px; bottom: 45px; background: #fff; color: #4A66A0; border-radius:2px; box-shadow:0px 0px 10px rgba(0,0,0,0.8); z-index: 100;}
+#CMS_Asset_CreateFileView:before { content:""; position: absolute; bottom:-14px; left: 30px; width:7px; height:7px; box-sizing: border-box; border: 7px solid transparent; border-top: 7px solid #fff;}
+#CMS_Asset_CreateFileView ._btn_close { position: absolute; top: 10px; right: 10px; cursor: pointer;}
+#CMS_Asset_CreateFileView ._body { padding: 10px 40px 10px 10px;}
+#CMS_Asset_CreateFileView ._body input { font-size:16px; width: 200px;}
+#CMS_Asset_CreateFileView ._atten { color: red; padding: 5px;}
+#CMS_Asset_CreateFileView ._dir_area { padding: 0 0 0 10px; margin:0 0 5px 0; border-left: 2px solid #eee;}
+#CMS_Asset_CreateFileView ._file_area { padding: 0 0 0 10px; margin:0 0 5px 0; border-left: 2px solid #eee;}
+#CMS_Asset_CreateFileView ._title { font-weight: bold; padding: 5px 0;}
+
+
+/* ! ---------- #CMS_Asset_RenameFileView ---------- ---------- ---------- ---------- */
+
+#CMS_Asset_RenameFileView { position: absolute; left: 5px; bottom: 45px; background: #fff; color: #4A66A0; border-radius:2px; box-shadow:0px 0px 10px rgba(0,0,0,0.8); z-index: 100;}
+#CMS_Asset_RenameFileView ._btn_close { position: absolute; top: 10px; right: 10px; cursor: pointer;}
+#CMS_Asset_RenameFileView ._body { padding: 10px 40px 10px 10px;}
+#CMS_Asset_RenameFileView ._body input { font-size:16px; width: 200px;}
+#CMS_Asset_RenameFileView ._atten { color: red; padding: 5px;}
+#CMS_Asset_RenameFileView ._title { font-weight: bold; padding: 5px 0;}
+
+
+/* ! ---------- #CMS_Asset_UploaderView ---------- ---------- ---------- ---------- */
+
+#CMS_Asset_UploaderView { position: absolute; top: 10px; left: 200px; right: 30px; bottom: 10px; background: #fff; color: #333; border-radius:2px; box-shadow:0px 0px 10px rgba(0,0,0,0.8); z-index: 100;}
+#CMS_Asset_UploaderView:before { content:""; position: absolute; bottom:14px; left: -14px; width:7px; height:7px; box-sizing: border-box; border: 7px solid transparent; border-right: 7px solid #fff;}
+
+#CMS_Asset_UploaderView ._btn_close { position: absolute; top: 10px; right: 10px; color: #4A66A0; cursor: pointer;}
+#CMS_Asset_UploaderView ._guide { position: absolute; top: 10px; right: 70px;}
+
+#CMS_Asset_UploaderView ._header { padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; position: absolute; top: 0px; left: 0px; right: 0px; height: 40px;}
+#CMS_Asset_UploaderView ._body { position: absolute; top: 40px; left: 0px; right: 0px; bottom: 0px; padding: 15px; overflow: scroll;}
+
+#CMS_Asset_UploaderView ._bold { font-weight: bold;}
+#CMS_Asset_UploaderView ._uploaderReplaceArea { display: none;}
+#CMS_Asset_UploaderView ._uploaderReplaceArea { background: #ffffee; background: #e7ebf2; padding: 10px; margin:0 0 500px 0;}
+#CMS_Asset_UploaderView ._alertArea { padding: 10px; line-height: 1.4; color:red; background: #ffc;}
+#CMS_Asset_UploaderView ._uploadArea { margin:10px 0 0 0;}
+#CMS_Asset_UploaderView ._uploadArea ._dragStage { border:1px dashed #0B85A1; width:100%; color:#92AAB0; text-align:left; vertical-align:middle; margin:10px 0 0 0; font-size:24px; background: #ffc; padding: 100px 0; text-align: center;}
+#CMS_Asset_UploaderView ._uploadArea ._list_btns{ display: none;text-align: center;margin: 10px;}
+#CMS_Asset_UploaderView ._uploadArea ._notes{ line-height: 1.4;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList {width:100%;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList {table-layout: fixed;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList th{padding:5px 2px;font-size: 10px;line-height: 1.2;background:#e7ebf2;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList td{border-top: 1px solid #fff;border-bottom: 1px solid #eee;padding:10px 2px;font-size: 12px; }
+#CMS_Asset_UploaderView ._uploadArea table._dragList td{background: #ffe;vertical-align: middle;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList tr._comp td{ background: #eee;color:#888; }
+#CMS_Asset_UploaderView ._uploadArea table._dragList tr._uploading td{ background: #eff;color:blue; }
+#CMS_Asset_UploaderView ._uploadArea table._dragList tr._error td{ background: #eee;color:red; }
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._controllArea {padding: 0;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._controllArea { width:100px;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._progressArea { display: inline-block;width:50px;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._stateBtns { display: inline-block;width:30px;text-align: center;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._stateBtns{font-size: 14px;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._stateBtns div{padding: 5px ;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._upload_btn_upload{color:blue;cursor:pointer;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._upload_btn_cancel{color:#888;cursor:pointer;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._upload_btn_delete{color:red;cursor:pointer;padding: 5px;width:20px;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._upload_btn_upload:hover,
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._upload_btn_cancel:hover,
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._upload_btn_delete:hover{background:rgba(0,0,0,0.05)}
+#CMS_Asset_UploaderView ._uploadArea table._dragList tr ._progressBar { border-top: 1px solid #ccc;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList tr ._progressBar { width: 50px; height: 5px; background: #eee; border-radius: 5px; overflow: hidden; }
+#CMS_Asset_UploaderView ._uploadArea table._dragList tr ._progressBar ._bar { width: 0px; height: 5px; background: blue; border-radius: 5px;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList tr ._progressBar ._bar_comp { width: 50px; height: 5px;background:#888;border-radius: 5px;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList tr ._progressBar ._bar { -webkit-transition-duration: 0.2s;transition-duration: 0.2s;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList tr._error ._progressBar { display: none;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._name_org{padding: 0 0 0 5px;font-size: 14px;margin: 2px 0;opacity: 0.5;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._name_up{padding: 0 0 0 5px;font-size: 14px;margin: 2px 0;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._thumb {padding: 0px;background: #999;text-align: center;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._thumb img{max-width: 80px;max-height:40px;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._atten{font-size: 12px;margin: 4px 0;color:red;display: none;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._rename{}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._size{text-align:center;font-size: 10px;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._size ._size_e{display: none;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._size._overSize {color:red;line-height: 1.4;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._size._overSize ._size_e{display: block;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._date{text-align: center;font-size: 10px;line-height: 1.2;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._type{text-align: center;font-size: 10px;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._delete{text-align: center;padding: 0;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._size_wh_messe{display: none;}
+#CMS_Asset_UploaderView ._uploadArea table._dragList ._size_wh_messe { margin: 5px; padding: 5px; background: #fff; border: 1px solid #e7ebf2;line-height: 1.2;}
+

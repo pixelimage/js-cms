@@ -1,0 +1,234 @@
+{
+	"meta": {},
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.p",
+						"data": ".default",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.list",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"t1": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									},
+									{
+										"publicData": "1",
+										"t1": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									},
+									{
+										"publicData": "1",
+										"t1": "ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									}
+								]
+							}
+						},
+						"attr": {
+							"css": "default",
+							"class": "default"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".big",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.list",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"t1": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									},
+									{
+										"publicData": "1",
+										"t1": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									},
+									{
+										"publicData": "1",
+										"t1": "ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									}
+								]
+							}
+						},
+						"attr": {
+							"css": "default big",
+							"class": "default big"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".small",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.list",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"t1": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									},
+									{
+										"publicData": "1",
+										"t1": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									},
+									{
+										"publicData": "1",
+										"t1": "ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									}
+								]
+							}
+						},
+						"attr": {
+							"css": "default small",
+							"class": "default small"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".number",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.list",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"t1": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									},
+									{
+										"publicData": "1",
+										"t1": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									},
+									{
+										"publicData": "1",
+										"t1": "ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "",
+											"target": "",
+											"text": "",
+											"class_": "",
+											"image": ""
+										}
+									}
+								]
+							}
+						},
+						"attr": {
+							"css": "default number",
+							"class": "default number"
+						}
+					}
+				]
+			}
+		]
+	}
+}

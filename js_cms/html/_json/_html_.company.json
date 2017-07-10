@@ -1,0 +1,283 @@
+{
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h1",
+							"main": {
+								"text": "はじめに",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default ",
+							"narrow": "",
+							"class": "default ",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+						"attr": {
+							"css": "default",
+							"narrow": "",
+							"class": "default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.img",
+						"data": {
+							"img": "width:1000,height:200",
+							"link": null,
+							"isZoom": false,
+							"isLayoutMode": false,
+							"layout": {},
+							"onlyImgTag": false
+						},
+						"extra": {
+							"caption": "",
+							"width": "100%",
+							"margin": "",
+							"layout_width": ""
+						},
+						"attr": {
+							"css": "default ",
+							"class": "default "
+						}
+					},
+					{
+						"type": "tag.margin",
+						"data": "20px",
+						"attr": {
+							"css": "default",
+							"narrow": "",
+							"class": "default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "layout.cols",
+						"data": [
+							{
+								"type": "layout.div",
+								"attr": {
+									"style": ""
+								},
+								"data": [
+									{
+										"type": "tag.img",
+										"data": {
+											"img": "width:200,height:140",
+											"link": null,
+											"isZoom": false,
+											"isLayoutMode": false,
+											"layout": {},
+											"onlyImgTag": false
+										},
+										"extra": {
+											"caption": "名称",
+											"width": "",
+											"margin": "",
+											"layout_width": ""
+										},
+										"attr": {
+											"css": "default  frame",
+											"class": "default  frame"
+										}
+									}
+								]
+							},
+							{
+								"type": "layout.div",
+								"attr": {
+									"style": ""
+								},
+								"data": [
+									{
+										"type": "tag.p",
+										"attr": {
+											"class": "default",
+											"css": "default",
+											"narrow": "",
+											"hide": ""
+										},
+										"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。\n\nサンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+									}
+								]
+							}
+						],
+						"attr": {
+							"css": " col-p40",
+							"narrow": "",
+							"class": " col-p40",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h3",
+							"main": {
+								"text": "大見出し",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": " default",
+							"narrow": "",
+							"class": " default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "layout.cols",
+						"data": [
+							{
+								"type": "layout.div",
+								"attr": {
+									"style": ""
+								},
+								"data": [
+									{
+										"type": "tag.p",
+										"attr": {
+											"class": "default",
+											"css": "default",
+											"narrow": "",
+											"hide": ""
+										},
+										"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。\n\nサンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。\n\nサンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。\n"
+									}
+								]
+							},
+							{
+								"type": "layout.div",
+								"attr": {
+									"style": ""
+								},
+								"data": [
+									{
+										"type": "tag.margin",
+										"data": "10px",
+										"attr": {
+											"css": "default",
+											"narrow": "",
+											"class": "default",
+											"hide": ""
+										}
+									},
+									{
+										"type": "tag.img",
+										"data": {
+											"img": "width:200,height:140",
+											"link": null,
+											"isZoom": false,
+											"layout": {},
+											"isLayoutMode": false
+										},
+										"extra": {
+											"caption": "",
+											"width": "",
+											"margin": ""
+										},
+										"attr": {
+											"css": "default ",
+											"narrow": "",
+											"class": "default ",
+											"hide": ""
+										}
+									},
+									{
+										"type": "tag.margin",
+										"data": "10px",
+										"attr": {
+											"css": "default",
+											"narrow": "",
+											"class": "default",
+											"hide": ""
+										}
+									},
+									{
+										"type": "tag.img",
+										"data": {
+											"img": "width:200,height:140",
+											"link": null,
+											"isZoom": false,
+											"layout": {},
+											"isLayoutMode": false
+										},
+										"extra": {
+											"caption": "",
+											"width": "",
+											"margin": ""
+										},
+										"attr": {
+											"css": "default ",
+											"narrow": "",
+											"class": "default ",
+											"hide": ""
+										}
+									},
+									{
+										"type": "tag.margin",
+										"data": "10px",
+										"attr": {
+											"css": "default",
+											"narrow": "",
+											"class": "default",
+											"hide": ""
+										}
+									},
+									{
+										"type": "tag.img",
+										"data": {
+											"img": "width:200,height:140",
+											"link": null,
+											"isZoom": false,
+											"layout": {},
+											"isLayoutMode": false
+										},
+										"extra": {
+											"caption": "",
+											"width": "",
+											"margin": ""
+										},
+										"attr": {
+											"css": "default ",
+											"narrow": "",
+											"class": "default ",
+											"hide": ""
+										}
+									}
+								]
+							}
+						],
+						"attr": {
+							"css": " col-p40",
+							"narrow": "",
+							"class": " col-p40",
+							"hide": ""
+						}
+					}
+				]
+			}
+		]
+	},
+	"meta": {}
+}

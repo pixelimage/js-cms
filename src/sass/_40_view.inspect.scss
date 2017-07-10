@@ -1,0 +1,177 @@
+
+
+/* ! ---------- #InspectView ---------- ---------- ---------- ---------- */
+
+#InspectView { width: 210px;line-height: 1;}
+#InspectView { display: none; position: fixed; top: 300px; background: #4A66A0; border-radius: 5px; color: #0FF; font-size: 12px; cursor: pointer; border-top: 1px solid rgba(0,255,255,0.5); border-left: 1px solid rgba(0,255,255,0.5); box-shadow: 1px 1px 5px rgba(51,102,153,0.4);}
+#InspectView:hover { box-shadow: 1px 3px 5px rgba(51,102,153,0.6);}
+
+#InspectView ._btn_close { position: absolute; top: 3px; right: 3px; color: #fff; font-size:12px; background: #4A66A0; padding: 2px; color: #00ffff; border-radius:10px; cursor: pointer;}
+#InspectView ._btn_close:hover { color: #fff;}
+
+#InspectView ._header { cursor: move; height: 25px;}
+#InspectView ._header ._dragBar { position: absolute; top: 7px; left: 10px; right: 5px; height: 12px; background: url("../images/bg_dragbar.png") center center repeat-x; display: inline-block; opacity: 0.5;}
+#InspectView ._header:hover ._dragBar { opacity: 1;}
+#InspectView ._header ._title { position: absolute; display: inline-block; padding: 7px 4px 0 7px; background: #4A66A0;border-radius:5px 5px 0 0;}
+
+#InspectView ._header ._t0 { font-size: 12px; color:rgba(0,255,255,0.5);}
+#InspectView ._header ._t1 { font-size: 12px;font-weight: bold; }
+#InspectView ._header ._t2 { font-size: 10px; }
+#InspectView ._preview { padding: 3px; background: #3C5792; border-top: 2px solid #0ff;}
+#InspectView ._miniPreviw { line-height: 1.2; font-weight: normal; font-size: 12px; height:42px; overflow: hidden; color: rgba(0,255,255,0.5);}
+#InspectView ._miniPreviw:hover { color: rgba(0,255,255,1); }
+#InspectView ._footer { background: #3C5792; padding: 2px 0 2px 0; border-top: 1px dotted #7b99d4; border-radius: 0 0 10px 10px;}
+#InspectView ._footer table {margin: 0 auto;width: 195px;}
+#InspectView ._footer table td{padding: 0;}
+
+#InspectView ._guide_btn { position: absolute; top: 8px; right: 8px;}
+#InspectView input { font-size: 14px; }
+#InspectView textarea { font-size: 12px; line-height: 1.4; }
+#InspectView table { width: 100%;}
+#InspectView table._mainlayout th,
+#InspectView table._mainlayout td { padding: 2px 1px;}
+#InspectView table._mainlayout tr:first-child th,
+#InspectView table._mainlayout tr:first-child td{border:none;}
+#InspectView th { width: 50px; }
+#InspectView tr { text-align: left;  }
+#InspectView table._nonelayout {background: red; }
+#InspectView input { width: 100% }
+#InspectView input._main { font-weight: bold;}
+#InspectView input._sub { font-size: 12px;}
+#InspectView select._link_tar { background: #6FF; }
+#InspectView textarea { width: 100%; height: 40px; }
+#InspectView textarea._in_data { height: 80px;}
+#InspectView textarea._style { height:54px; }
+#InspectView input.readonly { background: #657fb3; color: #0FF; }
+#InspectView ._in_data_img {  min-width: 20px; min-height: 20px; margin:3px 5px 0 0;}
+#InspectView ._in_data_img img { max-width: 55px; max-height: 40px; border: 4px solid yellow;}
+#InspectView ._in_data_img_t { display: inline-block; color:yellow; text-decoration: underline; width: 180px; white-space: nowrap; overflow: hidden; text-decoration: underline; text-overflow: ellipsis;}
+
+#InspectView ._wide_preset{background: #ff0;}
+
+#InspectView ._mode_switch {height: 270px;}
+#InspectView ._mode_switch_body {padding: 0 0 5px 5px;}
+#InspectView ._mode_switch_body_hr {border-top: 1px solid #00ffff;height: 1px;margin: 7px -5px;}
+#InspectView ._btn_mode { position: relative; padding: 5px 0; height: 30px;}
+#InspectView ._btn_mode span { position: absolute; display: block; top: -2px; right: 5px;}
+#InspectView ._btn_mode i{color: #ff0;}
+#InspectView ._btn_mode i:nth-child(1){display: inline-block;}
+#InspectView ._btn_mode i:nth-child(2){display: none;}
+#InspectView ._btn_mode._current i:nth-child(1){ display: none;}
+#InspectView ._btn_mode._current i:nth-child(2){ display: inline-block;}
+#InspectView ._btn_mode._current{color: #ff0;font-weight: bold;}
+
+
+#InspectView ._btn_addStyle { margin-top: -21px; margin-left: 240px; display: inline-block; width: 50px; height: 20px; background: url(../images/icon_plus_css.png?4) left top no-repeat; cursor: pointer; }
+#InspectView ._btn_addClass { margin-top: -22px; margin-left: 200px; display: inline-block; width: 50px; height: 20px; background: url(../images/icon_plus_class.png?4) left top no-repeat; cursor: pointer; }
+#InspectView ._row { margin: 3px 0;}
+#InspectView ._currentClassName { font-size: 10px; padding: 5px 0 0; font-weight: bold; }
+#InspectView ._notes { margin: 5px 0 0 0 ; font-size: 12px; line-height: 1.4;}
+
+#InspectView ._tabRow1 { padding: 0 5px; font-weight: normal; text-align: center; border-bottom: 2px solid #0ff;}
+#InspectView ._tabRow1 ul { display: table; width: 100%;}
+#InspectView ._tabRow2 { background: rgba(0,255,255,0.7); font-weight: normal; text-align: center; padding: 2px 0 0 25px; border-left: 1px solid rgba(54,105,161,0.5); border-right: 1px solid rgba(54,105,161,0.5);}
+#InspectView ._tabRow2 ul { margin: 5px 0 0 0; display: table; width: 90%;}
+#InspectView ._tabItem { display: table-cell; padding: 10px 0 7px 0; background: rgba(0,255,255,0.5); color: #0ff; color: #3C5792; border-radius:2px 2px 0 0; border-right: 1px solid #4A66A0;}
+#InspectView ._tabItemOut { display: table-cell; padding: 8px 0 5px 0; background: rgba(54,105,161,0.3); color: #0ff; border-radius:2px 2px 0 0;}
+
+#InspectView ._tabItem:hover { background: rgba(0,255,255,0.8);}
+#InspectView ._tabItem._current { background: #0ff;}
+#InspectView ._tabItemOut._current { background: #4A66A0; color: #0ff; opacity: 1;}
+#InspectView ._bodyItem{position: relative; padding:5px; display: none;}
+#InspectView ._bodyItemOut{}
+
+#InspectView ._body { min-height: 120px; }
+#InspectView ._body_data { min-height:90px;}
+#InspectView ._body_css { min-height:45px; background: #3C5792; border-top: 1px solid #2B4681;padding-top:5px;}
+#InspectView ._body_css_class { min-height:120px;}
+#InspectView ._body_css_style { margin-top: 15px;}
+#InspectView ._body_view {height: 300px;}
+/*#InspectView ._body_id {height: 80px;border-top: 1px dotted #7b99d4;}*/
+#InspectView ._body_export {height: 340px;}
+#InspectView ._body_embed {height: 400px;}
+
+#InspectView table._presetTable th{padding: 0px 5px 0 0;opacity: 0.5;white-space:nowrap;font-size: 10px;}
+#InspectView table._presetTable td{padding: 1px;}
+
+#InspectView ._selectBox {position: relative;width: 110px;float: right;}
+#InspectView ._selectBox ._name{font-weight: bold;padding: 2px 0;}
+#InspectView ._selectBox ._list { display: none; z-index: 100; position:absolute; top:15px; left:0px; width: 100px; background: #4A66A0; background: #0ff; padding: 4px;border-radius:2px ; box-shadow: 0 0 5px rgba(51,102,153,1);}
+#InspectView ._selectBox:hover ._list {display: block;}
+#InspectView ._btn_heading { display: block; font-weight: bold;border-radius:2px ;}
+#InspectView ._btn_heading {color: #4A66A0; font-size: 12px;}
+#InspectView ._btn_heading span{padding: 4px 4px;display: block;}
+#InspectView ._btn_heading._active,
+#InspectView ._btn_heading._active:hover { background: #4A66A0; color: #0ff;}
+#InspectView ._btn_heading:hover._active:hover { background: #4A66A0; color: #0ff;}
+#InspectView ._btn_heading:hover { background: #9ff;}
+
+#InspectView ._presetArea { margin: -2px 0 0 0; padding: 8px; background: #3572a5;}
+#InspectView ._presetError { padding: 5px 0;line-height: 1.4;}
+#InspectView ._presetTitle {}
+#InspectView ._presetTitle ._btn_preset {opacity: 0.5; float: right;}
+#InspectView ._presetTitle ._btn_preset:hover { opacity: 1;}
+#InspectView ._presetSubWapper { position: relative;}
+#InspectView ._presetSubWapper ._presetSubTitle { padding: 5px 0;}
+#InspectView ._presetSubWapper ._presetSubs { position: absolute; top: 0px; left: 60px; width: 145px; background: #4A66A0; border: 1px solid #00ffff; border-radius:2px; box-shadow:0px 0px 5px rgba(0,0,0,0.2); padding: 5px 10px 5px 5px; z-index: 1; display: none;}
+#InspectView ._presetSubWapper._current ._presetSubTitle i {color: #ff0;}
+#InspectView ._presetSubWapper:hover ._presetSubTitle { background: #9ff; color: #4A66A0;}
+#InspectView ._presetSubWapper:hover ._presetSubs {display: block;}
+
+#InspectView ._preset_tabs { margin: 5px -8px 5px -8px; border-bottom: 1px solid rgba(0,255,255,0.5);}
+#InspectView ._preset_tabs:after { display: block; clear: both; height: 0; content: ''; }
+#InspectView ._preset_tab { width: 45%; margin: 0 0 -1px 3%; float: left; border: 1px solid rgba(0,255,255,0.5); border-bottom:none; text-align: center; padding: 7px 0; background:rgba(0, 255, 255, 0.2);}
+#InspectView ._preset_tab._current { border-bottom: 1px solid #3572a5; padding: 10px 0 4px 0; background:none;}
+
+
+#InspectView ._presetItems {}
+#InspectView ._presetItems ._items_tag { display: none;}
+#InspectView ._presetItems ._items_common { display: none;}
+
+#InspectView ._presetItems ._hr {margin: 2px 0;height: 1px; border-top: 1px dotted rgba(0,255,255,0.5);}
+#InspectView ._presetItems ._item {position: relative; padding: 2px 0;}
+#InspectView ._presetItems ._item._current {}
+#InspectView ._presetItems ._item ._checked { display: none;}
+#InspectView ._presetItems ._item._current ._checked { display: inline;}
+#InspectView ._presetItems ._item:hover ._checked { display: inline;}
+#InspectView ._presetItems ._item:hover ._not_checked { display: none;}
+#InspectView ._presetItems ._item._current ._not_checked { display: none;}
+#InspectView ._presetItems ._item._current ._btn_item i{ color: #ff0;}
+#InspectView ._presetItems ._item ._btn_item {}
+#InspectView ._presetItems ._item ._btn_item ._cssName { font-size:10px; color: rgba(0,255,255,0.5);}
+#InspectView ._presetItems ._item ._btn_edit { display: none; position: absolute; top: 0px; right: -8px; padding: 3px; background: #0ff; color: #4A66A0;}
+#InspectView ._presetItems ._item:hover ._btn_edit { display: block;}
+#InspectView ._presetItems ._btn_add { margin-top: 8px; padding: 5px; text-align: center; background: rgba(0,255,255,0.2); color: #0ff; border-radius:2px;}
+
+
+#InspectView ._hoverSet { position: relative;}
+#InspectView ._hoverSet ._hoverItems { display: none; position: absolute; top:-6px; left:-1px; background: #4967a1; box-shadow: 0 0 5px rgba(51,102,153,0.8); padding: 5px 0; border-radius:3px;}
+#InspectView ._hoverSet ._hoverItems { border: 1px dotted #7b99d4;}
+#InspectView ._hoverSet:hover ._hoverItems { display: block;}
+#InspectView ._hoverSet:hover ._hoverItems span { display: block;}
+
+body._modalTextEditing #InspectView { border: 1px solid #4967a1;box-shadow:none;}
+body._modalTextEditing #InspectView { opacity: 0.5;}
+body._modalTextEditing #InspectView > div { opacity: 0.5;}
+
+
+#InspectView table._step { width: auto;line-height: 1.2;}
+#InspectView table._step th { padding: 4px 2px; font-size: 12px; color:#54BBD2;}
+#InspectView table._step ._read { padding: 4px 2px; font-size: 12px; color:#54BBD2;}
+#InspectView table._step td { padding: 4px 2px;}
+#InspectView ._btn_pub { background: #0ff; color: #4A66A0; font-size: 12px; padding: 8px 5px 6px 7px; border-radius:5px; text-align: center; border-bottom: 2px solid #3cc;}
+#InspectView ._btn_pub:hover { background: yellow;}
+#InspectView ._btn_public_path { display: inline-block; padding: 3px; text-decoration: underline;}
+#InspectView ._errorText_path { color: red;padding: 3px; }
+#InspectView ._btn_public_delete { display: inline-block; padding: 0 0 0 5px; text-decoration: underline;}
+#InspectView input._path { color:blue; text-decoration: underline; font-weight: bold; font-size: 12px; padding: 5px 2px;}
+#InspectView ._editFile_dir_wap,
+#InspectView ._editFile_dir {background: red;}
+#InspectView ._stepNo { background: #0ff; color: #4A66A0; padding: 5px 0; text-align: center; font-size: 10px; font-weight: bold; width: 20px; height: 20px; box-sizing: border-box; border-radius:50%; margin: -2px 0 0 0 ;}
+#InspectView ._picture { border-bottom:1px dotted #7b99d4; padding: 0 0 2px 0; margin: 0 0 5px 0;}
+#InspectView ._inner { height: 160px; transition-duration: 0.2s; transition-property:height;}
+#InspectView ._btn_embed_code { padding:8px 5px; text-align: center; background:#0ff; color: #4A66A0; border-radius:2px;}
+#InspectView ._embedLink { text-decoration: underline;}
+#InspectView ._embedLink:hover { color: #ff0;}
+
+

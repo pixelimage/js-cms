@@ -1,0 +1,734 @@
+
+#SubPageView ._editableBlock { margin: 0 0 10px; padding: 5px 0 20px; }
+
+._editableTemplate ._templateTable { width: 100%; margin-top: -20px; }
+._editableTemplate ._previewAreaWapper { padding: 10px; margin: 10px 0 0 0; background: #4A66A0; border-radius: 10px; box-shadow: 0 0 10px rgba(74,102,160,0.8); }
+._editableTemplate ._previewArea,
+._editableTemplate ._codeArea { width: 100%; height: 320px; background: #fff; }
+._editableTemplate ._codeArea textarea { border: none; width: 100%; height: 100%; background: #4A66A0; color: #fff; border-radius: 0; }
+._editableTemplate ._temp { font-size: 12px; line-height: 1.4; }
+._editableTemplate ._left { float: left; width: 350px; }
+._editableTemplate ._main ._core { margin-left: 370px; position: relative; }
+._editableTemplate ._editableTemplate { }
+._editableTemplate ._title { color: #4A66A0; font-weight: bold; font-size: 14px; margin: 10px 0 5px; }
+._editableTemplate ._id { font-size: 20px }
+._editableTemplate ._m { font-size: 10px; color: #4A66A0; font-weight: bold; margin: 5px 0 0; }
+._editableTemplate ._btn_relaod { padding: 0 20px; position: absolute; top: 7px; right: 7px;}
+._editableTemplate ._btn_addStyle { margin-top: -23px; margin-left: 195px; display: inline-block; width: 50px; height: 20px; background: url(../images/icon_plus_css.png?1) left top no-repeat; cursor: pointer; }
+#GridDetailView ._modalBox { top: 40px; width: 800px; left: 50%; margin:0 0 0 -400px; bottom: 40px;}
+
+
+/* ! ---------- FileInfoView ---------- ---------- ---------- ---------- */
+
+#FileInfoView ._modalBox { left: 50%; top: 50%; margin-left: -300px; margin-top: -300px; width: 600px; height: 600px; padding: 0; color: #4A66A0; }
+#FileInfoView ._fileInfoEditTable { width: 100% }
+#FileInfoView ._fileInfoEditTable th {line-height: 1.2; border-top: 1px solid #e7ebf2; padding: 7px 0; font-size: 12px; width: 70px; }
+#FileInfoView ._fileInfoEditTable td {line-height: 1.2; border-top: 1px solid #e7ebf2; padding: 7px; }
+#FileInfoView ._fileInfoEditTable input._text { font-size: 14px; width: 300px; }
+#FileInfoView ._fileInfoEditTable textarea { font-size: 14px; width: 350px; height: 200px; }
+#FileInfoView ._fileInfoEditTable select { font-size: 16px; width: 100px; height: 30px; font-weight: bold; color:#4A66A0;}
+#FileInfoView input { margin: 2px 0 }
+#FileInfoView ._anno { margin: 2px 0; font-size: 12px; line-height: 1.4; }
+#FileInfoView ._red { color: red }
+#FileInfoView ._read {margin: 5px 0; line-height: 1.4; }
+#FileInfoView ._subtable { width: 100% }
+#FileInfoView ._subtable td { border: none; padding: 3px; }
+#FileInfoView ._filepath { width: auto }
+#FileInfoView ._filepath th { border: none; padding: 5px 2px 2px 2px;width: auto; }
+#FileInfoView ._filepath td { border: none; padding: 2px; }
+#FileInfoView ._tab { margin: -10px -20px 10px -20px; padding: 10px 20px 0 20px; background: #e7ebf2;}
+#FileInfoView ._tab > div { float:left; border: 1px solid #d1d9e6; border-bottom:none; padding: 10px 20px 5px 20px; border-radius:5px 5px 0 0; background: #ffffee; margin:0 5px 0 0; cursor: pointer; color:#fff; background: #4A66A0;}
+#FileInfoView ._tab > div._active{ color:#4A66A0; background: #fff; }
+#FileInfoView ._editFile_dir_wap {font-size: 12px;width: 140px;margin:3px 0 0 0;font-weight: bold;color:#4A66A0;padding: 7px 2px 5px 5px;background: #ffe;display: inline-block;border-radius:5px;box-shadow:0px 0px 5px rgba(0,0,0,0.2);cursor:pointer;}
+#FileInfoView ._editFile_dir_wap:hover { background: #ffc;}
+#FileInfoView ._editFile_dir {display: inline-block;width: 115px;white-space: nowrap;overflow: hidden;color:blue;text-decoration: underline;text-overflow: ellipsis;}
+#FileInfoView ._repID { color: #ccc; font-size: 10px;}
+#FileInfoView ._fileEM { display: inline-block; background:url("../images/ss_file.png") top left no-repeat; width:15px; height:15px; margin: 0 0 0 2px; background-position:-147px -266px; vertical-align: middle;}
+
+
+/* ! ---------- Anchor ---------- ---------- ---------- ---------- */
+
+#Anchor_PageListView ._modalBox { left: 50%; top: 50%; margin-left: -350px; margin-top: -300px; width: 700px; height: 600px; }
+#Anchor_PageListView table{table-layout:fixed;width: 100%;}
+#Anchor_PageListView th{font-size: 10px;padding:10px 2px;}
+#Anchor_PageListView td{font-size: 12px;padding: 2px;box-sizing: border-box;}
+#Anchor_PageListView ._name{font-size: 12px;font-weight: bold;}
+#Anchor_PageListView ._url{font-size: 10px;color:#8ba3d2;word-wrap:break-word;}
+#Anchor_PageListView ._dirrow{ background: #EEF1F6;}
+#Anchor_PageListView ._dirrow td{ padding: 15px 2px 10px 2px;font-weight: bold;}
+#Anchor_PageListView ._hasData{ cursor: pointer;}
+#Anchor_PageListView ._hasData:hover{ background:#EEF1F6;}
+
+#Anchor_TargetListView ._modalBox { left: 50%; top: 50%; margin-left: -240px; margin-top: -250px; width: 480px; height: 500px;  }
+#Anchor_InputView ._modalBox { left: 50%; top: 50%; margin-left: -350px; margin-top: -130px; width: 700px; height: 260px; padding: 0; color: #4A66A0; }
+#Anchor_InputView input{font-size: 14px;}
+
+#Anchor_BtnView ._modalBox { left: 50%; top: 50%; margin-left: -370px; margin-top: -350px; width: 740px; height: 700px; }
+#Anchor_BtnView ._preview { color: #000; margin: 5px 0; padding: 5px; max-width: 420px; overflow: hidden;  box-shadow: 0 0 10px rgba(74,102,160,0.4); }
+#Anchor_BtnView ._preview { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAQYBAMAAAC5B4uRAAAAD1BMVEX////y8vL19fXm5ubp6ekF8zylAAAB70lEQVR4AezUsQ0AIAzEwGQExAaI/WdEZoKkS2FX3133sSiouPJQUHGliIjIFIRa0v6rI10REZEpiAf52qtjAQAAAIBB/taT2BlBZxDIjTgeAoE4HgKBOB4CgTgeAoE4HgKBOB4CgTgeAoE4/kcgEMdDIBDHQyAQx0MgEMdDIBDHQyAQx0MgEMdDIBDHQyA/4ngIBOJ4CATieAgE4ngIBOJ4CATieAgE4ngIBOJ4CORHHA+BQBwPgUAcD4FAHA+BQBwPgUAcD4FAHA+BQBwPgfyI4yEQiOMhEIjjIRCI4yEQiOMhEIjjIRCI4yEQiOMhkB9xPAQCcTwEAnE8BAJxPAQCcTwEAnE8BAJxPAQCcTwE8iOOh0AgjodAII6HQCCOh0AgjodAII6HQCCOh0AgjodAfsTxEAjE8RAIxPEQCMTxEAjE8RAIxPEQCMTxEAjE8RDIjzgeAoE4HgKBOB4CgTgeAoE4HgKBOB4CgTgeAoE4HgL5EcdDIBDHQyAQx0MgEMdDIBDHQyAQx0MgEMdDIBDHQyA/4ngIBOJ4CATieAgE4ngIBOJ4CATieAgE4ngIBOJ4CORHHA+BQBwPgUAcD4FAHA+BQBwPgUAcD4FAHA+BQBwPgfyI4yEQiOMhEIjjIRCI4yEQiOMhEIjjIZAZCew7cPXLsQT8AAAAAElFTkSuQmCC) left top;}
+#Anchor_BtnView ._selectClass { position: relative; }
+#Anchor_BtnView ._btnCopyMC { position: absolute; cursor: pointer;background: rgba(0,0,0,0); }
+#Anchor_BtnView ._btnCopyMC:hover { border: 1px dotted #4A66A0 }
+#Anchor_BtnView ._btnCopyMC._active{ background: rgba(255,255,255,0.5); border: 2px solid #4A66A0; border-radius: 3px; box-shadow: 0 0 5px rgba(0,0,255,0.2); }
+#Anchor_BtnView input{font-size: 14px;}
+
+
+/* ! ---------- #GadgetListView ---------- ---------- ---------- ---------- */
+
+#GadgetListView ._modalBox { left: 50%; top: 50%; margin-left: -340px; margin-top: -340px; width: 680px; height: 680px;}
+#GadgetListView ._modalBox ._body { left:0; right:0;}
+#GadgetListView ._modalBox ._footer { background: #fff;}
+
+#GadgetListView ._modalBox ._tabs { padding: 10px 0 0 20px; background: #e7ebf2; margin: -10px -10px 20px -10px;}
+#GadgetListView ._modalBox ._tabs:after { display: block; clear: both; height: 0; content: ''; }
+#GadgetListView ._modalBox ._tabs ._tt { float: left; padding: 5px 10px 0 0 ; line-height: 1.2; font-size:12px;}
+#GadgetListView ._modalBox ._tabs ._tab { float: left; padding: 10px 10px 5px 10px; margin: 0 2px 0 0; background: #4A66A0; color: #fff; border-radius:5px 5px 0 0; min-width: 100px; line-height: 1.2; cursor: pointer; text-align: center;}
+#GadgetListView ._modalBox ._tabs ._tab._current { background: #fff; color: #4A66A0; font-weight: bold; border-bottom: none; margin-bottom:-1px; box-shadow:0px -1px 1px rgba(0,0,0,0.1);}
+#GadgetListView ._modalBox ._tabs ._tab span{display: block; font-size:10px; opacity: 0.5;}
+
+#GadgetListView ._modalBox ._gad_blocks { }
+#GadgetListView ._modalBox ._gad_block { display: none;padding: 0 10px;}
+
+#GadgetListView ._modalBox ._btn_custom { width: 180px; height: 120px; float: left; display: block; background: #edf0f5; font-size:12px; margin: 0 10px 10px 0; overflow: hidden;}
+#GadgetListView ._modalBox ._btn_custom ._t1 { background: #4A66A0; color: #fff; padding: 5px 20px; font-weight: bold; text-align: center;}
+#GadgetListView ._modalBox ._btn_custom ._t2 { padding: 10px; line-height: 1.4; }
+#GadgetListView ._modalBox ._repeat_area { position: relative; background: #4A66A0; height: 500px; margin: 0 -20px 0 -20px;}
+
+#GadgetListView ._btn_add { background: #e7ebf2; padding: 10px; margin: 2px; color: #4A66A0; }
+
+
+/* ! ---------- #PresetStageView ---------- ---------- ---------- ---------- */
+
+#PresetStageView {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	 > ._bg { cursor: pointer; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(73,103,161,0.9);}
+	 > ._modalBox {
+		position: fixed;
+		top: 0;
+		left: 160px;
+		right: 0;
+		bottom: 0;
+		background: #eee;
+		background: #fff;
+		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+		background: #fff;
+		> ._body { position: absolute; left: 160px; right: 0; top: 0; bottom:0; background: #fff; border-left: 1px solid #d1d9e6;}
+		> ._navi { background: #e7ebf2; color: #4A66A0; position: absolute; top: 0; left: 0; bottom:0; width: 160px;}
+		> ._btn_add,
+		> ._btn_add_dis { position: absolute; left: 50%; bottom: 15px; height: 64px; width: 64px; background: #4A66A0; color: #fff; border-radius:50%; text-align: center; padding: 13px 0 0 0; line-height: 1.2; border: 4px solid #fff; color: #fff;}
+		> ._btn_add_dis {background: #ccc;}
+		> ._btn_add {box-shadow:0px 0px 10px rgba(0,0,0,0.2); color: #ff0;cursor: pointer;}
+	}
+	 > ._btn_close { position: absolute; left: 25px; bottom: 25px; padding: 10px 0;width: 110px; border: 1px solid rgba(255,255,255,0.2); color: #fff; text-align: center; cursor: pointer; }
+}
+
+#PresetStage_PageListView {
+	font-size:12px;
+	._header { height: 40px;}
+	._header ._title { display: block; padding: 12px 0 0 10px; font-size:18px; font-weight: bold;}
+	._inner { position: absolute; top: 40px; left: 0px; right: 0px; bottom: 0px; background: #dbe1eb; overflow-y: scroll;}
+	._inner ._gloup_name { background: #4A66A0; color: #fff; margin: 0; padding: 4px 0 2px 15px;line-height: 1.4;}
+	._inner ._page_items { margin:0 0 15px 0;}
+	._inner ._item { padding: 6px 5px 6px 15px; margin-right:-1px; cursor: pointer;}
+	._inner ._item._current { background: #ffc; font-weight: bold;}
+}
+
+#PresetStage_PagesView {
+	position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px;
+	._page_header {
+		position: absolute; top: 0px; left: 0px; right: 0px; height: 40px; background: #e7ebf2; border-bottom: 1px solid #d1d9e6; z-index: 10;
+		
+		._page_title { display: block; padding: 12px 0 0 20px; font-size:18px; font-weight: bold;color: #4A66A0;}
+		._page_btns_pub {
+			position: absolute; top: 5px; right: 45px; width: 100px; height: 40px;
+			._btn_save { position: absolute; left: 0px; top: 0px; width: 100%; border-right: 1px solid #0ff; background: #4A66A0; color: #0ff; line-height: 35px; padding: 0 0 0 30px; font-size:12px;}
+			._btn_save > i {position: absolute;top: 8px;left:6px; font-size:18px;}
+			._btn_save_pre { position: absolute; left: 0px; top: 0px; width: 100%; border-right: 1px solid #0ff; background: #4A66A0; color: #ff0; line-height: 35px; padding: 0 0 0 30px; font-size:12px;}
+			._btn_save_pre > i { position: absolute; top: 8px; left: 7px; font-size:18px;}
+			._btn_saveing { position: absolute; left: 0; top: 0; width: 100%; height: 35px; background: rgba(54,105,161,0.7); text-align: center; box-sizing: border-box; padding:8px 0; color: #6FF;}
+		}
+		 ._page_side_opener {
+			position: absolute; top: 40px; right: 100px; color: #4A66A0; font-size:12px; background: rgba(255,255,255,0.9); padding: 10px 10px 5px 5px;
+			._btn_open_all {margin: 0 2px;}
+			._btn_open_all span { display: inline-block; background: #4A66A0; color: #00ffff; padding:1px 3px;border-radius:2px;}
+			._btn_close_all {margin: 0 2px;}
+			._btn_close_all span { display: inline-block; background: #4A66A0; color: #00ffff; padding:1px 5px; border-radius:2px;}
+		}
+		._page_side_zoom { position: absolute; top: 40px; right: 0px; color: #4A66A0; padding: 10px 10px 5px 5px; background: rgba(255,255,255,0.9);}
+		._page_btns_pre {
+			position: absolute; top: 7px; right: 155px; width: 110px; height: 25px; background: #edf0f5;
+			._btn_preview { position: absolute; left: 0px; top: 0; width: 88px; border-right: 1px solid #0ff; height: 25px; background: #4A66A0; color: #0ff; line-height: 25px; text-align: center; font-size:12px;}
+			._btn_preview_more { position: absolute; left: 88px; top: 0; width: 22px; height: 25px; background: #4A66A0; color: #0ff; line-height: 25px; font-size:12px; text-align: center;}
+			._btn_preview_more i { transition-duration: 0.2s;}
+			._btn_preview_more._hilight i {transform: scale(1.6);}
+			._btn_previewing { display: none; position: absolute; left: 0px; top: 0; width: 88px; height: 35px; background: rgba(255,255,255,0.7); text-align: center; box-sizing: border-box; padding:8px 0; color: #4A66A0;}
+		}
+		 ._page_icon_btns {
+			position: absolute; top: 7px; width: 160px; height: 25px; right: 280px; font-size:14px; color: #4A66A0;
+			._item { position: relative; text-align: center; float: left; margin: 0 2px 0 0; width: 30px;}
+			._item ._side_btn { line-height: 25px; cursor: pointer;}
+		}
+		 ._float_item {
+			position: relative; cursor: pointer;
+			._float_fuki { display: none; position: absolute; top:30px; left: -50px; width:240px; background: #fff; padding:10px; font-size:14px; color: #888; text-align: left; line-height: 1.4; box-shadow: 0 0 10px rgba(74,102,160,0.4); border-radius:5px; z-index: 1;}
+			._float_fuki ._fuki_title { padding: 0 0 5px 0; margin: 0 0 5px 0; border-bottom: 2px solid #eee;}
+			._float_fuki ._read {line-height: 1.4;color:#999;padding: 5px;}
+			&:hover {background: rgba(255,255,255,0.5);}
+		}
+	}
+	._page_header._float_item ._messa {display: none;padding: 7px;color:red; }
+	._page_inner { position: absolute; top: 50px; left: 10px; right: 0px; bottom: 0px;}
+	._page_inner_zoom { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; padding: 0 20px 100px 0; transform-origin: 0 0; overflow-y: scroll;}
+}
+
+
+/* ! ---------- #DirListView ---------- ---------- ---------- ---------- */
+
+#DirListView ._modalBox { left: 50%; top: 50%; margin-left: -220px; margin-top: -280px; width: 440px; height: 560px;}
+#DirListView ._body { left:0; right:0; background: #333; color: #ccc; padding: 10px;}
+#DirListView ._body ._btn_dir { cursor: pointer;}
+#DirListView ._body ._btn_dir:hover{color: #fff;}
+#DirListView ._body ._btn_dir._current { color: #ff8;background: #444;}
+#DirListView ._body ._btn_dir span { display: inline-block; vertical-align: middle;}
+#DirListView ._body ._btn_dir ._label{padding: 3px 0 0 0;font-size:10px;color: #666;}
+#DirListView ._body ._title { font-weight: bold; margin-top: 10px;}
+#DirListView ._body ._btn_select { float: right; display: block; background: #4A66A0; color: #00ffff; margin: 3px 3px 0 0; padding: 3px 15px; line-height: 1; border-radius:2px; font-size: 12px;}
+/*
+#DirListView ._replacePath { font-weight: bold; font-size: 10px; padding: 10px 5px 10px 5px; color: #e7ecf3; background: #4A66A0; border-radius: 5px;}
+#DirListView table._main { margin:5px 0; width: 100%;}
+#DirListView table._main > tbody > tr > td { border-top: 1px solid #fff;}
+#DirListView table._main td { vertical-align: middle;}
+#DirListView table._main td { font-size: 12px; padding: 1px 4px 1px 4px;}
+#DirListView table._main > tbody > tr {background: #EEF1F6;}
+#DirListView table._main tr._active{background: #ffc;}
+#DirListView table._main td{color:#999;}
+#DirListView table._main ._btn_dir td{ color:#4A66A0;}
+#DirListView ._checks {margin: 10px 0;padding: 2px 0 10px 0;border-bottom: 2px solid #4A66A0;}
+#DirListView table._main ._sub0 td,
+#DirListView table._main ._sub1 td { font-size: 16px; font-weight: bold; padding: 4px;}
+#DirListView table._main ._sub2 { font-size: 14px;}
+#DirListView table._main ._tab { width: 20px;}
+#DirListView ._write { font-size: 10px; color:#fff; background: #4A66A0; padding: 2px 5px;}
+#DirListView ._not-write { font-size: 10px; color:#fff; background: red; padding: 2px 5px;color:yellow;}
+#DirListView ._date { font-size: 10px; opacity: 0.5;}
+#DirListView small { color:#999;font-size: 12px;}
+*/
+
+
+/* ! ---------- #SimpleToolTip ---------- ---------- ---------- ---------- */
+
+#SimpleToolTip { position: absolute; top: 0px; left: 0px;}
+#SimpleToolTip ._attention {padding: 5px 10px;background: red;color:#fff;border-radius:5px;font-size: 12px;line-height: 1.4;}
+#SimpleToolTip ._attention small {color:#fff;font-size: 10px;}
+
+
+/* ! ---------- #Preset_IconView ---------- ---------- ---------- ---------- */
+
+#Preset_IconView ._modalBox {left: 50%;top: 50%;margin-left: -450px;margin-top: -330px;width: 900px;height: 660px;}
+#Preset_IconView ._body span i { display: inline-block; padding: 10px; margin: 2px; cursor: pointer; background: #fff; }
+#Preset_IconView ._body span i:hover { background: #4A66A0; color: #fff; }
+#Preset_IconView ._p {line-height: 1.4;}
+#Preset_IconView ._h2 { margin: 10px 0 0 0; padding: 7px; font-size: 12px; background: #4A66A0; color: #fff; font-weight: bold; }
+#Preset_IconView ._g { background: #e7ebf2; padding: 10px; margin: 0 0 10px 0; }
+#Preset_IconView ._cols {}
+#Preset_IconView ._cols:after { display: block; clear: both; height: 0; content: ''; }
+#Preset_IconView ._col{float: left;margin: 0 20px 0 0;}
+
+/* ! ---------- #CMS_AlertView ---------- ---------- ---------- ---------- */
+
+#CMS_AlertView ._modalBox{ left: 50%; top: 50%; margin-left: -250px; margin-top: -100px; width: 500px; height:200px; }
+#CMS_AlertView ._body ._p{font-size: 18px;text-align: center;padding: 10px 0 0 0;line-height: 1.4;}
+#CMS_AlertView ._body ._p ._small{font-size: 14px; }
+#CMS_AlertView ._body ._p ._small em{background: #ffc;}
+
+/* ! ---------- #CMS_ConfirmView ---------- ---------- ---------- ---------- */
+
+#CMS_ConfirmView ._modalBox{ left: 50%; top: 50%; margin-left: -250px; margin-top: -100px; width: 500px; height:200px; }
+
+/* ! ---------- #CMS_CopyView ---------- ---------- ---------- ---------- */
+
+#CMS_CopyView ._modalBox{ left: 50%; top: 50%; margin-left: -250px; margin-top: -100px; width: 500px; height:200px; }
+#CMS_CopyView textarea{width: 100%;font-size: 18px;height: 100px;}
+
+
+/* ! ---------- #CMS_InputView ---------- ---------- ---------- ---------- */
+
+#CMS_InputView ._modalBox { left: 50%; top: 50%; margin-left: -250px; margin-top: -150px; width: 500px; height:300px;}
+#CMS_InputView input {width: 100%;font-size: 18px;}
+
+
+/* ! ---------- #CMS_ProccessView ---------- ---------- ---------- ---------- */
+
+#CMS_ProccessView ._modalBox { left: 50%; top: 50%; margin-left: -100px; margin-top: -30px; width: 200px; height:60px; box-shadow:0px 0px 5px rgba(0,0,0,0.2);}
+#CMS_ProccessView ._process { padding: 20px 0 0 0 ; font-size: 18px; text-align: center;}
+
+/* ! ---------- #CMS_AlertLockView ---------- ---------- ---------- ---------- */
+
+#CMS_AlertLockView{cursor: pointer;}
+#CMS_AlertLockView ._modalBox { left: 50%; top:-410px; margin-left: -200px; width: 400px; height: 100px; background: #000; color:#ff0; border: 2px solid #fff; transition-duration:0.4s;}
+#CMS_AlertLockView._show ._modalBox { top:20px;}
+#CMS_AlertLockView ._read { display: table-cell; text-align: center; vertical-align: middle; width: 400px; height: 100px; font-size: 18px; line-height: 1.8;}
+#CMS_AlertLockView ._mark { position: fixed; top: 10px; right: 10px; width: 20px; height: 20px; border: 1px solid yellow; border-radius:50%; opacity: 0; transition-duration:0.4s; transition-timing-function:cubic-bezier(0.4, 1.2, 0.8, 1.8); transition-delay:0.6s;}
+
+#CMS_AlertLockView._show ._mark { top: -40px; right: -40px; width: 100px; height: 100px; opacity: 1; border: 10px solid yellow;}
+
+/* ! ---------- #CMS_ErrorView ---------- ---------- ---------- ---------- */
+
+#CMS_ErrorView ._modalBox { left: 50%; top: 50%; margin-left: -300px; margin-top: -300px; width: 600px; height:600px;}
+#CMS_ErrorView ._header { background: red; color: #fff; border: 1px solid #fff; padding: 5px 5px 5px 15px;}
+#CMS_ErrorView ._body ._p{line-height: 1.8;margin: 0.5em 0;}
+#CMS_ErrorView textarea {width: 100%;height:200px;}
+#CMS_ErrorView ._h {font-weight: bold;margin: 10px 0 0 0;}
+#CMS_ErrorView ._path {padding: 5px;background: #ffe;border: 1px solid #d1d9e6;}
+#CMS_ErrorView ._res_error {padding: 5px;background: #ffe;border: 1px solid #d1d9e6;color: red;}
+
+/* ! ---------- #BackupView ---------- ---------- ---------- ---------- */
+
+#BackupView ._modalBox { left: 50%;margin-left: -450px;  width: 900px;top:40px;bottom:40px;}
+#BackupView ._p{line-height: 1.6;}
+
+#BackupView ._diffList { border:1px solid #cccccc; width:100%; height:200px; margin: 5px 0;}
+#BackupView ._selectArea { padding:5px; border:2px solid #ffcccc; background:#ffffcc; margin: 5px 0;}
+#BackupView ._selectArea select { margin: 5px; font-size: 18px; padding: 3px;}
+
+#BackupView ul._tab { margin: 10px 0 0 0;}
+#BackupView ul._tab li { list-style: none; display: inline-block; padding: 10px 20px 5px 20px; border:1px solid #cccccc;  border-bottom:1px solid #cccccc; margin: 0 0 -1px 0;}
+#BackupView ul._tab li { background:#4A66A0;color:#fff;}
+#BackupView ul._tab li._active{ background:#fff; border-bottom:1px solid #fff; font-weight: bold; background:#ffffee;}
+#BackupView ul._tab li._active{ color:#4A66A0;}
+
+#BackupView ._backupArea,
+#BackupView ._diffArea { background:#ffffee; display: none; border:1px solid #cccccc; padding: 10px 15px; margin: 0 0 1em 0;}
+#BackupView .createBlock { background: #e7ebf2; padding:15px; border-radius:5px; margin: 0 0 2em 0;}
+#BackupView ._h2 {font-size: 14px;font-weight: bold; }
+#BackupView ._arrow{margin: 5px ;text-align: center;}
+#BackupView_notWritable { line-height: 1.6;color:red;}
+#BackupCreateView { width: 530px; float:right;}
+
+#BackupCreateView ._btns {padding: 0 0 0 50px;}
+#BackupCreateView ._btn_add,
+#BackupCreateView ._btn_add_dis,
+#BackupCreateView ._btn_add_done { display: inline-block; display: none; background: #4A66A0; color: #fff; text-align: center; padding: 10px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; width: 400px; border-bottom: 2px solid #eee; font-weight: bold; }
+#BackupCreateView ._btn_add { cursor: pointer }
+#BackupCreateView ._btn_add_dis { background: #999; cursor: normal; border-top: 2px solid #cccccc; border-bottom: none; }
+#BackupCreateView ._btn_add_done {background:#eeeeee;color: #4A66A0; }
+#BackupCreateView ._btn_diff,
+#BackupCreateView ._btn_diff_none,
+#BackupCreateView ._btn_diff_dis,
+#BackupCreateView ._btn_diff_done { display: inline-block; display: none; background: #4A66A0; color: #fff; text-align: center; padding: 10px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; width: 400px; border-bottom: 2px solid #eee; font-weight: bold; }
+#BackupCreateView ._btn_diff { cursor: pointer }
+#BackupCreateView ._btn_diff_none{ display: block;background:#eeeeee;}
+#BackupCreateView ._btn_diff_dis{background: #999; cursor: normal; border-top: 2px solid #cccccc; border-bottom: none; }
+#BackupCreateView ._btn_diff_done {background:#eeeeee;color: #4A66A0; }
+#BackupCreateView ._zip_selects,
+#BackupCreateView ._diff_selects { padding: 10px; border: 1px solid #ddd; background: #fff; margin: 5px 0; line-height: 1.4;}
+
+#BackupTargetArrow{ width: 20px; float:left;padding:150px 0 0 10px;}
+#BackupTargetView { width: 250px; float:left;}
+#BackupTargetView ._dirList { background: #fff; padding: 10px;background: #ffffee;}
+#BackupTargetView ._dirList div{margin: 0 0 5px 0;}
+
+#BackupListView ._filelist { width: 100% }
+#BackupListView  table { margin: 10px 0;}
+#BackupListView  th { font-size: 10px;padding: 5px;background: #4A66A0;color:#e7ebf2;}
+#BackupListView  td { font-size: 12px;background: #ffffee;border-bottom: 1px dashed #e7ebf2; padding:7px 5px 3px 5px; }
+#BackupListView ._btn_del { display: inline-block; background: red; color: #fff; padding: 2px 5px; cursor: pointer; font-size: 14px; line-height: 1; font-weight: bold; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+
+#BackupListView .min2	{background:rgba(255,255,0,0.5);font-weight:bold;}
+#BackupListView .min10	{background:rgba(255,255,0,0.2);}
+#BackupListView .hour	{background:rgba(255,255,0,0.1);}
+#BackupListView .hour6	{background:rgba(255,255,0,0.04);}
+#BackupListView .day	{font-size:12px;}
+#BackupListView .day2	{font-size:12px;}
+#BackupListView .day7	{font-size:12px;}
+#BackupListView .month	{font-size:10px;}
+#BackupListView .month2	{font-size:10px;}
+#BackupListView .month4	{font-size:10px;}
+#BackupListView .year	{font-size:10px;}
+#BackupListView .year2	{font-size:10px;}
+#BackupListView .year_	{font-size:10px;}
+
+
+/* ! ---------- DummyImageView ---------- ---------- ---------- ---------- */
+
+#DummyImageView ._modalBox { top: 50%; left: 50%; margin-left: -450px; margin-top: -320px; width: 900px; height: 640px;}
+#DummyImageView ._body { font-size: 12px;}
+#DummyImageView input { padding: 2px;}
+#DummyImageView ._values > tbody > tr > td { border-top: 1px solid #e7ebf2; padding:7px 3px; vertical-align: middle; line-height: 1.2;}
+#DummyImageView ._mockStage { position: relative; width:850px; height:350px; background:url(../images/bg_mock.png) left top no-repeat; margin: 0 0 10px 0; overflow:hidden;}
+#DummyImageView ._mockStage ._image_placeholder { position: absolute; top: 40px; left: 40px; }
+#DummyImageView ._mockStage canvas { position: absolute; top: 40px; left: 40px; }
+#DummyImageView ._btn_preset { cursor: pointer; font-size: 10px; background: #e7ebf2; padding: 5px; border-radius:5px; display: inline-block;}
+#DummyImageView ._btn_preset:hover { background: #4A66A0; color:#fff;}
+#DummyImageView ._btn_color { cursor: pointer; font-size: 16px; background: #fff; padding: 2px 0px;}
+#DummyImageView ._btn_color:hover { opacity: 0.8;}
+#DummyImageView ._btn_pos { border: 1px solid #e7ebf2; background: #fff; position: absolute; top: 0px; left: 0px;}
+#DummyImageView ._prest_rects td { vertical-align: top; padding: 2px;}
+#DummyImageView ._preset_rect { cursor: pointer; background: #eee; display: inline-block;}
+#DummyImageView ._preset_rect:hover { opacity: 0.8;}
+
+
+/* ! ---------- BatchPublishView ---------- ---------- ---------- ---------- */
+
+#BatchPublishView ._modalBox { left: 50%; top: 50%; margin-left: -150px; margin-top: -120px; width: 300px; height: 240px;}
+#BatchPublishView ._progress { position: absolute; top: 50%; left: 50%; margin:-80px 0 0 -120px; width: 240px; height: 40px; background: #eee;}
+#BatchPublishView ._bar { position: absolute; width: 0px; height: 40px; background: #4A66A0; transition-duration: 0.4s;}
+#BatchPublishView ._t_result { position: absolute; display: table; top: 50%; left: 50%; margin:-30px 0 0 -140px; width: 280px; height: 60px;}
+#BatchPublishView ._t_result ._core { display: table-cell; text-align: center; vertical-align: middle; line-height: 1.4; font-size: 12px;}
+#BatchPublishView ._btns { position: absolute; top: 50%; left: 50%; margin:20px 0 0 -100px; width: 200px; text-align: center;}
+#BatchPublishView ._btn_start { width: 100%; box-sizing: border-box; margin: 0 0 5px 0;}
+#BatchPublishView ._btn_close { width: 100%; box-sizing: border-box; margin: 0 0 5px 0;}
+#BatchPublishView ._btn_cancel { width: 100%; box-sizing: border-box; margin: 20px 0 5px 0;}
+
+
+
+/* ! ---------- CMS_GuideView ---------- ---------- ---------- ---------- */
+
+#CMS_GuideView { }
+#CMS_GuideView { z-index: 10000; position: fixed; top:10px; left:10px; width: 900px; height: 650px; background: #66cc00; box-shadow: 0 0 15px rgba(120,70,50,0.6); border-radius: 5px; color: #4A66A0; color: #666;}
+#CMS_GuideView ._btn_close { position: absolute; top: -10px; right: -10px; width: 23px; height: 23px; cursor: pointer; background: url(../images/btn_closes.png); background-position:-98px -1px;}
+#CMS_GuideView ._btn_zoom { float: right; margin: 8px 20px 0 0; padding: 5px; color: #fff; font-size: 12px; cursor: pointer;}
+#CMS_GuideView ._btn_zoom:hover {opacity: 0.85;}
+#CMS_GuideView ._title { font-size: 16px; padding: 12px 5px 0 10px; background: #66cc00 url("../images/bg_dragbar.png") center center no-repeat; color: #fff; cursor: pointer; height: 35px; box-sizing: border-box;}
+#CMS_GuideView ._title i { color: #80FF00; color: #fff; padding: 0 3px;}
+#CMS_GuideView ._navi ._first {font-size:18px;background:url("../images/icon_intro.png") 3px top no-repeat;padding:4px 0 5px 27px}
+
+/**/
+#CMS_GuideView ._navi { position: absolute; top:35px; left:0px; width: 200px; bottom:0px; background: #EFFAD6; line-height: 1.4;}
+#CMS_GuideView ._navi ._inner { padding:20px 0 30px 0;}
+
+#CMS_GuideView ._navi ul {margin: 0 0 0 1em;}
+#CMS_GuideView ._navi li {}
+#CMS_GuideView ._navi li a { text-decoration: none;display: block;padding: 2px 0;}
+#CMS_GuideView ._navi li a:hover { text-decoration: underline;}
+#CMS_GuideView ._navi li a._current {background: #ff0;}
+#CMS_GuideView ._navi ._h2-toggle { margin: -5px 0 6px 0; padding: 10px 5px 5px 10px; background: #D1F0A6;}
+#CMS_GuideView ._navi ._h2-toggle { clear:both; cursor: pointer; -webkit-user-select: none; user-select: none;}
+#CMS_GuideView ._navi ._h2-toggle:hover { }
+#CMS_GuideView ._navi ._h2-toggle span { float: right; margin: -2px 3px 0 0; padding: 2px 5px; background: #66cc00; color: #D1F0A6; display: block;}
+#CMS_GuideView ._navi ._h2-toggle._open span { background: #D1F0A6; color: #66cc00;}
+#CMS_GuideView ._navi ._toggle-body {display: none;}
+
+#CMS_GuideView ._navi ._h4 { margin: 1em 0 5px 0; padding: 0 0 0 10px; font-weight: bold;border-bottom: 2px solid #D1F0A6;}
+#CMS_GuideView ._navi ._gloup { margin: 0 0 1em 0;}
+#CMS_GuideView ._navi ._user { font-size: 14px; background: #66cc00; padding: 10px 5px 5px 10px; margin: 10px 0 5px 0; color: #fff; vertical-align: middle;}
+#CMS_GuideView ._navi ._user img{float:right;margin: -7px 0 0 0;}
+
+#CMS_GuideView ._body { position: absolute; top:35px; left:200px; right:0; bottom:0px; background: #ffe;}
+#CMS_GuideView ._body ._gloup {color: #55aa00;font-size: 12px;}
+#CMS_GuideView ._body ._text { font-size: 14px; line-height:1.6; padding:5px 20px 20px 20px;}
+#CMS_GuideView ._body ._video { background: #666; width: 600px; height: 320px; color: #fff; padding: 20px; box-sizing: border-box;}
+#CMS_GuideView ._body ._h1 { font-size: 18px; padding: 15px 0 15px 5px; border-bottom: 0px solid #66cc00; margin: 0 0 10px 0;}
+#CMS_GuideView ._body ._h1 { background: #EFFAD6;}
+#CMS_GuideView ._body ._h2 { font-size: 16px; border-left: 5px solid #66cc00; background: #EFFAD6; margin: 20px 0 10px 0; padding:15px 5px 10px 10px; line-height: 1; clear:both; user-select: none;}
+#CMS_GuideView ._body ._h2-toggle { font-size: 16px; border-left: 5px solid #66cc00; background: rgba(102, 204, 0, 0.1); margin: 5px 0 5px 0; padding:15px 5px 10px 10px; line-height: 1; color: #55aa00; clear:both; cursor: pointer; -webkit-user-select: none; user-select: none;}
+#CMS_GuideView ._body ._h2-toggle:hover { background: rgba(102, 204, 0, 0.2);}
+#CMS_GuideView ._body ._h2-toggle span { box-sizing: border-box; float: right; background: #66cc00; color: #fff; padding: 13px 0 0; width:40px; height: 40px; text-align: center; margin: -15px -5px 0 0;}
+#CMS_GuideView ._body ._h2-toggle._open span { box-sizing: border-box; float: right; background: none; color: #66cc00; padding: 11px 0 0; width: 36px; height: 36px; text-align: center; margin: -15px -5px 0 0;}
+#CMS_GuideView ._body ._h2-midashi { margin: 20px 0 0 0; background: #66cc00; font-size: 14px; color: #fff; padding: 10px 20px 7px 20px; display: inline-block; border-radius:5px 5px 0 0;}
+#CMS_GuideView ._body ._toggle-body {display: none;}
+#CMS_GuideView ._body ._h3 { font-weight: bold; border-bottom: 2px solid #66cc00; margin: 20px 0 10px 0; padding:0 5px 5px 0; line-height: 1; clear:both;}
+#CMS_GuideView ._body ._h4 { font-weight: bold; border-left: 5px solid #66cc00; margin: 15px 0 10px 0; padding:0 0 0 5px; line-height: 1; clear:both;}
+#CMS_GuideView ._body ._btn_back { display: block; float:left; background: #66cc00; color: #fff; font-size: 12px; padding: 3px 7px; margin: 0 5px 0 0;border-radius:10px;cursor: pointer;}
+#CMS_GuideView ._body b { background: #ffc; padding: 0 4px; /*border-bottom: 2px solid rgba(102, 204, 0, 0.2);*/}
+#CMS_GuideView ._body a {font-weight: bold;}
+#CMS_GuideView ._body table { margin: 5px;}
+#CMS_GuideView ._body th { background: #66cc00; color: #fff; padding: 5px 5px 2px 5px; line-height: 1.2; font-size: 10px;}
+#CMS_GuideView ._body td { border-top: 2px solid #ffe; padding: 10px 5px; background: #F4FBDD;}
+#CMS_GuideView ._body td._cell-id { color: #44aa00; white-space: nowrap; font-weight: bold;}
+#CMS_GuideView ._body ul { margin: 0.5em 0 0.5em 3em;}
+#CMS_GuideView ._body li { list-style-type: disc;}
+#CMS_GuideView ._color-file {color: #4A66A0;}
+#CMS_GuideView ._color-help {color: #66cc00;}
+#CMS_GuideView ._slider { position:relative; width: 800px; height: 490px; position: absolute;}
+#CMS_GuideView ._slider img { position: absolute; top: 0px; left: 0px; display: none;}
+#CMS_GuideView ._cont { position: absolute; bottom: 0; left:0; width: 100%; height: 30px;}
+#CMS_GuideView ._btn_prev { position: absolute; top: 0; left:280px; padding: 8px 30px; background: #66cc00; color: #fff; border-radius:5px;}
+#CMS_GuideView ._btn_next { position: absolute; top: 0; right:280px; padding: 8px 30px; background: #66cc00; color: #fff; border-radius:5px;}
+#CMS_GuideView ._btn_prev.ng {opacity: 0.2;}
+#CMS_GuideView ._btn_next.ng {opacity: 0.2;}
+#CMS_GuideView ._pageNo { position: absolute; top: 0; left:50%; padding: 10px 0 0 0 ; width: 100px; margin: 0 0 0 -50px; text-align: center; color: #66cc00;}
+#CMS_GuideView ._notes { color: #999;}
+#CMS_GuideView ._box { padding: 10px; margin: 5px 0; background: #F4FBDD; border-radius:5px; color: #996;}
+#CMS_GuideView ._box ._box { background: #ffffee;}
+#CMS_GuideView ._box ._box { background: #ffffee;}
+#CMS_GuideView ._input { color: #333;margin: 5px 0; padding: 5px; background: #fff; border-left: 1px solid #ddd; border-top: 2px solid #ddd; border-radius:5px;}
+#CMS_GuideView ._toggle-body { padding: 0 0 30px 0;}
+#CMS_GuideView ._slide img {border: 1px solid #ddd;margin: 0;}
+#CMS_GuideView ._body img {border: 1px solid #ddd;margin: 10px 0;display: block;}
+#CMS_GuideView ._body img._no-br {border: none;margin: 10px 0;}
+#CMS_GuideView ._body img.left {float:left;margin: 0 10px 10px 0;}
+#CMS_GuideView ._body img.right {float:right;margin: 0 0 10px 10px;}
+
+._btn_guide_block_dark { display: inline-block;padding:2px;cursor: pointer;line-height: 1.2;}
+._btn_guide_block_dark i{color:#80FF00; }
+._btn_guide_block_dark:hover {color: #80FF00; }
+._btn_guide_block_header { cursor: pointer;color:#80FF00; }
+
+._btn_guide_block_light { display: inline-block; padding:2px; color: #66cc00; cursor: pointer; line-height: 1.2; font-size: 12px;}
+._btn_guide_block_light:hover{ background: #ffc;}
+._btn_guide_block_light._big {font-size: 16px;}
+._btn_guide_block_light._blue {font-size:14px;}
+._btn_guide_block_light i {color:#66cc00; }
+._btn_guide_block_light:hover {color: #66cc00; }
+
+
+/* ! ---------- TreeViewMakerView ---------- ---------- ---------- ---------- */
+
+#TreeViewMakerView {font-size: 12px;}
+#TreeViewMakerView._modalView ._header { height: 50px;}
+#TreeViewMakerView._modalView ._body {top: 50px;left: 0;right:0;}
+#TreeViewMakerView._modalView ._body > ._replaceArea{padding: 0;}
+
+#TreeViewMakerView ._previewArea ._p{font-size: 12px;}
+#TreeViewMakerView ._editerArea ._p{font-size: 12px;line-height: 1.4;}
+#TreeViewMakerView > ._inner { padding: 20px;}
+#TreeViewMakerView ._editerArea ._h2 {font-size: 18px;font-weight: bold;}
+#TreeViewMakerView ._editerArea ._h2 { padding:0 0 5px 0; margin: 0 0 5px 0;}
+#TreeViewMakerView ._editerArea ._h3 { border-bottom: 4px solid #e7ebf2; font-size: 14px; padding: 3px 0; margin: 15px 0 10px; font-weight: bold;}
+
+#TreeViewMakerView ._header ._title { float:left;}
+#TreeViewMakerView ._header ._dirSelectArea { float:right; }
+#TreeViewMakerView ._header ._selectSet { background: #ffe; border-radius:5px; border: 1px solid #e7ebf2; padding: 3px 3px 3px 10px; margin: -2px 0 0 5px; line-height: 1;}
+#TreeViewMakerView ._header ._selectSet > div{float: left;}
+#TreeViewMakerView ._header ._floatLeft { float: left; }
+#TreeViewMakerView ._header ._matchPageCount { background:#ff8; }
+
+#TreeViewMakerView ._header ._targetDir{margin: 7px 10px 0 0;}
+#TreeViewMakerView ._header ._targetDir b{background: #ff8; }
+#TreeViewMakerView ._header ._dirListArea { position: relative;}
+#TreeViewMakerView ._header ._dirListBtn { border-radius:5px; padding: 7px 7px; background: #fff; background: #4A66A0; color: #fff; cursor: pointer;}
+#TreeViewMakerView ._header ._dirListBtn:hover{color: #ffc; }
+#TreeViewMakerView ._header ._dirListFuki { display: none;}
+#TreeViewMakerView ._header ._dirListFuki { position: absolute; right:0px; width: 200px; max-height: 500px; top:25px; background: #fff; padding: 10px;  line-height: 1.4;}
+#TreeViewMakerView ._header ._dirListFuki { border-radius:5px; box-shadow:0 0 10px rgba(74,102,160,0.4);}
+#TreeViewMakerView ._header ._dirListFuki ul ul { padding: 5px 0 0 10px; border-left: 1px solid #ccc;}
+#TreeViewMakerView ._header ._dirListFuki ._dir { padding: 0px 0 2px 0; font-weight: bold;cursor: pointer;}
+#TreeViewMakerView ._header ._dirListFuki ._dir._current{background: #ff8;}
+#TreeViewMakerView ._header ._dirListFuki ._dir:hover { background: #f2f2f2;}
+#TreeViewMakerView ._header ._dirListFuki ._dir._current:hover { background: #ee8;}
+#TreeViewMakerView ._header ._dirListFuki .state{color: red;font-size: 10px;}
+
+#TreeViewMakerView ._header ._targetTag{margin: 7px 10px 0 0;min-width: 100px;}
+#TreeViewMakerView ._header ._targetTag b{background: #ff8; }
+#TreeViewMakerView ._header ._tagListArea { position: relative;}
+#TreeViewMakerView ._header ._tagListBtn { border-radius:5px; padding: 7px 7px; background: #fff; background: #4A66A0; color: #fff; cursor: pointer;}
+#TreeViewMakerView ._header ._tagListBtn:hover{color: #ffc; }
+#TreeViewMakerView ._header ._tagListFuki { display: none;}
+#TreeViewMakerView ._header ._tagListFuki { position: absolute; right:0px; width: 150px; max-height: 500px; top:25px; background: #fff; padding: 10px;  line-height: 1.4;}
+#TreeViewMakerView ._header ._tagListFuki { border-radius:5px; box-shadow:0 0 10px rgba(74,102,160,0.4);}
+#TreeViewMakerView ._header ._tagListFuki ul ul { padding: 5px 0 0 10px; border-left: 1px solid #ccc;}
+#TreeViewMakerView ._header ._tagListFuki ._tag { padding: 0px 0 2px 0; font-weight: bold;cursor: pointer;}
+#TreeViewMakerView ._header ._tagListFuki ._tag._current{background: #ff8;}
+#TreeViewMakerView ._header ._tagListFuki ._tag:hover { background: #f2f2f2;}
+#TreeViewMakerView ._header ._tagListFuki ._tag._current:hover { background: #ee8;}
+
+#TreeViewMakerView ._editerArea { position: absolute; top: 0px; right: 0px; width:47%; height:100%; overflow-y: scroll;}
+#TreeViewMakerView ._editerArea ._inner { padding: 20px 20px 20px 20px ;}
+
+#TreeViewMakerView ._layout {}
+#TreeViewMakerView ._layout th { padding: 10px;font-weight: bold;}
+#TreeViewMakerView ._layout td { padding: 10px;}
+
+#TreeViewMakerView ._levelTable{margin: 5px 0 5px 0;border-top: 1px solid #e7ebf2;border-left: 1px solid #e7ebf2;}
+#TreeViewMakerView ._levelTable{line-height: 1;}
+#TreeViewMakerView ._levelTable th { background: #F3F5F8; padding: 5px 5px; }
+#TreeViewMakerView ._levelTable th._tree {padding: 0 5px 0 5px; }
+#TreeViewMakerView ._levelTable th { font-size: 10px; vertical-align: baseline; }
+#TreeViewMakerView ._levelTable td { background: #ffe; padding: 2px;}
+#TreeViewMakerView ._levelTable th,
+#TreeViewMakerView ._levelTable td { border-bottom: 1px solid #e7ebf2; border-right: 1px solid #e7ebf2;}
+#TreeViewMakerView ._levelTable tr._disable td{opacity: 0.4;}
+#TreeViewMakerView ._levelTable input {font-size: 12px;border: none;padding: 4px 2px;}
+#TreeViewMakerView ._levelTable ._pd {padding: 8px 0 0 8px;}
+#TreeViewMakerView input._dir,
+#TreeViewMakerView input._page,
+#TreeViewMakerView input._add{ width: 90px;}
+#TreeViewMakerView input._html{ width: 50px;} 
+
+#TreeViewMakerView ._presets { background: #F3F5F8; background: #ffe; border-bottom: 1px solid #e7ebf2; padding:10px 10px 10px 20px;}
+#TreeViewMakerView ._presets { margin: -20px -20px 0 -20px;}
+
+#TreeViewMakerView ._optionTable{margin: 5px 0;border-top:1px solid #e7ebf2;line-height: 1.2;}
+#TreeViewMakerView ._optionTable th { padding: 6px 4px 0 5px;border-bottom:1px solid #e7ebf2;background: #ffe; }
+#TreeViewMakerView ._optionTable td { padding: 6px 4px;border-bottom:1px solid #e7ebf2;}
+#TreeViewMakerView ._optionTable .sm {color: #888;}
+#TreeViewMakerView ._read{line-height: 1.4;margin: 5px 0 5px 0;}
+
+#TreeViewMakerView ._previewArea { position: absolute; top: 0px; left: 0px; width:53%; height:100%; background:#e7ebf2;}
+#TreeViewMakerView ._previewArea ._inner { position: absolute; top:60px; left: 15px; right:15px; bottom:15px; background: #fff; box-shadow:0px 0px 5px rgba(0,0,0,0.2);}
+#TreeViewMakerView ._previewViewTitle { position: absolute; top: 40px; left:15px;font-weight: bold; }
+#TreeViewMakerView ._previewTextTitle{ position: absolute; top: 40px; left:50%;font-weight: bold; }
+#TreeViewMakerView ._pageSelectArea { position: absolute; top: 10px; left:15px; right:10px; }
+#TreeViewMakerView ._pageURL { float: left; }
+#TreeViewMakerView ._pageURL b { font-size: 14px;background: rgba(255,255,0,0.5); }
+#TreeViewMakerView ._pageListBtn { float: right;margin:-2px 0 0 0; }
+#TreeViewMakerView ._pageListBtn { border-radius:5px; padding: 7px 10px; background: #fff; background: #4A66A0; color: #fff; cursor: pointer;}
+#TreeViewMakerView ._pageListBtn:hover{color: #ffc; }
+#TreeViewMakerView ._pageListFuki { display: none;}
+#TreeViewMakerView ._pageListFuki { position: absolute; top:25px; right:0px; width:200px; max-height: 500px; background: #fff; padding: 10px; line-height: 1.4;}
+#TreeViewMakerView ._pageListFuki { border-radius:5px; box-shadow:0 0 10px rgba(74,102,160,0.4);}
+#TreeViewMakerView ._pageListFuki ul ul { padding: 0 0 0 10px; border-left: 1px solid #ccc;}
+#TreeViewMakerView ._pageListFuki ._dir { padding: 10px 0 2px 0; font-weight: bold;color: #888;}
+#TreeViewMakerView ._pageListFuki ._page { padding: 2px 0; cursor: pointer;}
+#TreeViewMakerView ._pageListFuki ._page._current{background: #ff8;}
+#TreeViewMakerView ._pageListFuki ._page:hover { background: #f2f2f2;}
+#TreeViewMakerView ._pageListFuki ._page:hover._current { background: #ee8;}
+#TreeViewMakerView ._pageListFuki ._state{color: red;font-size: 10px;}
+#TreeViewMakerView ._pageListFuki ._path {font-size: 10px;color: #ccc;}
+
+#TreeViewMakerView ._previewView {float: left;width: 50%;height: 100%;overflow-y: scroll;}
+#TreeViewMakerView ._previewView {background: #fff;}
+#TreeViewMakerView ._previewView_inner {padding: 10px;}
+#TreeViewMakerView ._previewText { float: right;width: 50%;height: 100%;}
+#TreeViewMakerView ._previewText textarea { color: #888; width: 100%; height: 100%; background: #eee; border: none; padding:0;}
+#TreeViewMakerView ._previewText textarea { font-size: 12px;overflow: scroll;}
+
+._previewTreeView {line-height: 1.2;}
+._previewTreeView ._ownCurrent { background:rgba(255,255,0,0.05);border: 1px solid #ee8;}
+._previewTreeView ._ownCurrent ._ownCurrent { background:rgba(255,255,0,0.1);border: 1px solid #ee8;}
+._previewTreeView ._current { background:rgba(255,255,0,0.5);}
+._previewTreeView ._underconst,
+._previewTreeView a{ text-decoration: none;}
+._previewTreeView a:hover{ text-decoration: underline;}
+._previewTreeView ._underconst a{ color:#888;text-decoration: none;}
+._previewTreeView ul ul{margin:2px -1px 10px 5px;}
+._previewTreeView ul ul{border-left: 1px solid #ccc;padding: 0 0 0 10px;}
+._previewTreeView li{padding: 2px;}
+._previewTreeView li._type-dir-toggle > a:first-child {background: #ffc;cursor: pointer;}
+._previewTreeView li._type-dir-toggle > a:first-child:hover{background: #ff8;}
+
+/* ! ---------- TreeViewMakerViewEditor ---------- ---------- ---------- ---------- */
+
+#TreeViewMakerViewEditor { position: absolute; width: 210px; top: 300px; left: 50px; background: #4A66A0; border-radius:5px; padding: 5px; box-shadow:0px 0px 5px rgba(0,0,0,0.4);  color:#6FF;}
+#TreeViewMakerViewEditor textarea {width: 100%; height: 80px; }
+#TreeViewMakerViewEditor ._presets { font-size: 12px; margin: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.2);}
+#TreeViewMakerViewEditor ._btn_preset { padding:2px 2px; margin: 1px; display: inline-block; cursor: pointer;}
+#TreeViewMakerViewEditor ._btn_preset:hover { background: #4A66A0;}
+#TreeViewMakerViewEditor ._btn_rep_id { padding:4px 5px; margin: 1px; display: inline-block; background: rgba(255,255,255,0.1); font-size: 10px; cursor: pointer;}
+#TreeViewMakerViewEditor ._btn_rep_id:hover { background: rgba(255,255,255,0.2);}
+#TreeViewMakerViewEditor ._btn_close { position: absolute; top: -10px; right: -10px; width: 23px; height: 23px; cursor: pointer; background: url(../images/btn_closes.png); background-position:-67px -1px;z-index: 1;}
+#TreeViewMakerViewEditor ._snippets {}
+#TreeViewMakerViewEditor ._snippets ._title {margin: 5px 0;font-size: 10px;}
+#TreeViewMakerViewEditor ._snippets ._inner {padding: 5px;border: 1px solid rgba(255,255,255,0.2);}
+#TreeViewMakerViewEditor ._snippets ._inner {display: none;}
+#TreeViewMakerViewEditor ._snippets:hover ._inner {display: block;}
+#TreeViewMakerViewEditor ._p {margin: 5px 0;line-height: 1.4;font-size: 10px;}
+
+#TreeViewMakerViewEditor {z-index: 10010;}
+#TreeViewMakerView ._header ._dirListFuki {  z-index: 10;}
+#TreeViewMakerView ._header ._tagListFuki {  z-index: 10;}
+#TreeViewMakerView ._pageListFuki {z-index: 10;}
+
+
+
+/* ! ---------- SitemapEditView ---------- ---------- ---------- ---------- */
+
+#SitemapEditView {line-height: 1;}
+#SitemapEditView table._mainList { font-size: 12px;background:#F3F5F8;}
+#SitemapEditView table._mainList th { background: #e7ebf2;padding: 5px;border-top: 1px solid #fff;vertical-align: middle;text-align: center;}
+#SitemapEditView table._mainList td { padding: 0px 4px;vertical-align: middle;}
+
+#SitemapEditView ._tree { font-size:34px; opacity: 0.5;line-height: 1;}
+
+#SitemapEditView tr._dir > td{ border-top: 1px solid #fff;}
+#SitemapEditView tr._page > td{ border-top: 1px solid #fff;}
+
+#SitemapEditView input { font-size: 12px; margin: 0 0 4px 0;}
+#SitemapEditView input._dir {text-decoration: underline;}
+#SitemapEditView input._in_id {color: blue; text-decoration: underline;}
+#SitemapEditView input._in_name {color: #4A66A0; font-size: 12px;font-weight: bold;}
+
+#SitemapEditView input._in_name{width:300px;}
+#SitemapEditView input._in_id{width:150px;}
+#SitemapEditView input._in_tag{width:200px;}
+#SitemapEditView input._in_date{width:100px;}
+
+#SitemapEditView._modalView ._modalBox{left:30px;right:30px;}
+@media screen and (max-width: $breakPointML) {
+	#SitemapEditView input._in_name{width:250px;}
+	#SitemapEditView input._in_id{width:150px;}
+	#SitemapEditView input._in_tag{width:150px;}
+}
+
+@media screen and (max-width: $breakPointMM) {
+	#SitemapEditView input._in_name{width:200px;}
+	#SitemapEditView input._in_id{width:150px;}
+	#SitemapEditView input._in_tag{width:100px;}
+}
+
+#SitemapEditView ._anno{width: 150px;}
+#SitemapEditView ._red{color: red;}
+
+#SitemapEditView .level-0 b {display: inline-block;font-size: 18px;}
+#SitemapEditView table._mainList .level-0 td {padding:5px 0 5px 5px}
+#SitemapEditView ._editFile_dir_wap { font-size: 12px; width: 120px; font-weight: bold; color:#4A66A0; padding: 6px 2px 4px 5px; background: #ffe; display: inline-block; border-radius:5px; box-shadow:0px 0px 5px rgba(0,0,0,0.2); cursor:pointer;}
+#SitemapEditView ._editFile_dir_wap:hover { background: #ffc;}
+#SitemapEditView ._editFile_dir { display: inline-block; width: 95px; white-space: nowrap; overflow: hidden; color:blue; text-decoration: underline; text-overflow: ellipsis;}
+
+/* ! ---------- EmbedTagListView ---------- ---------- ---------- ---------- */
+
+#EmbedTagListView ._modalBox { position: relative; left: 50%; top: 50%; margin-left: -300px; margin-top: -400px; width: 600px; height:800px; box-shadow:0px 0px 5px rgba(0,0,0,0.2);}
+#EmbedTagListView._modalView ._body { top:80px;}
+
+#EmbedTagListView th { padding: 4px;white-space: nowrap;width: 200px;}
+#EmbedTagListView td { padding: 4px;}
+
+#EmbedTagListView ._tabs { position: absolute; top: 40px; left: 0px; right: 0px; padding: 10px 10px 0 10px; background: #e7ebf2;}
+#EmbedTagListView ._tabs:after { display: block; clear: both; height: 0; content: ''; }
+#EmbedTagListView ._tabs ._tab { float:left; border: 1px solid #d1d9e6; border-bottom:none; padding: 10px 20px 5px 20px; line-height: 1; border-radius:5px 5px 0 0; background: #ffffee; margin:0 5px 0 0; cursor: pointer; color:#fff; background: #4A66A0;}
+#EmbedTagListView ._tabs ._tab._active { color:#4A66A0; background: #fff; }
+
+#EmbedTagListView ._note { color: #888; margin: 10px 0 10px 0;}
+#EmbedTagListView mark {background: #ff8;color:inherit;}
+
+#EmbedTagListView ._area_my ._tag_h2 { background: #4A66A0; margin: 20px 0 10px 0; color: #fff; padding: 10px 5px 10px 10px; font-weight: bold; border-radius:2px;}
+#EmbedTagListView ._area_my ._tag_title { margin: 20px 0 10px 0; padding: 0 0 5px 0; font-weight: bold; border-bottom: 2px solid #dbe1eb;}
+#EmbedTagListView ._area_my ._rep_id { display: inline-block; font-size: 12px; color: #ff8; background: #222; font-weight: bold; padding: 5px 10px; border-radius:2px; cursor: pointer; box-shadow:1px 1px 2px rgba(0,0,0,0.2);}
+#EmbedTagListView ._area_my ._rep_id:hover { background: #444; color: #fff;}
+#EmbedTagListView ._localarea { padding: 20px; background: #ffe;}
+#EmbedTagListView ._area_page ._tag_title { margin: 20px 0 10px 0; padding: 0 0 5px 0; font-weight: bold; border-bottom: 2px solid #dbe1eb;}
+#EmbedTagListView ._area_page ._rep_id { display: inline-block; font-size: 12px; background: #4A66A0; color: #00ffff; font-weight: bold; padding: 5px 10px; border-radius:2px; cursor: pointer; box-shadow:1px 1px 3px rgba(74, 102, 160, 0.4);}
+#EmbedTagListView ._area_page ._rep_id:hover { background: #444; color: #fff;}
+
+#EmbedTagListView ._area_file ._tag_title { margin: 40px 0 10px 0; padding: 5px 5px 5px 5px; font-weight: bold; border-left: 5px solid #4A66A0;}
+#EmbedTagListView ._area_file ._sample { line-height: 1.4; background: #333; color: #fff; padding: 10px; margin: 1em; border-radius:2px;}
+
+
+/* ! ---------- ServerInfoView ---------- ---------- ---------- ---------- */
+
+#ServerInfoView {
+	 ._modalBox {
+		left: 50%;
+		top: 50%;
+		margin-left: -450px;
+		margin-top: -330px;
+		width: 900px;
+		height: 660px;
+	}
+ 	._p {
+		line-height: 1.4;
+		margin:1em 0;
+	}
+	._anno{
+		color: red;
+	}
+	._h2 {
+		margin:20px 0 10px 0;
+		padding: 7px;
+		background: #4A66A0;
+		color: #fff;
+		font-weight: bold;
+	}
+	 iframe {
+		border: 1px solid #ddd;
+		width: 100%;
+		height: 250px;
+	}
+}
+

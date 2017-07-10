@@ -1,0 +1,32 @@
+../../
+
+#ルート
+トップ,index.html
+SITEMAP,sitemap.html
+問い合わせ,contact.html
+
+#会社について
+はじめに,html/company.html
+会社概要,html/company_outline.html
+沿革,html/company_histoty.html
+事務所一覧,html/company_office.html
+
+#お知らせ
+お知らせ一覧,html/news.html
+2015/05/05,html/news_20150505.html
+2015/04/04,html/news_20150404.html
+2015/03/03,html/news_20150303.html
+2015/02/02,html/news_20150202.html
+2015/01/01,html/news_20150101.html
+
+#製品案内
+製品案内,html/products.html
+PRODUCTS AA01,html/products_01.html
+PRODUCTS BB01,html/products_02.html
+PRODUCTS CC01,html/products_03.html
+PRODUCTS DD01,html/products_04.html
+
+#採用情報
+募集要項,html/rec_guideline.html
+福利厚生,html/rec_benefits.html
+よくある質問,html/rec_faq.html

@@ -1,0 +1,177 @@
+
+._cellValue { margin: 5px 5px 10px 0;background: red; }
+
+
+/* ---------- ---------- ---------- */
+
+body._cms .cms-imagemap img {width: 100%;}
+body._cms .cms-imagemap ._rect { position:absolute; overflow:hidden; background: rgba(0, 0, 255,0.2); box-shadow:0px 0px 5px rgba(0,0,0,0.2); outline: 1px solid rgba(0,0,0,0.2); cursor: pointer;}
+body._cms .cms-imagemap ._rect:hover { background:rgba(255,255,255,0.2);}
+
+#ImageMapView { position: fixed; top: 0; left: 0; width: 100%; height: 100%; font-size:12px; display: none;}
+#ImageMapView ._bg { cursor: pointer; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(73,103,161,0.95);}
+#ImageMapView ._modalBox { position: fixed; top: 30px; left: 30px; right: 30px; bottom: 10px;}
+#ImageMapView ._header { position: absolute; top: 00px; left: 0px; font-size:18px; color: #00ffff;}
+#ImageMapView ._body { position: absolute; top: 30px; left: 0; right: 0; bottom:60px;}
+
+#ImageMapView ._footer { position: absolute; bottom: 0; left: 0; right: 0; text-align: center;}
+#ImageMapView ._footer ._btn_do { display: inline-block; text-align: center; border-radius:5px; cursor: pointer; padding: 18px 80px 15px 80px; margin: 5px 0; background: #00ffff; color: #4A66A0; font-size:16px;}
+#ImageMapView ._footer ._btn_close { display: inline-block; text-align: center; border-radius:5px; cursor: pointer; padding: 18px 30px 15px 30px; margin: 5px 0; border: 1px solid rgba(0, 255, 255, 0.5); color: #00ffff; font-size:16px;}
+#ImageMapView ._footer ._btn_do:hover { opacity: 0.8;}
+#ImageMapView ._footer ._btn_close:hover { opacity: 0.8;}
+
+/*
+#ImageMapView ._zoomVal { position: absolute; top: 10px; left: 10px; color: #fff; font-size:10px; font-weight: bold;}
+*/
+#ImageMapView ._add_btns { position: absolute; left: 0; bottom: 0; width: 700px; height: 40px;}
+#ImageMapView ._layoutView { position: relative; width: 1020px; height: 640px; background: #444;box-shadow:0px 0px 10px rgba(0,0,0,0.8);outline: 2px solid #00ffff; overflow:hidden;}
+#ImageMapView ._layoutView:after { display: block; clear: both; height: 0; content: ''; }
+#ImageMapView ._imageStageWapper { position: absolute; top: 0px; left: 0px; width:840px; height: 640px; overflow:hidden;}
+#ImageMapView ._imageStageInner { position: absolute; top:20px; left: 20px; right: 20px; bottom: 20px;}
+#ImageMapView ._cms-design-stage {}
+#ImageMapView ._cms-design-stage ._design-item { cursor: pointer;}
+#ImageMapView ._cms-design-stage ._design-item { position: absolute; top: 0px; left: 0px; width:0px; height: 0px;}
+#ImageMapView ._cms-design-stage ._design-item ._design-item-link { position: absolute; top: 0; left: 0; right: 0; bottom: 0; color: #00f; background: rgba(0, 0, 255,0.1); line-height: 1.4; font-size:10px; overflow: hidden;}
+#ImageMapView ._cms-design-stage ._design-item ._design-item-svg { position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
+#ImageMapView ._cms-design-stage ._design-item img { /*width: 100%;*/ }
+#ImageMapView ._cms-design-stage ._design-item._lock { cursor: normal;}
+#ImageMapView ._cms-design-stage ._design-item._lock:hover {box-shadow:none;}
+#ImageMapView ._cms-design-stage ._design-item._hide {display: none;}
+#ImageMapView ._cms-design-stage ._design-item._current ._design-item-in { outline: 1px dashed blue; box-shadow: 0px 0px 5px 2px #ff0;}
+#ImageMapView ._cms-design-stage ._design-item:hover ._design-item-in ._design-item-image:after { display: block; content:"\f03e"; font-family:FontAwesome; font-size:12px; background: #4A66A0;width: 24px; text-align: center; color: #00ffff; padding: 4px 0; position: absolute; top: 0px; left: 0px; border-radius:2px; z-index: 10;}
+
+#ImageMapView ._cms-design-stage ._design-item._hasSub { background: rgba(0, 0, 255,0.05);}
+#ImageMapView ._cms-design-stage ._design-item ._btn_remove { z-index: 1; display: none; position: absolute; top: -8px; right: -8px; width: 20px; height: 20px; background: red; text-align: center; font-size:12px; padding: 3px 0 0 0; color: #fff; border-radius:50%;}
+#ImageMapView ._cms-design-stage ._design-item ._btn_remove:hover {transform: scale(1.2);}
+#ImageMapView ._cms-design-stage ._design-item:hover ._btn_remove { display: block;}
+#ImageMapView ._cms-design-stage ._design-item-in { position: absolute; top: 0; left: 0; right:0; bottom:0;}
+#ImageMapView ._cms-design-stage ._design-item-in { }
+#ImageMapView ._cms-design-stage ._design-item-in:hover {box-shadow:0px 0px 5px rgba(0,0,0,0.4);}
+
+#ImageMapView ._canvas_tools { position: relative; height: 40px; color: #00ffff;}
+#ImageMapView ._canvas_tools input { background: #336; color: #00ffff; border:none; margin: 0 2px; text-align: center;}
+#ImageMapView ._canvas_tools ._right_area { float: right;}
+#ImageMapView ._canvas_tools ._top_area { position: absolute; top: -40px; right: 0px;}
+#ImageMapView ._canvas_tools ._move { padding: 4px 6px;cursor: pointer;}
+#ImageMapView ._canvas_tools ._move:hover {background: rgba(0,0,0,0.2);}
+
+#ImageMapView ._layersView { position: absolute; top: 0px; right: 0px; bottom: 0px; width: 180px; padding: 5px 0; background: rgba(0,0,0,0.1); color: #ddd; line-height: 1.4; overflow: scroll;}
+#ImageMapView ._layersView ._layer { padding: 5px; font-size:12px; border-bottom: 2px solid #444; cursor: pointer;}
+
+#ImageMapView ._layersView ._layer._current { background: rgba(255,255,0,0.5);}
+#ImageMapView ._layersView ._layer i{font-size:14px;padding: 2px;color: #ddd;}
+#ImageMapView ._layersView ._layer ._btn_hide_on{color: #aaa;}
+#ImageMapView ._layersView ._layer ._btn_hide_off{color: #000;}
+#ImageMapView ._layersView ._layer ._btn_lock_on{color: #000;}
+#ImageMapView ._layersView ._layer ._btn_lock_off{color: #aaa;}
+#ImageMapView ._layersView ._layer ._lock { float: right;}
+#ImageMapView ._layersView ._layer ._sub { font-size:10px; line-height: 1.4; padding: 0.2em 0 0 2.5em; color: #aaa;}
+#ImageMapView ._btn { display: inline-block; box-sizing: border-box; text-align: center; border-radius:5px; cursor: pointer; padding: 7px 10px 5px 10px; margin: 5px 0; background: #00ffff; color: #4A66A0; font-size:12px;}
+
+#ImageMapView .ui-resizable { position: relative;}
+#ImageMapView .ui-resizable-handle { position: absolute; font-size: 0.1px; display: block; -ms-touch-action: none; touch-action: none;}
+#ImageMapView .ui-resizable-disabled .ui-resizable-handle,
+#ImageMapView .ui-resizable-autohide .ui-resizable-handle { display: none;}
+#ImageMapView .ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0;}
+#ImageMapView .ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0;}
+#ImageMapView .ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%;}
+#ImageMapView .ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%;}
+#ImageMapView .ui-resizable-se { cursor: se-resize; width: 16px; height: 16px; right: 3px; bottom: 3px;}
+#ImageMapView .ui-resizable-se { display: none; opacity: 1;}
+
+#ImageMapView .ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px;}
+#ImageMapView .ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px;}
+#ImageMapView .ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
+
+#ImageMapView ._design-item:hover .ui-rotatable-handle { display: block;}
+#ImageMapView ._design-item:hover .ui-resizable-se { display: block;}
+#ImageMapView ._design-item._lock:hover .ui-resizable-se { display: none;}
+#ImageMapView ._design-item._lock:hover .ui-rotatable-handle { display: none;}
+#ImageMapView .ui-rotatable-handle { display: none; position: absolute; height: 16px; width: 16px; cursor: pointer; left: 3px; bottom: 3px; z-index: 1;}
+
+#ImageMapView .ui-resizable-se { background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxNi8wNy8xMDVr2zwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAABSklEQVQ4jaWSQUsCQRiGn7GQDnssvIWtl8QOSb8gdFdyb4L0SzwEXbaTYD+lqxB26CQ44EXonnRSEOzQIXY3vg7tyri5UvieZmCeZ775vlEiwi7J7UQD+8lCKVUAzoDDDec+gDfgNV6zqlxEkk1NMhJF0ZfW+qler9uJccUZgutN8GQyeW+1WvfABWD9WbBcLsNer/cMXAEFYC9mrUajUQSsTMF0Ov0sl8u3wClwYPQiB1S11gOgkinodDoPgM3vHHme1w3DMAKaaUFbRGQ4HM6BSyCfgvOAMx6PF/IDtNOCZhAEkeM4dxmjLPm+30+qjCteE1RGo9EjcM76B8sDJdu2b2azWbBNYLmuWzRGlYu77/i+3zfhLIEZC6h6ntdN3pzOVoHrukWt9SAMw2gTHAtqIoJKYKVUuoIT4Nh4kpkF8CIic5W+/b/5BrqPai1MdCAXAAAAAElFTkSuQmCC);}
+#ImageMapView .ui-rotatable-handle { background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxNi8wNy8xMDVr2zwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAABmUlEQVQ4ja2TMWtaURTHfy+xoVJCm6F2aejQGGweBLpVpF2yXJNBKJQ4mC/g0k8Qd3F+xKEfoHRwerqWOLgWBxWKkwlXJApph+KL93k6eA0mdFCaAxcul3t+55z/n+OICA8RUWAvmUweAbvAxirJa4BbLpe/TyaTsFQqfQO2VwFspdPp0yAIpiIinU7nCnBXAez7vt8VETHGTHO53BnwYhWA0lqPRUTq9foVcACsL5u8BjyJxWIbAO12+wLoA+GygMgSf9aZjbQDPAUcW2AE/FxmhMeFQuHzcDj8MxgMbuan1+v9ApIA+9Vq9VbEbDb7BXi9AHnkuu5Rq9W6lnsBfATYUkrd2tjv928s5ICZnS7wKZPJnBtj7gOOHSvkG8/zzvL5/HuAMAyl0WiMrKiSSCReplKp55FIxFkUx3Gc7PweBd55nnc+7+RfEQRBWCwW281m87ft4HARGAVcpdSp7/tdrfXYGDM1xky11uNardZVShWAD/F4/KRSqXwFEndassK9At4yW6pn9v3aWvYDuLR2bgIj53/X+S9/UAAMkfXOywAAAABJRU5ErkJggg==);}
+
+#ImageMapView ._cms-design-stage ._design-item._hide_handle{}
+#ImageMapView ._cms-design-stage ._design-item._hide_handle:hover .ui-resizable-se { right: 0px; bottom: 0px;transform: scale(0.5);}
+#ImageMapView ._cms-design-stage ._design-item._hide_handle:hover .ui-rotatable-handle { display: none;}
+#ImageMapView ._cms-design-stage ._design-item._hide_handle:hover ._btn_remove { display: none;}
+
+
+/* ! ---------- ImageMapInspectView ---------- ---------- ---------- ---------- */
+
+#ImageMapInspectView {display: none; position: absolute; top:120px; left: 1020px; right: 0px; width: 210px; background: #222; color: #888; font-size:12px; border-radius:5px; border-top: 2px solid #555; border-left: 1px solid #555; box-shadow:1px 1px 5px rgba(0,0,0,0.4);}
+#ImageMapInspectView ._header { cursor: move; height: 25px;}
+#ImageMapInspectView ._header ._dragBar { position: absolute; top: 7px; left: 10px; right: 5px; height: 12px; background: url("../images/bg_dragbar.png") center center repeat-x; display: inline-block; opacity: 0.5;}
+#ImageMapInspectView ._header:hover ._dragBar { opacity: 1;}
+#ImageMapInspectView ._header ._inspect_title { position: absolute; display: inline-block; padding: 7px 4px 0 4px; background: #222; border-radius:5px 5px 0 0;}
+
+#ImageMapInspectView textarea._in_text,
+#ImageMapInspectView textarea._in_html,
+#ImageMapInspectView textarea._in_svg{height: 60px;}
+
+#ImageMapInspectView th {padding:6px 2px 2px 0;}
+#ImageMapInspectView td {padding:2px;font-size:12px;color: #888;}
+#ImageMapInspectView input { margin:0 1px 0 0; font-size:11px;}
+
+#ImageMapInspectView ._body_com {padding: 7px 7px 14px 7px;}
+#ImageMapInspectView ._body_uni {padding: 0 7px 14px 7px;background: #111;}
+#ImageMapInspectView ._body_com ._subtitle { margin: 5px -7px 5px -7px; padding: 0 0 0 7px; font-weight: bold;}
+#ImageMapInspectView ._body_uni ._subtitle { margin: 5px -7px 5px -7px; padding: 10px 0 0 7px; border-top: 1px solid #666; font-weight: bold;}
+#ImageMapInspectView ._em_box { margin: 5px 0; padding: 5px; border: 1px solid #444; color: #ccc; border-radius:2px;}
+#ImageMapInspectView ._em_box_read { margin: 5px 0; color: #888;line-height: 1.2;}
+
+#ImageMapInspectView ._type_in {}
+#ImageMapInspectView ._in_data_image { display: inline-block; padding: 3px; box-shadow:0px 0px 5px rgba(0,0,0,0.4); cursor: pointer; border: 5px solid #666;}
+#ImageMapInspectView ._in_data_image img { min-width:40px; max-width:100px; max-height: 40px;}
+#ImageMapInspectView ._in_data_image_path { display: inline-block; color:yellow; text-decoration: underline; cursor: pointer;}
+
+#ImageMapInspectView ._btn_check_visible,
+#ImageMapInspectView ._btn_check_hidden { font-size:16px;}
+
+#ImageMapInspectView ._basic_tabs {margin: 5px -8px 5px -8px;border-bottom: 1px solid #666;}
+#ImageMapInspectView ._basic_tabs:after { display: block; clear: both; height: 0; content: ''; }
+#ImageMapInspectView ._basic_tab {width: 45%;margin: 0 0 -1px 3%;float: left;border: 1px solid#666;border-bottom:none;text-align: center;padding: 7px 0;}
+#ImageMapInspectView ._basic_tab._current {border-bottom: 1px solid #222;padding: 10px 0 4px 0;}
+
+#ImageMapInspectView ._preview {padding: 3px;background: #222;border-top: 2px solid #666;}
+#ImageMapInspectView ._miniPreviw {line-height: 1.2;font-weight: normal;font-size: 12px;height:42px;overflow: hidden;color: #666;}
+#ImageMapInspectView ._miniPreviw:hover { color: #ccc; }
+
+#ImageMapInspectView ._footer {background: #222;padding: 2px 0 2px 0;border-top: 1px dotted #888;border-radius: 0 0 10px 10px;}
+#ImageMapInspectView ._footer table {margin: 0 auto;width: 195px;}
+#ImageMapInspectView ._footer table td{padding: 0;}
+
+#ImageMapInspectView ._hoverSet { position: relative;}
+#ImageMapInspectView ._hoverSet ._hoverItems { display: none; position: absolute; top:-6px; left:-1px; background: #333; box-shadow: 0 0 5px rgba(51,102,153,0.8); padding: 5px 0; border-radius:3px;}
+#ImageMapInspectView ._hoverSet ._hoverItems { border: 1px dotted #666;}
+#ImageMapInspectView ._hoverSet:hover ._hoverItems { display: block;}
+#ImageMapInspectView ._hoverSet:hover ._hoverItems span { display: block;}
+#ImageMapInspectView ._btn_wide {margin-top: 8px;padding: 10px 5px;text-align: center;background: #333;color: #ccc;border-radius:2px;cursor: pointer;}
+
+
+/* ! ---------- #InputCnadidate ---------- ---------- ---------- ---------- */
+
+#InputCnadidate { position: absolute; top: 15px; left: 10px; padding: 5px; min-width: 80px; background: #fff; color: #4A66A0; font-size:12px; border-radius:2px; box-shadow:0px 0px 5px rgba(0,0,0,0.4);}
+#InputCnadidate ._candidate_item { padding: 4px 0; cursor: pointer;line-height: 1;}
+#InputCnadidate ._candidate_item:hover { background: #eee;}
+
+
+/* ! ---------- #ColorPickerView ---------- ---------- ---------- ---------- */
+
+#ColorPickerView { display: none; position: absolute; top: 0px; left: 0px; padding: 10px; background: #fff; color: #4A66A0; font-size:12px; border-radius:2px; box-shadow:0px 0px 10px rgba(0,0,0,0.4);}
+#ColorPickerView canvas {cursor: pointer;}
+#ColorPickerView ._color_preview { padding: 5px; color: #fff; border: 1px solid #eee; height: 24px;}
+#ColorPickerView ._btn_reset { border: 1px solid #eee; border-bottom: 1px solid #ddd; margin-top: 5px; padding: 7px; border-radius:5px; text-align: center; font-size:12px; cursor: pointer;}
+#ColorPickerView ._btn_reset:hover {background: #f2f2f2;}
+
+
+/* ! ---------- CMSテスト用 ---------- ---------- ---------- ---------- */
+
+._cms_test_conteiner { padding: 15px; margin: 10px 0; background: #fff; box-shadow:0px 0px 5px rgba(0,0,0,0.2);}
+._cms_test_h2 {
+	font-weight: bold;
+	margin: 20px 0 10px 0;
+	background: #e7ebf2;
+	padding: 5px;color: #4A66A0;
+}

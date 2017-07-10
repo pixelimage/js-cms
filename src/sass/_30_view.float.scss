@@ -1,0 +1,177 @@
+
+/* ! ---------- #AddElements ---------- ---------- ---------- ---------- */
+
+#AddElements { position: absolute; width:110px; left: 0; bottom: 10px; height: 40px; z-index: 10;}
+#AddElements:before { content:""; position: absolute; top: -2px; left: 8px; height: 44px; background: rgba(255,255,255,0.8);}
+#AddElementsArrow { cursor: pointer; position: absolute; top: 0; left:10px; background: #4A66A0; color: #0ff; font-size: 12px; width: 125px; line-height: 40px;}
+#AddElementsArrow ._icon { display: inline-block; text-align: center; width: 40px; height: 40px;}
+#AddElementsArrow ._text { display: inline-block; position: absolute; top: 0px; left: 40px; height: 40px;}
+#AddElementsArrowClose { display: none; cursor: pointer; position: absolute; top: 0; left:10px; background: #3b85b3; color: #0ff; font-size: 12px; line-height: 40px; text-align: center; width: 40px;}
+body._showAddPanel #AddElements { width:740px;}
+
+/* ! ---------- #AddElementsView ---------- ---------- ---------- ---------- */
+
+
+#AddElementsView {
+	display: none;
+	position: absolute;
+	top:0;
+	left:50px;
+	width:390px;
+	background: #4A66A0;
+	height: 40px;
+	transition-duration: 0.2s;
+	font-size: 14px;
+	line-height: 1;
+	&.hover { width:780px; left:-40px; height: 165px; top:-115px; border: 1px solid #fff;}
+	._mouseArea { position: absolute; top:0px; width: 100%; height:40px;}
+	._core { position: absolute; height: 165px; overflow: hidden; opacity: 0; transition-duration: 0.2s;}
+	&.hover ._core { width: 1000px; opacity: 1;}
+	&.hover ._text_block_add { display: none;}
+	._btn { float: left;}
+	._btn:first-child { margin-top: -7px;}
+	
+	._text_block_add { position: absolute; top:0px; height:40px;}
+	._help-icon { position: absolute; top: 0px; right: 0px; color: #80FF00; padding: 3px 6px 3px 5px; border-radius:0 0 0 5px;}
+	._help-icon:hover { color: #4A66A0; background: #80FF00;}
+}
+
+#AddElementsBtnSet {
+	display: none;
+	position: absolute;
+	left:445px;
+	height: 40px;
+	font-size: 14px;
+	line-height: 1;
+	._btn { position: relative; float: left; margin: 0 5px 0 0; color: #fff; text-align: center; background: #4A66A0; height: 40px; cursor: pointer;}
+	._help-icon { position: absolute; top: 0px; right: 0px; color: #80FF00; padding: 3px 6px 3px 5px;}
+	._help-icon:hover { color: #4A66A0; background: #80FF00;}
+}
+	
+._showAddPanel {
+	#AddElementsArrow { display: none;}
+	#AddElementsArrowClose { display: block;}
+	#AddElementsView { display: block;}
+	#AddElementsBtnSet { display: block;}
+}
+
+/* ! ---------- Float_DateInputView ---------- ---------- ---------- ---------- */
+
+#Float_DateInputView { position: fixed; top: 100px; left: 100px; background: #4A66A0; border-radius: 10px; box-shadow: 0 0 10px rgba(74,102,160,0.8); color:#6FF;}
+#Float_DateInputView ._body { padding: 5px}
+#Float_DateInputView ._btn_close { position: absolute; top: -10px; right: -10px; width: 23px; height: 23px; cursor: pointer; background: url(../images/btn_closes.png); background-position:-67px -1px;}
+
+
+/* ! ---------- #Float_PreviewFull ---------- ---------- ---------- ---------- */
+
+#Float_Preview ._title { font-size: 14px;font-weight: bold;}
+#Float_Preview ._gID { font-size: 12px;}
+#Float_Preview ._date {}
+#Float_Preview ._m { color:#23CACA;color:#999;}
+
+#Float_PreviewTab { -webkit-transition-duration: 0.1s; transition-duration: 0.1s;}
+#Float_PreviewTab { position: fixed; top:0px; background: #4A66A0; font-size: 11px; color:#0ff;}
+#Float_PreviewTab ._inner { padding: 5px 10px 7px 5px;}
+
+#Float_PreviewMini{ -webkit-transition-duration: 0.1s; transition-duration: 0.1s;}
+#Float_PreviewMini { min-width: 250px; position: fixed; top: 100px; background: #fff; font-size: 10px; line-height: 1.4; color:#4A66A0; border-radius:5px; box-shadow: 0 0 10px rgba(74,102,160,0.4);}
+#Float_PreviewMini ._fuki { padding: 10px; }
+#Float_PreviewMini ._btn_preview_open { background: #4A66A0; color:#00ffff; padding: 5px; border-radius:2px; text-align: center; font-size: 12px; font-weight: bold; margin: 5px 0 0 0;}
+
+#Float_PreviewFull { position: fixed; top: 40px; bottom: 0px; background:#444; box-shadow: 2px 2px 8px rgba(0,0,0,0.4) inset; font-size: 10px; line-height: 1.6; color:#ccc;}
+#Float_PreviewFull ._arrow { position: absolute; top: 0px; left: -10px; width:10px; height:5px; box-sizing: border-box; border: 5px solid transparent; border-right: 5px solid #222;}
+#Float_PreviewFull ._zoomArea { padding: 10px 0 0 15px; font-size:12px; color: #999;}
+#Float_PreviewFull ._zoomArea:after { display: block; clear: both; height: 0; content: '';}
+#Float_PreviewFull ._zoomArea ._btnSet { float: left; margin: 0 10px 0 0;}
+#Float_PreviewFull ._inner { position: absolute; top: 35px; left: 15px; right: 15px; bottom: 55px;}
+#Float_PreviewFull ._inner ._infoArea { position: absolute; top: 0px; left: 0px; right: 0px; height: 100px;}
+#Float_PreviewFull ._inner ._infoArea ._title { font-size:16px;line-height: 1.2;}
+#Float_PreviewFull ._inner ._iframeArea { position: absolute; top: 100px; left: 0px; right: 0px; bottom: 0px;}
+#Float_PreviewFull ._inner ._iframeArea:after { display: block; clear: both; height: 0; content: ''; }
+#Float_PreviewFull ._inner ._iframeDiv { height: 100%; float:left;}
+#Float_PreviewFull ._inner ._iframeDiv iframe { width: 100%; height: 100%; -ms-transform-origin: 0 0; transform-origin: 0 0; -ms-transform:scale(1); transform:scale(1);}
+#Float_PreviewFull ._btn_preview_close { position: absolute; left: 15px; right: 15px; bottom: 15px; background: #ccc; color:#000; padding: 7px; border-radius:2px; text-align: center; font-size: 12px; font-weight: bold; margin: 5px 0 0 0;}
+
+#codeFrame { width: 100% }
+
+/* ! ---------- FreeLayoutInfoView ---------- ---------- ---------- ---------- */
+
+#FreeLayoutInfoView { display: none; position: absolute; top: 0px; left: 0px;}
+#FreeLayoutInfoView { z-index: 1000;}
+#FreeLayoutInfoView { background: #e7ebf2; color: #4A66A0; padding: 8px; box-sizing: border-box; font-size: 14px; min-width: 60px; border: 1px solid #c2cfe0; box-shadow:0 0 4px rgba(0,0,0,0.2); border-radius:2px;}
+#FreeLayoutInfoView ._inner { padding: 10px 0 0 0;}
+#FreeLayoutInfoView ._item { border-top: 1px solid #ddd; padding: 8px; cursor: pointer;}
+#FreeLayoutInfoView ._item:hover { background: rgba(255,255,255,0.5);}
+#FreeLayoutInfoView ._item._disable { cursor: normal; color: #888;}
+#FreeLayoutInfoView ._item._disable:hover { background: none;}
+#FreeLayoutInfoView ._block_btn { display: inline-block; background: #4A66A0; color: #fff; padding: 4px 6px; border-radius:2px;}
+#FreeLayoutInfoView ._item-title { border-top: 1px solid #ddd; padding: 8px;}
+#FreeLayoutInfoView ._item-body { margin: 0 0 5px 10px; padding: 0 0 0 5px;}
+#FreeLayoutInfoView ._item-body ._item { padding:5px; border-top: none;}
+#FreeLayoutInfoView ._note { margin:5px 0 0 0; line-height: 1.4; opacity: 0.5;font-size:12px;}
+#FreeLayoutInfoView kbd { float: right; background:rgba(54,105,161,0.15); margin-left:5px;}
+
+
+/* ! ---------- tooltip ---------- ---------- ---------- ---------- */
+
+._input-with-btns { position: relative;line-height: 1 }
+._input-with-btns ._btns { position: absolute; bottom: 2px; right: 2px; text-align: right;}
+._input-with-btns._input-textarea ._btns { bottom: 4px;}
+._input-with-btns ._btn_input { display: inline-block; background: #4A66A0; color: #6FF; padding:5px 8px; font-size: 12px; border-radius: 2px; cursor: pointer;}
+._input-with-btns ._btn_input:hover { background: #6a93e8;}
+._input-with-btns ._btn_input-red { background: red; color: #fff;}
+
+#ImageMapInspectView ._input-with-btns ._btn_input{background: #666; color: #fff; }
+
+._checkboxs { margin: 0 0 ;font-size: 12px;}
+._checkboxs ._checkboxs_inner { border: 1px solid #e7ebf2; display: inline-block; border-radius: 5px; }
+._checkboxs ._m { display: inline-block; padding:7px 5px; margin: 0 2px 2px 0; }
+._checkboxs ._checkbox { display: inline-block; padding:7px 5px; cursor: pointer; background:#ffffee;}
+._checkboxs ._checkbox._active{ background: #4A66A0;color:#e7ebf2; }
+
+
+/* ! ---------- 注釈 ---------- ---------- ---------- ---------- */
+
+[data-tooltip] { position: relative;z-index: 20;}
+[data-tooltip]:after { position: absolute; top: -25px; left: -5px; display: none; height: 17px; padding: 7px 4px 0 7px; font-size: 12px; font-weight: bold; line-height: 12px; content: attr(data-tooltip); white-space: nowrap; background: #fff;}
+[data-tooltip]:hover:after { display: block;}
+[data-tooltip2] { position: relative;}
+[data-tooltip2]:after { position: absolute; top: -30px; left: -30px; display: none; height: 17px; padding: 7px 4px 0 7px; font-size: 12px; font-weight: bold; line-height: 12px; content: attr(data-tooltip2); white-space: nowrap; background: #fff;}
+[data-tooltip2]:hover:after { display: block;}
+
+
+/* ! ---------- ショートカットキー ---------- ---------- ---------- ---------- */
+
+kbd { display: inline-block; padding: 3px 4px 1px 4px; border-radius:2px; box-shadow:0 0 1px rgba(0,0,0,0.2); font-size: 10px; line-height: 1; background: #e7ebf2; color: #4A66A0; font-weight: bold;}
+[data-ks-bottom],[data-ks-top],[data-ks-right] { position: relative;}
+[data-ks-bottom]:before,
+[data-ks-top]:before,
+[data-ks-right]:before {
+	display: none;
+	position: absolute;
+	padding: 3px 4px 1px 4px;
+	border-radius:2px;
+	box-shadow:1px 1px 3px rgba(0,0,0,0.6);
+	font-size: 10px;
+	min-width: 45px;
+	line-height: 1;
+	background: #e7ebf2;
+	color: #4A66A0;
+	font-weight: bold;
+	z-index: 100000;
+}
+[data-ks-top]:before {
+	top: -16px;
+	left: -3px;
+	content: attr(data-ks-top);
+}
+[data-ks-bottom]:before {
+	top: -8px;
+	left: -3px;
+	content: attr(data-ks-bottom);
+}
+[data-ks-right]:before { top:5px; left:-100%; content: attr(data-ks-right);}
+[data-ks-bottom]:hover:before,
+[data-ks-top]:hover:before,
+[data-ks-right]:hover:before { display: block; opacity: 1;}
+

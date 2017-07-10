@@ -1,0 +1,225 @@
+{
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.img",
+						"data": {
+							"img": "width:960,height:300",
+							"link": null,
+							"isZoom": false,
+							"isLayoutMode": false,
+							"layout": {},
+							"onlyImgTag": false
+						},
+						"extra": {
+							"caption": "",
+							"width": "100%",
+							"margin": "",
+							"layout_width": ""
+						},
+						"attr": {
+							"css": "default  frame",
+							"class": "default  frame"
+						}
+					},
+					{
+						"type": "tag.margin",
+						"data": "40px",
+						"attr": {
+							"css": "default",
+							"narrow": "",
+							"class": "default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "layout.cols",
+						"data": [
+							{
+								"type": "layout.div",
+								"attr": {
+									"style": ""
+								},
+								"data": [
+									{
+										"type": "tag.heading",
+										"data": {
+											"heading": "h3",
+											"main": {
+												"text": "お知らせ",
+												"link": null
+											},
+											"right": {
+												"text": "一覧へ {{-}}",
+												"link": {
+													"href": "html/news.html",
+													"target": ""
+												}
+											}
+										},
+										"attr": {
+											"css": "default mt0",
+											"narrow": "",
+											"class": "default mt0",
+											"hide": ""
+										}
+									},
+									{
+										"type": "object.news",
+										"data": {
+											"setting": {
+												"texts": {
+													"max": "{no}"
+												},
+												"grid": []
+											},
+											"news": {
+												"texts": {},
+												"grid": [
+													{
+														"publicData": "1",
+														"date": "2015/03/03",
+														"t1": "お知らせタイトルサンプル",
+														"t2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+														"anchor": {
+															"href": "html/news_20150505.html",
+															"target": ""
+														},
+														"_state": []
+													},
+													{
+														"publicData": "1",
+														"date": "2015/02/02",
+														"t1": "お知らせタイトルサンプルサンプル",
+														"t2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+														"anchor": {
+															"href": "html/news_20150505.html",
+															"target": ""
+														},
+														"_state": []
+													},
+													{
+														"publicData": "1",
+														"date": "2015/01/01",
+														"t1": "お知らせタイトルサンプル",
+														"t2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+														"anchor": {
+															"href": "html/news_20150505.html",
+															"target": ""
+														},
+														"_state": []
+													}
+												],
+												"_state": {
+													"currentRow": -1,
+													"currentPage": 0,
+													"fitWide": true,
+													"hideCols": "1,1,1"
+												}
+											}
+										},
+										"attr": {
+											"css": "default sizeM ",
+											"narrow": "",
+											"class": "default sizeM ",
+											"hide": "",
+											"id": "news"
+										}
+									}
+								]
+							},
+							{
+								"type": "layout.div",
+								"attr": {
+									"style": ""
+								},
+								"data": [
+									{
+										"type": "object.images",
+										"data": {
+											"list": {
+												"texts": {},
+												"grid": [
+													{
+														"publicData": "1",
+														"image": {
+															"mode": "simple",
+															"path": "width:200,height:80",
+															"width": "",
+															"ratio": ""
+														},
+														"anchor": {
+															"href": "",
+															"target": ""
+														},
+														"_state": []
+													},
+													{
+														"publicData": "1",
+														"image": {
+															"mode": "simple",
+															"path": "width:200,height:80",
+															"width": "",
+															"ratio": ""
+														},
+														"anchor": {
+															"href": "",
+															"target": ""
+														},
+														"_state": []
+													},
+													{
+														"publicData": "1",
+														"image": {
+															"mode": "simple",
+															"path": "width:200,height:80",
+															"width": "",
+															"ratio": ""
+														},
+														"anchor": {
+															"href": "",
+															"target": ""
+														},
+														"_state": []
+													}
+												],
+												"_state": {
+													"currentRow": -1,
+													"currentPage": 0,
+													"fitWide": true,
+													"hideCols": ""
+												}
+											}
+										},
+										"extra": {
+											"width": "200px",
+											"height": "",
+											"float": "",
+											"margin": "0 0 10px 0"
+										},
+										"attr": {
+											"css": "default",
+											"class": "default"
+										}
+									}
+								]
+							}
+						],
+						"attr": {
+							"css": "col-p40",
+							"narrow": "",
+							"class": "col-p40",
+							"hide": ""
+						}
+					}
+				]
+			}
+		]
+	},
+	"meta": {}
+}

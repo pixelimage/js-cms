@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="" class="">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>GRID</title>
+
+<link href="./css/grid.css" rel="stylesheet" type="text/css" />
+<script>
+var userAgent = window.navigator.userAgent.toLowerCase();
+var isIE = false;
+if (userAgent.indexOf('msie') != -1) { isIE = true;}
+if (userAgent.indexOf('trident') != -1) { isIE = true;}
+if (userAgent.indexOf('edge') != -1) { isIE = true;}
+if (isIE) {
+	document.querySelector('html').classList.add("blowser_ie");
+}
+</script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="./grid_setting.js"></script>
+<script type="text/javascript" src="./js/grid_body.js"></script>
+
+</head>
+<body class="previewBody">
+<div id="FrameView"></div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<codes>
+
+<item><id>mailform.php</id><code><![CDATA[<?php
+
+/* ---------- ---------- ---------- */
+
+$mailTo = "{MAIL}";
+
+$_setting = <<<EOT
+{
+	"forms":[
+{FORMS}
+	]
+}
+EOT;
+
+/* ---------- ---------- ---------- */
+
+$isDev = false;
+
+if($isDev){
+	ini_set( "display_errors", 1 ); 
+	error_reporting(E_ALL & ~E_NOTICE);
+	header("Access-Control-Allow-Origin:*");
+}
+
+header("Content-Type: application/json; charset=utf-8");
+
+if (get_magic_quotes_gpc()) {
+  function strip_magic_quotes_slashes($arr) {
+    return is_array($arr) ?
+      array_map("strip_magic_quotes_slashes", $arr) :
+      stripslashes($arr);
+  }
+  $_GET     = strip_magic_quotes_slashes($_GET);
+  $_POST    = strip_magic_quotes_slashes($_POST);
+}
+
+/* ---------- ---------- ---------- */
+//メイン処理
+
+//設定データ処理
+$setting = json_decode($_setting);
+if(!isset($setting)) showError("設定が正しくありません。");
+checkReferer();
+checkSendMailAddress($mailTo);
+//入力データ処理
+//$_input = file_get_contents("test.json");
+$_input = $_POST["json"];
+$input = json_decode($_input);
+if(!isset($input))showError("送信内容が正しくありません。");
+
+//メイン処理
+$message = createMessage($setting->forms); 
+sendEmail($mailTo,$message);
+exit();
+
+/* ---------- ---------- ---------- */
+//共通処理
+
+function createMessage($list){
+	$s = '';
+	for ($i = 0; $i < count($list); $i++) {
+		$type = $list[$i]->type;
+		if($type != "html" && $type != "embed"){
+			$val = getValue_($list[$i]);
+			checkType($list[$i]->type,$val);
+			$s.= "\n●".$list[$i]->label."\n";
+			$s.= "\t".$val."\n";
+		}
+	}
+	$s .= "\n";
+	$s .= "---------- ---------- ---------- ---------- \n";
+	$s .= "送信元サイト : ".$_SERVER["HTTP_HOST"]."\n";
+	$s .= "送信日時 : ".date("Y/m/d (D) H:i:s",time())."\n";
+	$s .= "送信者IPアドレス : ".@$_SERVER['REMOTE_ADDR']."\n";
+	$s .= "送信者ブラウザ : ".$_SERVER["HTTP_USER_AGENT"]."\n";
+	$s .= "---------- ---------- ---------- ---------- \n\n";
+	return $s;
+}
+function checkType($t,$s){
+	if($s == "")return;
+	if($t == "email") checkMailAddress($s);
+	if($t == "tel") checkTel($s);
+	if($t == "url") checkURL($s);
+	if($t == "number") checkNumber($s);
+}
+function getValue_($sett){
+	global $input;
+	$t = $sett->type;
+	$n = $sett->id;
+	if(! isset($input->$n)) showError("設定が正しくありません。");
+	if($sett->req == "1"){
+		if(empty($input->$n)) showError("未記入の必須入力項目があります。");
+	}
+	return $input->$n;
+}
+function sendEmail($mail,$message){
+	global $isDev;
+	if($isDev){
+		file_put_contents('sendmail/'.date('Ymd_H-i-s').'.txt',$message);
+		showSuccess();
+	}
+	mb_language("ja");
+	mb_internal_encoding("UTF-8");
+	$title = '問い合わせメール ( '.$_SERVER["HTTP_HOST"].' )';
+	$header = 'From: '.$mail;
+	if(mb_send_mail($mail, $title, $message, $header)){
+		showSuccess();
+	} 
+		showError("メールを送信できませんでした。");
+	}
+
+/* ---------- ---------- ---------- */
+
+function showSuccess (){
+	$out = array(); 
+	$out["result"] = "success";
+	echo(json_encode($out));
+	exit();
+}
+function showError ($s){
+	$out = array(); 
+	$out["result"] = "error";
+	if(isset($s)){
+		$out["text"] = $s;
+	}
+	echo(json_encode($out));
+	exit();
+}
+
+/* ---------- ---------- ---------- */
+
+function checkReferer(){
+	$domain = (empty($_SERVER["HTTPS"])?"http://":"https://").$_SERVER["HTTP_HOST"];
+	if(strpos($_SERVER['HTTP_REFERER'],$domain) === false){
+		showError("使い方がただしくありません。");
+	}
+}
+function checkSendMailAddress($s){
+	if($s == "sample@example.com"){
+		showError("メール設定がサンプルのアドレスのままです。実在のメールアドレスを設定してください。");
+	}
+	checkMailAddress($s);
+}
+function checkMailAddress($s){
+	if (preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $s)) {
+	   return true;
+	}
+	showError("メール設定が正しくありません。正しいメールアドレスを設定してください。");
+}
+function checkURL($s){
+	if (preg_match('/^(https?|ftp)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)$/',$s)) {
+	   return true;
+	}
+	showError("URLが正しくありません。");
+}
+function checkTel($s){
+	if (preg_match( "/^0\d{1,5}-?\d{0,4}-?\d{4}$/", $s)) {
+	   return true;
+	}
+	showError("電話番号が正しくありません");
+}
+function checkNumber($s){
+	if (preg_match( "/^[0-9]+$/", $s)) {
+	   return true;
+	}
+	showError("入力内容が正しくありません");
+}
+
+
+]]></code></item>
+
+<item><id>block.replace.js</id><code><![CDATA[(function(list,id,isPub){ 
+/*
+テンプレートを使わずに、JavaScriptで直接、
+HTMLコードを生成できます。テンプレートでは
+表現しきれない、複雑なHTMLコードを生成できます。
+*/
+var __ = [];
+	__.push('<ul id="'+id+'" class="clearfix commonHeight">');
+	for (var i = 0; i <  list.length ; i++) {
+		__.push('<li class="cms-blocklink">');
+		__.push('	<div class="inner clearfix">');
+		__.push('		<div class="images">');
+		__.push(_cms.getImageTag(list[i],isPub));
+		__.push('		</div>');
+		__.push('		<div class="texts">');
+		if(list[i].anchor.href){
+		__.push('			<p class="t1"><a href="'+list[i].anchor.href+'">'+list[i].a1+'</a></p>');
+		} else{
+		__.push('			<p class="t1">'+list[i].a1+'</p>');
+		}
+		__.push('			<p class="t2">'+list[i].a2+'</p>');
+		__.push('		</div>');
+		__.push('	</div>');
+		__.push('</li>');
+	}
+	__.push('</ul>');
+	return __.join("\n");
+});
+
+]]></code></item>
+
+
+<item><id></id><code><![CDATA[]]></code></item>
+
+</codes>
+

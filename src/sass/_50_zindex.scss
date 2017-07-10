@@ -1,0 +1,64 @@
+
+#CMS_Header{ z-index: 9500;}
+#Float_PreviewTab { z-index: 5500;}
+
+#PresetStageView { z-index: 3000;}
+
+#InspectView{z-index: 4000; }
+#AddElementsView{z-index: 4100; }
+#AddElementsView{z-index: 4101; }
+#Float_DateInputView {z-index: 21000;}
+#Float_DateInputView ._btn_close {z-index: 21100;}
+
+
+
+#CMS_PagesView ._page_header{z-index: 9000;}
+
+#TreeViewMakerView{z-index: 9000; }
+._modalView{z-index: 10000; }
+
+
+#ImageMapView,
+#ImageMapInspectView,
+#InputCnadidate,
+#ColorPickerView{z-index: 10000;}
+
+#CMS_PageListBgView { z-index: 10000;}
+
+#CMS_AssetStageResizeView { z-index: 2000;}
+#CMS_SidePreview { z-index: 3000;}
+
+#Editer_JSONView,
+#Editer_CodeCopyView,
+#Editer_TAGView {z-index: 30000;}
+
+#GridDetailView{z-index: 20000;}
+
+#Anchor_InputView,
+#Anchor_BtnView,
+#Anchor_PageListView,
+#Anchor_TargetListView,
+#DirListView {z-index: 40000;}
+
+#MiniEditer { z-index: 40500;}
+#Preset_CSSView { z-index: 40700;}
+#SimpleToolTip,
+#Preset_IconView,
+#ServerInfoView,
+#BatchPublishView{z-index: 50000;}
+
+#EmbedTagListView{z-index: 50000;}
+
+#CMS_LOCK { z-index:51000;}
+#CMS_LOCK._unlock { z-index:6000;}
+
+#CMS_GuideView { z-index: 55000; }
+
+#CMS_AlertView,
+#CMS_AlertLockView,
+#CMS_ConfirmView,
+#CMS_CopyView,
+#CMS_InputView,
+#CMS_ProccessView,
+#CMS_ErrorView {z-index: 60000;}
+

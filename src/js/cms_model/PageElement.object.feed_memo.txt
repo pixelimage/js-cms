@@ -1,0 +1,15 @@
+
+RSSテスト
+http://www.feb1976.com/temp/test.xml
+http://www.honda.co.jp/rss/hotnews.xml
+http://192.168.1.23:999/develop/test.xml
+http://www.pixelimage.jp/blog/atom.xml
+
+http://feeds.gizmodo.jp/rss/gizmodo/index.xml
+http://feeds.gizmodo.jp/rss/gizmodo/atom.xml
+
+http://www.bingo-cms.jp/rss.php
+http://www.chem-station.com/feed
+http://images.apple.com/main/rss/hotnews/hotnews.rss
+http://blog.heteml.jp/?feed=rss2
+

@@ -1,0 +1,181 @@
+
+/* ! ---------- _modalView ---------- ---------- ---------- ---------- */
+
+._modalView {min-width: 800px;font-size: 14px;line-height: 1;}
+._modalView { position: fixed; top: 0; left: 0; width: 100%; height: 100%; color: #4A66A0; display: none;}
+._modalView ._bg { cursor: pointer; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(73,103,161,0.75);}
+._modalView ._modalBox { position: fixed; top: 40px; left: 40px; right: 40px; bottom: 40px; background: #eee; background: #fff; border-radius: 2px; box-shadow: 0 0 5px rgba(0,0,0,0.2);}
+._modalView ._modalBox._conpact { position: fixed; top: 140px; left: 140px; right: 140px; bottom: 140px;}
+._modalView ._modalBox { margin:0 }
+._modalView ._header { position: absolute; left: 0px; right: 0px; top: 0px; height:40px; padding: 10px; line-height: 30px; border-radius: 2px 2px 0 0; box-sizing: border-box; border-bottom: 1px solid #d1d9e6;}
+._modalView ._title { font-size: 18px; margin: 0; font-weight: bold;}
+._modalView ._guide { float: right;}
+._modalView ._body { position: absolute; left: 10px; right: 10px; top: 40px; bottom:40px; }
+._modalView._modalView-nomargin ._body { left:0px; right:0px;}
+
+._modalView._noScroll ._body { overflow:visible;}
+._modalView ._body > ._replaceArea { padding: 10px 10px 100px 10px ;}
+._modalView ._footer { position: absolute; left: 0px; right:0px; bottom:0px; height:40px; padding: 5px; text-align: center; border-top: 1px solid #d1d9e6; background: #e7ebf2; border-radius: 0 0 5px 5px; box-sizing: border-box;}
+._modalView ._footer div { display: inline-block }
+
+._modalView select { color: #666; border: 1px solid #ccc; }
+._modalView input { }
+._modalView ._read { font-size: 14px;margin: 10px 0;line-height: 1.4;}
+._modalView ._box { padding: 10px;border: 1px solid #ddd;margin: 10px;}
+._modalView ._notes{margin:10px 0;font-size: 12px;line-height: 1.6;color:#888;}
+._modalView ._notes p{margin:10px 0;font-size: 12px;line-height: 1.6;}
+._modalView ._h1_ { font-size: 24px; margin: 10px 0 20px 0; color: #4A66A0;}
+._modalView ._h2_ { background: #4A66A0; font-size: 14px; margin: 10px 0; padding: 10px 10px 7px 10px; font-weight: bold; color:#fff ; border-radius:3px;}
+._modalView ._h3_ { border-bottom: 2px solid #4A66A0; border-bottom: 4px solid #e7ebf2; font-weight: bold; color: #4A66A0; font-size: 14px; margin: 0 0 10px 0; padding: 0 5px 5px 0;}
+._modalView ._block { padding: 10px; background: #fff; border-radius:5px; margin: 10px 20px 20px 20px;}
+._modalView ._btn_dic { display: inline-block; font-size:12px; padding: 2px 5px; background: #F3F5F8;}
+
+
+@media screen and (max-width: $breakPointMS) {
+._modalView ._modalBox { left: 10px; right: 10px;}
+}
+
+/* ! ---------- 個別モーダルサイズ指定 ---------- ---------- ---------- ---------- */
+
+#Editer_JSONView textarea,
+#Editer_CodeCopyView textarea,
+#Editer_TAGView textarea{width: 100%;font-size: 14px; min-height: 300px; border: none; box-shadow: none; line-height: 1.4;}
+
+#Editer_JSONView ._text-editor,
+#Editer_TAGView ._text-editor { border: 1px solid #ddd;}
+
+#Editer_JSONView ._text-editor {background: #ffe;}
+#Editer_TAGView ._text-editor {background: #f2f2f2;}
+
+#Editer_CodeCopyView textarea,
+#Editer_TAGView textarea{ background: #e7ebf2; padding: 10px; color: #4A66A0;  }
+#Editer_ExcelView ._modalBox { top: 100px; left: 100px; right: 100px; bottom: 100px;}
+#Editer_ExcelView .CodeMirror { background: #ffe; border: 1px solid #ddd;}
+
+/* ! ---------- MiniEditer ---------- ---------- ---------- ---------- */
+
+#MiniEditer { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; color: #4A66A0;}
+
+#MiniEditer._show { display: block; }
+#MiniEditer ._bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(73,103,161,0.5); cursor: pointer;}
+
+#MiniEditer ._modalBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:400px;
+	box-sizing: border-box;
+	border-radius:5px;
+	color: #0ff;
+}
+#MiniEditer ._btn_full { position: absolute; top: 0px; right: 0px; cursor: pointer;}
+#MiniEditer ._btn_full_off { position: absolute; top: 0px; right: 0px;cursor: pointer;}
+
+#MiniEditer ._header { background: #4A66A0; padding: 2px 0 5px 5px; border-radius:5px 5px 0 0; }
+#MiniEditer ._header_def {cursor: move; }
+#MiniEditer ._header_full{display: none;}
+#MiniEditer ._header ._dragBar { position: absolute; top: 7px; left: 110px; right: 25px; height: 12px; background: url("../images/bg_dragbar.png") center center repeat-x; opacity: 0.5;}
+#MiniEditer ._header:hover ._dragBar { opacity: 0.8;}
+#MiniEditer ._header ._title { float: left; font-size: 12px; padding: 4px 0 0 2px;}
+#MiniEditer ._header ._btns { float: right;}
+#MiniEditer ._body { background: #ffe; border-radius:0 0 5px 5px;}
+
+#MiniEditer ._btn_line { color: rgba(0,255,255,0.5); display: inline-block; padding: 5px 5px 3px 5px; font-size: 12px; border-radius: 2px;}
+#MiniEditer ._btn_line._active { background: #0ff; color: #4A66A0; cursor: pointer;}
+#MiniEditer ._anno { position: fixed; top: 0; left: 0; right: 0; background: #4A66A0; padding: 13px; color: #00ffff; font-size: 14px; text-align: center; cursor: pointer;}
+#MiniEditer ._anno kbd { background: #56accc; color: #4A66A0;}
+
+#MiniEditer ._footer { position: relative; font-size: 12px; padding: 5px; color: #888;border-top: 1px solid rgba(0,0,0,0.1);}
+#MiniEditer ._footer ._status {float: left;}
+
+#MiniEditer ._option { height: 30px; background: #444; font-size: 12px; color: #999; padding: 3px 6px 0 10px; box-sizing: border-box; border-radius:0 0 5px 5px;}
+#MiniEditer ._attrs { float: left;}
+#MiniEditer ._attrs input { padding:2px; background: #666; border: none; border-top: 2px solid #000; width: 150px; line-height: 1; color: #fff; vertical-align: baseline;}
+#MiniEditer ._checks { cursor: pointer; float: left; padding: 6px 10px 0 0;}
+#MiniEditer ._name {display: none; position: absolute; top: -50px; left: 0px; opacity: 0.4; color: #fff;}
+
+body._editFullscreen #MiniEditer ._modalBox { position: fixed;}
+body._editFullscreen #MiniEditer ._bg { background: rgba(73,103,161,1);}
+body._editFullscreen #MiniEditer ._header_def  { display: none;}
+body._editFullscreen #MiniEditer ._header_full { display: block;cursor: pointer;}
+body._editFullscreen #MiniEditer ._body { border-radius:0;}
+body._editFullscreen #MiniEditer ._option { display: none;}
+body._editFullscreen #MiniEditer ._anno { display: none;}
+body._editFullscreen .ui-resizable-handle { display: none;}
+body._editFullscreen #CMS_LOCK { visibility: hidden;}
+
+.CodeMirror-dialog { position: absolute; left: -1px; right: 10px; background: #fff; z-index: 15; padding:1px 10px 3px 10px; overflow: hidden; color: inherit; font-size: 12px;}
+.CodeMirror-dialog-top { border: 1px solid #4A66A0; bottom: 4px; box-shadow:0px 0px 5px rgba(0,0,0,0.4); border-radius:0 5px 5px 0;}
+.CodeMirror-dialog-bottom { border-top: 1px solid #eee; bottom: 0;}
+.CodeMirror-dialog input { border: none; outline: none; background: transparent; width: 20em; font-size: 18px; color: inherit; font-family: monospace;}
+.CodeMirror-dialog button { font-size: 70%;}
+
+.CodeMirror-foldmarker { color: blue; text-shadow: #b9f 1px 1px 2px, #b9f -1px -1px 2px, #b9f 1px -1px 2px, #b9f -1px 1px 2px; font-family: arial; line-height: .3; cursor: pointer;}
+.CodeMirror-foldgutter { width: .7em;}
+.CodeMirror-foldgutter-open,.CodeMirror-foldgutter-folded { cursor: pointer;}
+.CodeMirror-foldgutter-open:after { content: "\25BE";}
+.CodeMirror-foldgutter-folded:after { content: "\25B8";}
+
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute; font-size: 0.1px; display: block;}
+.ui-resizable-disabled .ui-resizable-handle,.ui-resizable-autohide .ui-resizable-handle { display: none;}
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0;}
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0;}
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%;}
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%;}
+.ui-resizable-se { cursor: se-resize;opacity: 0.5; width: 30px; height: 30px; right: -2px; bottom: -2px; background:url("../images/ss_file.png"); background-position:-15px -200px;}
+.ui-resizable-se:hover{opacity: 1;}
+
+.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px;}
+.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px;}
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
+
+/* ! ---------- _text-editor ---------- ---------- ---------- ---------- */
+
+._text-editor { position: relative; border-radius:0 0 5px 5px;}
+
+._text-editor ._cmeditor{padding: 5px 0;}
+
+._text-editor input._single { width:100%; font-size: 18px; padding:10px 5px; box-sizing: border-box; border-radius:0; border: none;}
+._text-editor input._single:focus{background: #ffe;}
+._text-editor .CodeMirror { height: 150px; font-size: 14px; line-height: 1.4;}
+/*
+._text-editor .CodeMirror { height: 150px; font-size: 14px; line-height: 1.4;}
+._text-editor .CodeMirror-gutters { background: #ffe;}
+._text-editor._editor-text .CodeMirror{ background: #ffe;}
+._text-editor._editor-text .CodeMirror-gutter{ background: #ffe;}
+._text-editor._editor-style ,
+._text-editor._editor-style .CodeMirror ,
+._text-editor._editor-style .CodeMirror-gutters,
+._text-editor._editor-style input._single:focus,
+._text-editor._editor-style input._single { background: #f4f3ff;color:#4A66A0;}
+
+._text-editor._editor-html { background: #eeeeee;}
+._text-editor._editor-html .CodeMirror,
+._text-editor._editor-html .CodeMirror-gutters{ background: #eeeeee;}
+
+._text-editor._editor-js { background: #444;}
+*/
+
+
+._text-editor ._presetBtns { padding: 0 10px 1px 0; color: #4A66A0; background: #4A66A0; font-size: 12px; border-bottom: 1px solid rgba(0,0,0,.1);}
+._text-editor ._presetGloup { position: relative; display: block; float: right; cursor: pointer;}
+._text-editor ._presetGloup ._presetBody { display: none; position: absolute; top: 20px; left: -2px; background: #fff; width: 160px; padding: 5px; box-shadow:0px 0px 5px rgba(0,0,0,0.2); border-radius:2px; z-index: 100;}
+._text-editor ._presetGloup ._hr { display: block; height: 1px; border-top: 1px solid #ddd; margin:7px 0 3px 0;}
+
+._text-editor ._presetGloup._active ._presetBody { display: block;}
+._text-editor ._presetTitle { color:#56accc; display: block; padding: 5px 5px 3px 5px;}
+
+._text-editor ._presetGloup:hover ._presetTitle { color:#0ff;}
+._text-editor ._presetGloup:hover ._presetItem:hover { background: #f7f7f7;}
+
+._text-editor ._presetItem,
+._text-editor ._presetBtn { float: right; display: block; color: rgba(0,255,255,0.5); padding: 5px 5px 3px 5px; cursor: pointer;}
+
+._text-editor ._presetItem:hover,
+._text-editor ._presetBtn:hover {color: rgba(0,255,255,1); }
+
+._text-editor ._presetGloup ._presetItem { float:none;color: #4A66A0;}
+._text-editor ._presetItem._active { color: #ff0;}
+
+

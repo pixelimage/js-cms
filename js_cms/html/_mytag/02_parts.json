@@ -1,0 +1,339 @@
+{
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.p",
+						"data": "このページでは、サイト全体で利用できる共用パーツを定義できます。\nUI関連のパーツは、別のページで指定し、このこまごましたパーツを定義してください。",
+						"attr": {
+							"css": "default ",
+							"class": "default "
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h2",
+							"main": {
+								"text": "アイコンなど、こまごましたパーツ",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": " default",
+							"class": " default"
+						}
+					},
+					{
+						"type": "object.replaceTexts",
+						"data": {
+							"texts": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"id": "-",
+										"val": "<i class='fa fa-caret-right '></i> ",
+										"memo": "やじるし",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"id": "(-)",
+										"val": "<i class='fa fa-chevron-circle-right'></i>",
+										"memo": "やじるし",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"id": "+",
+										"val": "<i class='fa fa-external-link-square '></i> ",
+										"memo": "やじるし",
+										"_state": [
+											"publicData",
+											"id",
+											"val",
+											"memo"
+										]
+									},
+									{
+										"publicData": "1",
+										"id": "v",
+										"val": "<i class=\"fa fa-angle-down \"></i> ",
+										"memo": "やじるし",
+										"_state": [
+											"publicData",
+											"id",
+											"val",
+											"memo"
+										]
+									},
+									{
+										"publicData": "1",
+										"id": "DIR",
+										"val": "<i class=\"fa fa-folder \"></i> ",
+										"memo": "やじるし",
+										"_state": [
+											"publicData",
+											"id",
+											"val",
+											"memo"
+										]
+									},
+									{
+										"publicData": "1",
+										"id": "MAIL",
+										"val": "<a href='mailto:test@mail.com'><i class='fa fa-envelope '></i> sample@mail.com</a>",
+										"memo": "メールアドレス",
+										"_state": []
+									}
+								],
+								"_state": {
+									"currentRow": 0,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							},
+							"images": {
+								"texts": {},
+								"grid": [],
+								"_state": {
+									"currentRow": -1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							},
+							"links": {
+								"texts": {},
+								"grid": [],
+								"_state": {
+									"currentRow": -1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": "default",
+							"class": "default",
+							"narrow": ""
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h2",
+							"main": {
+								"text": "共通パーツ",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": " default",
+							"class": " default"
+						}
+					},
+					{
+						"type": "replace.div",
+						"data": [
+							{
+								"type": "layout.div",
+								"data": [
+									{
+										"type": "tag.p",
+										"data": "<b>問い合わせ先</b>\n株式会社 example company\n〒565-0816 大阪府大阪市北区012-3456\n電話：06-1234-5678\nmail : <a href='mailto:sample@mail.com'><i class='fa fa-envelope '></i> sample@mail.com</a>",
+										"attr": {
+											"css": "default mt0 mb0",
+											"class": "default mt0 mb0"
+										}
+									}
+								],
+								"attr": {
+									"class": " p20 default waku",
+									"css": " p20 default waku",
+									"style": ""
+								},
+								"extra": {
+									"bg": {
+										"img": "",
+										"color": "",
+										"use": false
+									}
+								}
+							}
+						],
+						"attr": {
+							"class": " _cms_replace",
+							"css": " _cms_replace",
+							"style": "",
+							"replaceID": "問い合わせ",
+							"replaceTitle": "問い合わせサンプル",
+							"narrow": ""
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h2",
+							"main": {
+								"text": "ひな形デモ",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": " default",
+							"class": " default"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "ひな形ブロックで利用するための、Myタグです。",
+						"attr": {
+							"css": "default ",
+							"class": "default "
+						}
+					},
+					{
+						"type": "replace.div",
+						"data": [
+							{
+								"type": "tag.p",
+								"data": "ひな形ブロックのデモ用です。以下の表組みのセルの値が、ひな形ブロックのグリッド設定した値に置換えられます。",
+								"attr": {
+									"css": "default ",
+									"class": "default "
+								}
+							},
+							{
+								"type": "object.table",
+								"data": {
+									"setting": {
+										"texts": {
+											"row1": "1",
+											"col1": "1"
+										},
+										"grid": []
+									},
+									"table": {
+										"texts": {},
+										"grid": [
+											{
+												"publicData": "1",
+												"c1": "項目名",
+												"c2": "項目名",
+												"_state": []
+											},
+											{
+												"publicData": "1",
+												"c1": "項目名",
+												"c2": "{1}",
+												"_state": []
+											},
+											{
+												"publicData": "1",
+												"c1": "項目名",
+												"c2": "{2}",
+												"_state": []
+											},
+											{
+												"publicData": "1",
+												"c1": "項目名",
+												"c2": "{3}",
+												"_state": []
+											}
+										],
+										"_state": {
+											"currentRow": 3,
+											"currentPage": 0,
+											"fitWide": true,
+											"hideCols": ""
+										}
+									}
+								},
+								"attr": {
+									"css": "default w100p",
+									"style": "",
+									"class": "default w100p"
+								}
+							}
+						],
+						"attr": {
+							"class": " _cms_replace _narrow-element",
+							"css": " _cms_replace",
+							"style": "",
+							"replaceID": "ひな形デモ",
+							"replaceTitle": "ひな形ブロックデモ用です。削除しても問題ありません。",
+							"narrow": true
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h3",
+							"main": {
+								"text": "ウェブサービス",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": " default",
+							"class": " default"
+						}
+					},
+					{
+						"type": "replace.div",
+						"data": [
+							{
+								"type": "tag.markdown",
+								"data": "#{url}",
+								"attr": {
+									"css": "default ",
+									"class": "default "
+								}
+							},
+							{
+								"type": "tag.js",
+								"data": "(function(_param){\nvar url = _param[\"{url}\"];\nvar comment = _param[\"{comment}\"];\nvar tag = '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/'+url+'\" frameborder=\"0\" allowfullscreen></iframe>';\ntag +=\"<p>\" + comment + '</p>';\nreturn tag;\n});\n",
+								"attr": {
+									"preview": "",
+									"class": ""
+								}
+							}
+						],
+						"attr": {
+							"class": " _cms_replace _narrow-element",
+							"css": " _cms_replace",
+							"style": "",
+							"replaceID": "YOUTUBE",
+							"replaceTitle": "youtubeテンプレート",
+							"narrow": true
+						}
+					}
+				]
+			}
+		]
+	}
+}

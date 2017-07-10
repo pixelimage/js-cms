@@ -1,0 +1,342 @@
+/**
+ * サイトマップデータ管理
+ */
+
+CMS_Data.Sitemap = (function(){
+	
+	function init(){
+		_delay = new Lib_.Delay();
+		_delay_later_save = new Lib_.Delay();
+		_delay_later_public = new Lib_.Delay();
+		createIgnoreList();
+	}
+	
+	/* ---------- ---------- ---------- */
+	//初期ロード
+	
+	var callback;
+	function load(_callback){
+		var param = Dic.SettingJsonList._cms_sitemap;
+		callback = _callback
+		storage = new Storage.Online(param.id,{})
+		storage.load(function() {
+			load_comp();
+		});
+	}
+	var storage;
+	function load_comp(){
+		var d = storage.getData();
+		if(d.filelist == undefined){
+			storage.setData( {filelist:[]});
+		}
+		update(storage.getData());
+		callback();
+	}
+
+	/* ---------- ---------- ---------- */
+	
+	var sitemap;
+	function update(_sitemap){
+		sitemap = _sitemap;
+		sitemapFlat = [];
+		toFlatLoop(sitemap.filelist);
+		getInputCandidates();
+	}
+	
+	var sitemapFlat = [];
+	function toFlatLoop(_list){
+		for (var i = 0; i < _list.length ; i++) {
+			if(_list[i].filelist){
+				toFlatLoop(_list[i].filelist)
+			} else{
+				if(_list[i].type=="free"){
+					sitemapFlat.push(_list[i])
+				}
+			}
+		}
+	}
+	
+	/* ! ----------  ---------- ---------- ---------- ---------- */
+	//NGファイルリスト検索
+	
+	var ignoreList = [];
+	function createIgnoreList(){
+		ignoreList = []
+		for (var n in Dic.SettingJsonList) {
+			ignoreList.push(Dic.SettingJsonList[n].id)
+		}
+	}
+	
+	var match;
+	function find(_id){
+		match = null;
+		var b = false;
+		for (var i = 0; i < ignoreList.length ; i++) {
+			if(_id == ignoreList[i]) b = true;
+		}
+		if(b)return;
+		
+		find_loop(_id,sitemap.filelist,0);
+		if(! match){
+			CMS_SideView.openPage_init()
+		}
+	}
+	function find_loop(_id,_list,_deep){
+		for (var i = 0; i < _list.length ; i++) {
+			if(_list[i].id == _id){ match = _list[i]; }
+			if(_list[i].filelist) { find_loop(_id,_list[i].filelist,_deep+1) }
+		}
+	}
+	
+	function getData_by_id(_id){
+		find(_id);
+		return match;
+	}
+	
+	/* ! ----------  ---------- ---------- ---------- ---------- */
+	//#IO
+	
+	//IDに該当するファイルの更新日を最新にして、保存する
+	var _delay_later_save
+	function saveDateLater(_id){ saveDate(_id,1) }
+	function saveDate(_id,_delayTime){
+		if(_id == "_sitemap") return;
+		find(_id);
+		if(! match)return;
+		match.saveDate = CMS_DateUtil.getDate();
+		
+		//連続書き込みをさけるため、ディレイ処理
+		_delay_later_save.remove();
+		if(_delayTime == undefined){
+			save();
+		} else{
+			_delay_later_save.start(_delayTime,function(){
+				save();
+			});
+		}
+	}
+	
+	//IDに該当するファイルの公開日を最新にして、保存する
+	var _delay_later_public
+	function publicDateLater(_id){ publicDate(_id,1) }
+	function publicDate(_id,_delayTime){
+		if(_id == "_sitemap") return;
+		find(_id);
+		if(! match)return;
+		match.publicDate = CMS_DateUtil.getDate();
+		
+		//連続書き込みをさけるため、ディレイ処理
+		_delay_later_public.remove();
+		if(_delayTime == undefined){
+			save();
+		} else{
+			_delay_later_public.start(_delayTime,function(){
+				save();
+			});
+		}
+	}
+	
+	//save
+	var _delay;
+	function save(){
+		//サイトマップを更新すると、同時にリクエストがくるので、1つにしぼる
+		_delay.remove();
+		_delay.start(0.2,function(){
+			storage.setData(getData());
+			storage.save_sitemap(function(){
+				if(isLog)console.log("filelist saved.")
+			});
+		});
+	}
+
+	/* ! ----------  ---------- ---------- ---------- ---------- */
+	
+	function getDirText(_type,_deep){
+		return CMS_Data.SitemapU.getDirText(_type,_deep)
+	}
+	
+	/* ! ----------  ---------- ---------- ---------- ---------- */
+
+	//保存した日付をかえす
+	function getSaveDate(_id){
+		find(_id);
+		if(! match)return "";
+		return match.saveDate;
+	}
+	//公開した日付をかえす
+	function getPublishDate(_id){
+		find(_id);
+		if(! match)return "";
+		return match.publicDate;
+	}
+	
+	function getData(){
+		return sitemap;
+	}
+	function getFilelist(){
+		return sitemap.filelist;
+	}
+	
+	//エクセル用サイトマップテキストを書き出す
+	function getSitemapText(){
+		return CMS_Data.SitemapU.getSitemapText(sitemap)
+	}
+	
+	// サイトマップオブジェクトをフラットな配列に変換。サイトマップの表示につかう
+	function getDataGrid(){
+		return CMS_Data.SitemapU.getDataGrid(sitemap)
+	}
+	
+	//ページファイル名入力<input>で候補が表示されるように
+	function getInputCandidates(){
+		if(window["FormCandidates"]){
+			FormCandidates.setSitemapList(sitemapFlat);
+		}
+	}
+	
+	/* ! ----------  ---------- ---------- ---------- ---------- */
+	
+	return { 
+		init:init,
+		load:load,
+	
+		getData:getData,
+		getFilelist:getFilelist,
+		
+		save:save,
+		saveDate:saveDate,
+		publicDate:publicDate,
+		
+		saveDateLater:saveDateLater,
+		publicDateLater:publicDateLater,
+		
+		getSaveDate:getSaveDate,
+		getPublishDate:getPublishDate,
+		
+		getData_by_id:getData_by_id,
+		
+		getSitemapText:getSitemapText,
+		getDataGrid:getDataGrid,
+	 }
+})();
+
+
+CMS_Data.SitemapU = (function(){
+	
+	/* ! ----------  ---------- ---------- ---------- ---------- */
+	//エクセル用サイトマップテキストを書き出す
+	
+	var sitemapTag = "";
+	function getSitemapText(sitemap){
+		sitemapTag = "";
+		sitemapTag += "第1階層	第2階層	第3階層	第4階層	第5階層		ファイルパス	公開状態	\n"
+		getSitemapText_loop(sitemap.filelist,0);
+		return sitemapTag;
+	}
+	function getSitemapText_loop(_list,_deep){
+		var dd = "";
+		for (var i = 1; i < _deep ; i++) dd += getDirText("deep",_deep);
+		for (var i = 0; i < _list.length ; i++) {
+			sitemapTag += dd
+			if(_list[i].filelist){
+				sitemapTag += getDirText("dir",_deep) + getPageState("dir",_list[i],_deep)+'\n'
+				getSitemapText_loop(_list[i].filelist,_deep+1)
+			} else{
+				sitemapTag += getDirText("dir",_deep) + getPageState("file",_list[i],_deep)+'\n'
+			}
+		}
+	}
+	function getPageState(_type,_page,_deep){
+		var s = [];
+		if(_type == "dir"){
+			s.push("●"+_page.name);
+		} else{
+			s.push(_page.name);
+		}
+		
+		var d = Math.abs(4-_deep);
+		for (var i = 0; i < d ; i++) { s.push("") }
+		
+		s.push(",");
+		if(_type == "dir"){
+			s.push("--	");
+		} else{
+			s.push(CMS_Data.Path.BASE_DIR +"	/"+ HTML_DIR + _page.id + ".html");
+		}
+		{
+			var a = []
+			if(_page.isHide	== "1"){a.push("非公開")}
+			if(_page.isHideMenu	== "1"){a.push("メニュ非公開")}
+			if(_page.isUnderConst	== "1"){a.push("工事中")}
+			if(a.length == 0)a.push("●");
+			s.push(a.join(","));
+		}
+		return s.join("	");
+	}
+	
+	/* ! ----------  ---------- ---------- ---------- ---------- */
+	
+	var sitemapGrid = []
+	function getDataGrid(sitemap){
+		sitemapGrid = []
+		getPageGrid_loop(sitemap.filelist,0);
+		return sitemapGrid;
+	}
+	function getPageGrid_loop(_list,_deep){
+		var dd = ""
+		for (var i = 1; i < _deep ; i++) dd += getDirText("deep",_deep);
+		
+		for (var i = 0; i < _list.length ; i++) {
+			if(_list[i].type == "dir"){
+				sitemapGrid.push({
+					type:"dir",
+					deep:dd + getDirText("dir",_deep),
+					o:_list[i]
+				});
+				getPageGrid_loop(_list[i].filelist,_deep+1);
+			} else if(_list[i].type == "free"){
+				sitemapGrid.push({
+					type:"file",
+					deep:dd + getDirText("dir",_deep),
+					o:_list[i]
+				});
+			} else{
+				sitemapGrid.push({
+					type:"html",
+					deep:dd + getDirText("dir",_deep),
+					o:_list[i]
+				});
+			}
+		}
+	}
+	
+	/* ! ----------  ---------- ---------- ---------- ---------- */
+
+	function getDirText(_type,_deep){
+		var s = ""
+		if(_type =="deep"){
+			if(_deep == 0 || _deep == 1){
+				s+= ""
+			} else{
+				s+= "│	"
+			}
+		} 
+		if(_type =="dir"){
+			if(_deep == 0){
+				s+= ""
+			} else{
+				s+= "├	"
+			}
+		}
+		return s;
+	}
+	return {
+		getSitemapText:getSitemapText,
+		getDataGrid:getDataGrid,
+		getDirText:getDirText
+		
+	}
+})();
+
+	
+	

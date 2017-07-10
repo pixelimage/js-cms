@@ -1,0 +1,63 @@
+{
+	"meta": {},
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h1",
+							"main": {
+								"text": "{{PAGE_NAME}}",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default",
+							"narrow": "",
+							"class": "default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h2",
+							"main": {
+								"text": "オリジナルプリセット",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default mt0",
+							"class": "default mt0"
+						}
+					},
+					{
+						"type": "tag.markdown",
+						"data": "プリセットでは、自由にブロックを追加・編集・削除できます。\n追加したいブロックをコピーして、このページへペーストし、保存してください。\n\nプリセットのページ一覧は、設定ファイル(/_cms/setting/setting.js)で自由に登録できます。",
+						"attr": {
+							"preview": "",
+							"narrow": "",
+							"class": "default",
+							"hide": "",
+							"css": "default "
+						}
+					}
+				]
+			}
+		]
+	}
+}

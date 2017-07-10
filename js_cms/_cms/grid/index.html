@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="" class="">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>グリッドプレビュー</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="./css/grid.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="./grid_setting.js"></script>
+<script type="text/javascript" src="./js/grid.js"></script>
+</head>
+
+<body class="grid">
+<div id="PreviewArea">
+	<div id="PreviewView">
+		<div class="inner"></div>
+	</div>
+	<div id="PreviewViewHeader">
+		<div class="inner clearfix">
+			<div class="btns clearfix">
+				<div class="_btn item btn_zoom"><i class="fa fa-search "></i></div>
+				<div class="_btn item btn_width"><i class="fa fa-arrows-h"></i></div>
+				<div class="_btn item btn_reload"><i class="fa fa-repeat "></i></div>
+				<div class="_btn item btn_globe"><i class="fa fa-external-link-square "></i></div>
+			</div>
+			<div class="title_url"></div>
+			<div class="btns-right clearfix">
+				<div class="_btn item btn_close"><i class="fa fa-times "></i></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="MainArea">
+	<div id="ListView">
+		<div class="inner"></div>
+	</div>
+	<div id="GridView"></div>
+	
+	<div id="SettingEditView">
+		<div class="inner">
+			<textarea></textarea>
+			<div class="btns">
+				<div class="_btn btn_save"><i class="fa fa-check "></i> 保存</div>
+			</div>
+		</div>
+	</div>
+	<div id="HeaderView">
+		<div class="inner clearfix">
+			<div id="ViewSelectView">
+				<div class="logo">グリッド</div>
+				<div class="_btn _btn_list"><i class="fa fa-list-ol "></i></div>
+				<div class="_btn _btn_preview"><i class="fa fa-th "></i></div>
+			</div>
+			<div id="TabListView"></div>
+		</div>
+	</div>
+	<div id="StateMemoriView"><div class="inner"><span>1000px</span></div></div>
+	<div id="StateRectsView"></div>
+	<div id="ScrollView">
+		<div class="ss_controller b_all_sc_top"></div>
+		<div class="ss_controller b_all_sc_m500"></div>
+		<div class="ss_controller b_all_sc_m100"></div>
+		<div class="ss_controller b_all_sc_100"></div>
+		<div class="ss_controller b_all_sc_500"></div>
+		<div class="ss_controller b_all_sc_bottom"></div>
+	</div>
+	<div id="FloatPanelView">
+		<div class="inner">
+			<div class="ss_controller b_zoom_100"></div>
+			<div class="ss_controller b_zoom_50"></div>
+			<div class="ss_controller b_zoom_33"></div>
+			<div class="ss_controller b_zoom_25"></div>
+			<div class="ss_controller b_zoom_15"></div>
+			<div class="ss_controller b_zoom_up"></div>
+			<div class="ss_controller b_zoom_down"></div>
+			
+			<div class="ss_controller b_misc_01"></div>
+			<div class="ss_controller b_misc_01_ng"></div>
+			<div class="ss_controller b_misc_02"></div>
+			<div class="ss_controller b_misc_02_ng"></div>
+			<div class="ss_controller b_mar_left"></div>
+			<div class="ss_controller b_mar_right"></div>
+			<div class="ss_controller b_h_up"></div>
+			<div class="ss_controller b_h_down"></div>
+			<div class="ss_controller b_w_left"></div>
+			<div class="ss_controller b_w_right"></div>
+			<div class="ss_controller b_w_320"></div>
+			<div class="ss_controller b_w_768"></div>
+			<div class="ss_controller b_w_1024"></div>
+			<div class="ss_controller b_w_1200"></div>
+			<div class="ss_controller b_w_2000"></div>
+			<div class="ss_controller b_w_320-1024"></div>
+			<div class="ss_controller b_page_sc_top"></div>
+			<div class="ss_controller b_page_sc_m500"></div>
+			<div class="ss_controller b_page_sc_m100"></div>
+			<div class="ss_controller b_page_sc_100"></div>
+			<div class="ss_controller b_page_sc_500"></div>
+			<div class="ss_controller b_page_sc_bottom"></div>
+			<div class="ss_controller b_bg"></div>
+			<div class="ss_controller b_col"></div>
+			<div class="ss_controller b_bg_col"></div>
+			<div class="ss_controller b_col_col"></div>
+			
+			<div class="ss_controller b_h_500"></div>
+			<div class="ss_controller b_h_1000"></div>
+			<div class="ss_controller b_h_2000"></div>
+			<div class="ss_controller b_h_4000"></div>
+			<div class="ss_controller b_h_6000"></div>
+			<div class="ss_controller b_h_16000"></div>
+
+			<div class="current current_s">--</div>
+			<div class="current current_w">--</div>
+			<div class="current current_h">--</div>
+			<div class="current current_m">--</div>
+			<div class="memoris">
+				<div class="t">メモリ</div>
+				<div class="btns-2">
+					<div class="btn_memori_save">SAVE</div>
+					<div class="btn_memori_reset">RESET</div>
+				</div>
+			</div>
+			<div id="Slide_at_Preview" class="clearfix">
+				<div class="title">表示ページ</div>
+				<div class="_btn pagenation"></div>
+				<div class="_btn btn_prev"><i class="fa fa-chevron-left"></i> </div>
+				<div class="_btn btn_next"><i class="fa fa-chevron-right"></i> </div>
+			</div>
+		</div>
+	</div>
+	<div id="RevalView">
+		<div class="inner">
+			<input type="text" class="t2" value="$('p').hide()" />
+			<div class="gloup">
+				$('<input type="text" class="t1" value="" placeholder="jQueryセレクタ" />')
+			</div>
+			<div class="gloup">
+				<input type="checkbox" id="reval_hide" class="reval_hide"  value=""><label for="reval_hide">非表示</label>
+				<input type="checkbox" id="reval_iso" class="reval_iso"  value=""><label for="reval_iso">孤立</label>
+			</div>
+			<div class="gloup">
+				<input type="checkbox" id="reval_line" class="reval_line" checked value="checked"><label for="reval_line">枠線</label>
+				<input type="checkbox" id="reval_bk" class="reval_bk" checked value="checked"><label for="reval_bk">強調</label>
+				<input type="checkbox" id="reval_show" class="reval_show"  value=""><label for="reval_show">id,class名表示</label>
+			</div>
+			<div class="gloup">
+				<input type="checkbox" id="reval_link" class="reval_link"  value=""><label for="reval_link">リンク表示</label>
+				<input type="checkbox" id="reval_img" class="reval_img"  value=""><label for="reval_img">画像パス表示</label>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div id="LogView"></div>
+</body>
+</html>

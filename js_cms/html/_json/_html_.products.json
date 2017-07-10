@@ -1,0 +1,356 @@
+{
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h1",
+							"main": {
+								"text": "製品案内",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							},
+							"top": {
+								"text": "",
+								"link": null
+							},
+							"bottom": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default ",
+							"narrow": "",
+							"class": "default ",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.img",
+						"data": {
+							"img": "width:940,height:300",
+							"link": null,
+							"isZoom": false,
+							"layout": {},
+							"isLayoutMode": false
+						},
+						"extra": {
+							"caption": "",
+							"width": "100％",
+							"margin": ""
+						},
+						"attr": {
+							"css": "frame",
+							"narrow": "",
+							"class": "frame",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.margin",
+						"data": "20px",
+						"attr": {
+							"css": "default",
+							"narrow": "",
+							"class": "default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "object.carrousel",
+								"data": {
+									"setting": {
+										"texts": {
+											"slideWidth": "200",
+											"minSlides": "2",
+											"maxSlides": "6",
+											"slideMargin": "5"
+										},
+										"grid": []
+									},
+									"photos": {
+										"texts": {},
+										"grid": [
+											{
+												"publicData": "1",
+												"image": {
+													"mode": "simple",
+													"path": "width:200,height:80",
+													"width": "",
+													"ratio": ""
+												},
+												"text": "タイトル1",
+												"text2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+												"anchor": {
+													"href": "",
+													"target": ""
+												},
+												"_state": []
+											},
+											{
+												"publicData": "1",
+												"image": {
+													"mode": "simple",
+													"path": "width:200,height:80",
+													"width": "",
+													"ratio": ""
+												},
+												"text": "タイトル2",
+												"text2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+												"anchor": {
+													"href": "",
+													"target": ""
+												},
+												"_state": []
+											},
+											{
+												"publicData": "1",
+												"image": {
+													"mode": "simple",
+													"path": "width:200,height:80",
+													"width": "",
+													"ratio": ""
+												},
+												"text": "タイトル3",
+												"text2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+												"anchor": {
+													"href": "",
+													"target": ""
+												},
+												"_state": []
+											},
+											{
+												"publicData": "1",
+												"image": {
+													"mode": "simple",
+													"path": "width:200,height:80",
+													"width": "",
+													"ratio": ""
+												},
+												"text": "タイトル4",
+												"text2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+												"anchor": {
+													"href": "",
+													"target": ""
+												},
+												"_state": []
+											},
+											{
+												"publicData": "1",
+												"image": {
+													"mode": "simple",
+													"path": "width:200,height:80",
+													"width": "",
+													"ratio": ""
+												},
+												"text": "タイトル5",
+												"text2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+												"anchor": {
+													"href": "",
+													"target": ""
+												},
+												"_state": []
+											}
+										],
+										"_state": {
+											"currentRow": -1,
+											"currentPage": 0,
+											"fitWide": true,
+											"hideCols": ""
+										}
+									}
+								},
+								"attr": {
+									"narrow": "",
+									"class": " default",
+									"hide": "",
+									"css": " default"
+								}
+							}
+						],
+						"attr": {
+							"class": " p10 waku",
+							"css": " p10 waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "tag.margin",
+						"data": "40px",
+						"attr": {
+							"css": "default",
+							"narrow": "",
+							"class": "default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "object.repeat",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"image": {
+											"mode": "simple",
+											"path": "width:100,height:100",
+											"width": "",
+											"ratio": ""
+										},
+										"a1": "PRODUCTS AA01",
+										"a2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"a3": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "html/products_01.html",
+											"target": ""
+										},
+										"_state": [
+											"image",
+											"anchor",
+											"a1"
+										]
+									},
+									{
+										"publicData": "1",
+										"image": {
+											"mode": "simple",
+											"path": "width:100,height:100",
+											"width": "",
+											"ratio": ""
+										},
+										"a1": "PRODUCTS BB01",
+										"a2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"a3": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "html/products_02.html",
+											"target": ""
+										},
+										"_state": [
+											"image",
+											"anchor",
+											"a1"
+										]
+									},
+									{
+										"publicData": "1",
+										"image": {
+											"mode": "simple",
+											"path": "width:100,height:100",
+											"width": "",
+											"ratio": ""
+										},
+										"a1": "PRODUCTS CC01",
+										"a2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"a3": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "html/products_03.html",
+											"target": ""
+										},
+										"_state": [
+											"image",
+											"anchor",
+											"a1"
+										]
+									},
+									{
+										"publicData": "1",
+										"image": {
+											"mode": "simple",
+											"path": "width:100,height:100",
+											"width": "",
+											"ratio": ""
+										},
+										"a1": "PRODUCTS DD01",
+										"a2": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"a3": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"anchor": {
+											"href": "html/products_04.html",
+											"target": ""
+										},
+										"_state": [
+											"image",
+											"anchor",
+											"a1"
+										]
+									}
+								],
+								"_state": {
+									"currentRow": 3,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							},
+							"template": [
+								"list_lr5",
+								"<ul id=\"{ID}\" class=\" clearfix commonHeight\">\n{REPEAT_START}\n\t<li class=\"cms-blocklink\">\n\t\t<div class=\"inner clearfix\">\n\t\t\t<div class=\"images\">\n\t\t\t\t{IMG}\n\t\t\t</div>\n\t\t\t<div class=\"texts\">\n\t\t\t\t<p class=\"t1\">{1}</p>\n\t\t\t\t<p class=\"t2\">{2}</p>\n\t\t\t\t<p class=\"t3\">{3}</p>\n\t\t\t\t{LINK}\n\t\t\t</div>\n\t\t</div>\n\t</li>\n{REPEAT_END}\n</ul>\n",
+								"#{ID} {\n\tmargin-right:-1%;\n\tmargin-bottom:5px;\n}\n#{ID} li {\n\tfloat:left;\n\twidth:49%;\n\tmargin:0 1% 1% 0;\n\tborder-radius:5px;\n}\n#{ID} .images {\n\tfloat:left;\n\twidth:30%;\n\tmargin:0 0 10px 0;\n}\n#{ID} .images img {\n\twidth:100%;\n}\n#{ID} .texts {\n\tmargin:0 0 0 33%;\n}\n#{ID} .t1 {\n\tfont-size:14px;\n\tline-height:1.2;\n\tfont-weight:bold;\n\tborder-bottom: 2px solid #888;\n\tmargin:0 0 10px 0;\n\tpadding:5px 0 5px 0;\n}\n#{ID} .t2 {\n\tfont-size:12px;\n\tline-height:1.6;\n\tmargin:0 0 5px 0;\n}\n#{ID} .t3 {\n\tfont-size:10px;\n\tline-height:1.6;\n\tcolor:#888;\n\tmargin:0 0 5px 0;\n}\n#{ID} a {font-size:12px;}\n\n@media screen and (max-width: 480px) {\n\t#{ID} ul {\n\t\tmargin-right:auto;\n\t}\n\t#{ID} li {\n\t\tfloat:none;\n\t\twidth:auto;\n\t\tmargin:0 0 20px 0;\n\t}\n\t#{ID} .images{\n\t\tmax-height:none;\n\t}\n}\n",
+								{
+									"g": 1,
+									"w": 0,
+									"l": 2,
+									"d": 0,
+									"ww": 1,
+									"t_ww": 720,
+									"t_m": 10,
+									"t_iw": 80,
+									"t_ih": 120,
+									"t_m_p": 1,
+									"t_iw_p": 50
+								}
+							]
+						},
+						"attr": {
+							"narrow": "",
+							"class": "",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.margin",
+						"data": "20px",
+						"attr": {
+							"css": "default",
+							"narrow": "",
+							"class": "default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.html",
+						"data": "{{問い合わせ}}",
+						"attr": {
+							"preview": "",
+							"narrow": "",
+							"class": "",
+							"hide": ""
+						}
+					}
+				]
+			}
+		]
+	},
+	"meta": {}
+}

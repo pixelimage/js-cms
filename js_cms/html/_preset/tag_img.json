@@ -1,0 +1,196 @@
+{
+	"meta": {},
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.p",
+						"data": ".frame",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "tag.img",
+						"data": {
+							"img": "width:200,height:140",
+							"link": null,
+							"isZoom": false,
+							"isLayoutMode": false,
+							"layout": {},
+							"onlyImgTag": false
+						},
+						"extra": {
+							"caption": "",
+							"width": "",
+							"margin": "",
+							"layout_width": ""
+						},
+						"attr": {
+							"css": "default  frame",
+							"class": "default  frame"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".frame2",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "tag.img",
+						"data": {
+							"img": "width:200,height:140",
+							"link": null,
+							"isZoom": false,
+							"isLayoutMode": false,
+							"layout": {},
+							"onlyImgTag": false
+						},
+						"extra": {
+							"caption": "",
+							"width": "",
+							"margin": "",
+							"layout_width": ""
+						},
+						"attr": {
+							"css": "default  frame2",
+							"class": "default  frame2"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".round",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "tag.img",
+						"data": {
+							"img": "width:200,height:140",
+							"link": null,
+							"isZoom": false,
+							"isLayoutMode": false,
+							"layout": {},
+							"onlyImgTag": false
+						},
+						"extra": {
+							"caption": "",
+							"width": "",
+							"margin": "",
+							"layout_width": ""
+						},
+						"attr": {
+							"css": "default  round",
+							"class": "default  round"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".circle",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "tag.img",
+						"data": {
+							"img": "width:200,height:140",
+							"link": null,
+							"isZoom": false,
+							"isLayoutMode": false,
+							"layout": {},
+							"onlyImgTag": false
+						},
+						"extra": {
+							"caption": "",
+							"width": "",
+							"margin": "",
+							"layout_width": ""
+						},
+						"attr": {
+							"css": "default  circle",
+							"class": "default  circle"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "SVG",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "tag.img",
+						"data": {
+							"img": "width:200,height:140",
+							"link": null,
+							"isZoom": false,
+							"isLayoutMode": true,
+							"layout": {
+								"canvas": {
+									"width": 300,
+									"height": 200,
+									"background": "",
+									"color": "",
+									"dark": false,
+									"grid": 0
+								},
+								"list": [
+									{
+										"type": "item.svg",
+										"hide": false,
+										"rect": {
+											"left": 12.33,
+											"top": 4.5,
+											"width": 74.67,
+											"height": 89,
+											"opacity": 1,
+											"rotate": 0,
+											"link": "",
+											"attr": "",
+											"class": "",
+											"style": ""
+										},
+										"pixel": {
+											"top": 0,
+											"left": 0,
+											"width": 30,
+											"height": 20
+										},
+										"data": {
+											"svg": "<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 1792 1792\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z\"></path></svg>",
+											"color": "#000"
+										}
+									}
+								]
+							},
+							"onlyImgTag": false
+						},
+						"extra": {
+							"caption": "",
+							"width": "",
+							"margin": "",
+							"layout_width": ""
+						},
+						"attr": {
+							"css": "",
+							"class": ""
+						}
+					}
+				]
+			}
+		]
+	}
+}

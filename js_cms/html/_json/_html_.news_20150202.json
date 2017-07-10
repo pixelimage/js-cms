@@ -1,0 +1,220 @@
+{
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h1",
+									"main": {
+										"text": "お知らせタイトル",
+										"link": null
+									},
+									"right": {
+										"text": "",
+										"link": null
+									},
+									"top": {
+										"text": "2015/02/02",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": "default text-center",
+									"narrow": "",
+									"class": "default text-center",
+									"hide": ""
+								}
+							},
+							{
+								"type": "layout.div",
+								"data": [
+									{
+										"type": "tag.p",
+										"attr": {
+											"class": "default",
+											"css": "default",
+											"narrow": "",
+											"hide": ""
+										},
+										"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。\n\nサンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。\n"
+									},
+									{
+										"type": "tag.img",
+										"data": {
+											"img": "width:200,height:140",
+											"link": null,
+											"isZoom": false,
+											"layout": {},
+											"isLayoutMode": false
+										},
+										"extra": {
+											"caption": "",
+											"width": "",
+											"margin": ""
+										},
+										"attr": {
+											"css": "default ",
+											"narrow": "",
+											"class": "default ",
+											"hide": ""
+										}
+									},
+									{
+										"type": "tag.heading",
+										"data": {
+											"heading": "h3",
+											"main": {
+												"text": "中見出し",
+												"link": null
+											},
+											"right": {
+												"text": "",
+												"link": null
+											},
+											"top": {
+												"text": "",
+												"link": null
+											},
+											"bottom": {
+												"text": "",
+												"link": null
+											}
+										},
+										"attr": {
+											"css": "default ",
+											"narrow": "",
+											"class": "default ",
+											"hide": ""
+										}
+									},
+									{
+										"type": "tag.p",
+										"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"attr": {
+											"css": "default ",
+											"narrow": "",
+											"class": "default ",
+											"hide": ""
+										}
+									},
+									{
+										"type": "tag.heading",
+										"data": {
+											"heading": "h3",
+											"main": {
+												"text": "中見出し",
+												"link": null
+											},
+											"right": {
+												"text": "",
+												"link": null
+											},
+											"top": {
+												"text": "",
+												"link": null
+											},
+											"bottom": {
+												"text": "",
+												"link": null
+											}
+										},
+										"attr": {
+											"css": "default ",
+											"narrow": "",
+											"class": "default ",
+											"hide": ""
+										}
+									},
+									{
+										"type": "tag.p",
+										"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+										"attr": {
+											"css": "default",
+											"narrow": "",
+											"class": "default",
+											"hide": ""
+										}
+									},
+									{
+										"type": "tag.html",
+										"data": "{{問い合わせ}}",
+										"attr": {
+											"preview": "",
+											"narrow": "",
+											"class": "",
+											"hide": ""
+										}
+									}
+								],
+								"attr": {
+									"class": "waku default",
+									"css": "waku default",
+									"style": "padding:40px;",
+									"narrow": "",
+									"hide": ""
+								}
+							}
+						],
+						"attr": {
+							"class": "bg1",
+							"css": "bg1",
+							"style": "padding:40px;",
+							"narrow": "",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.margin",
+						"data": "20px",
+						"attr": {
+							"css": "default",
+							"narrow": "",
+							"class": "default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.btn",
+								"data": {
+									"href": "html/news.html",
+									"target": "",
+									"text": "<i class='fa fa-caret-left '></i>  お知らせ一覧へもどる",
+									"class_": "btn_textSimple  btn_size_M  ",
+									"image": ""
+								},
+								"attr": {
+									"narrow": "",
+									"class": "",
+									"hide": ""
+								}
+							}
+						],
+						"attr": {
+							"class": " text-center",
+							"css": " text-center",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						}
+					}
+				]
+			}
+		]
+	},
+	"meta": {}
+}

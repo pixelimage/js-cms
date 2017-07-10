@@ -1,0 +1,193 @@
+{
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.heading",
+						"data": {
+							"heading": "h1",
+							"main": {
+								"text": "募集要項",
+								"link": null
+							},
+							"right": {
+								"text": "",
+								"link": null
+							},
+							"top": {
+								"text": "",
+								"link": null
+							},
+							"bottom": {
+								"text": "",
+								"link": null
+							}
+						},
+						"attr": {
+							"css": "default",
+							"narrow": "",
+							"class": "default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+						"attr": {
+							"css": "default ",
+							"narrow": "",
+							"class": "default ",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.img",
+						"data": {
+							"img": "width:1000,height:200",
+							"link": null,
+							"isZoom": false,
+							"isLayoutMode": false,
+							"layout": {},
+							"onlyImgTag": false
+						},
+						"extra": {
+							"caption": "",
+							"width": "100%",
+							"margin": "",
+							"layout_width": ""
+						},
+						"attr": {
+							"css": "default ",
+							"class": "default "
+						}
+					},
+					{
+						"type": "tag.margin",
+						"data": "20px",
+						"attr": {
+							"css": "default",
+							"narrow": "",
+							"class": "default",
+							"hide": ""
+						}
+					},
+					{
+						"type": "object.table",
+						"data": {
+							"setting": {
+								"texts": {
+									"row1": "",
+									"col1": "1",
+									"_state": [
+										"col1",
+										"row1"
+									]
+								},
+								"grid": []
+							},
+							"table": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください\n <a href='http://www.google.co.jp'><i class='fa fa-caret-right '></i> リンク</a> ",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "項目名",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください\n <a href='http://www.google.co.jp'><i class='fa fa-caret-right '></i> リンク</a> ",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "項目名",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください\n <a href='http://www.google.co.jp'><i class='fa fa-caret-right '></i> リンク</a> ",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください",
+										"_state": []
+									}
+								],
+								"_state": {
+									"currentRow": -1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": " default w100p",
+							"style": "",
+							"narrow": "",
+							"class": " default w100p",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+						"attr": {
+							"css": " default",
+							"narrow": "",
+							"class": " default",
+							"hide": ""
+						}
+					}
+				]
+			}
+		]
+	},
+	"meta": {}
+}

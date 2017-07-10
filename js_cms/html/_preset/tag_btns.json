@@ -1,0 +1,532 @@
+{
+	"meta": {},
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.p",
+						"data": ".default",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.btnList",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									}
+								],
+								"_state": {
+									"currentRow": 1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": " default big",
+							"style": "",
+							"class": " default big"
+						}
+					},
+					{
+						"type": "object.btnList",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									}
+								],
+								"_state": {
+									"currentRow": 1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": " default",
+							"style": "",
+							"class": " default"
+						}
+					},
+					{
+						"type": "object.btnList",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									}
+								],
+								"_state": {
+									"currentRow": 1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": " default small",
+							"style": "",
+							"class": " default small"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".line",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.btnList",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									}
+								],
+								"_state": {
+									"currentRow": 1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": " default line",
+							"style": "",
+							"class": " default line"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".yoko",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.btnList",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									}
+								],
+								"_state": {
+									"currentRow": 1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": " default yoko",
+							"style": "",
+							"class": " default yoko"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".yoko2",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.btnList",
+						"data": {
+							"list": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									},
+									{
+										"publicData": "1",
+										"anchor": {
+											"href": "http://www.google.com",
+											"target": "",
+											"text": "{{(-)}} リンクボタン",
+											"class_": "",
+											"image": ""
+										},
+										"t1": "キャプションがはいります",
+										"_state": []
+									}
+								],
+								"_state": {
+									"currentRow": 1,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": " default yoko2",
+							"style": "",
+							"class": " default yoko2"
+						}
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,80 @@
+
+body ,h1, h2, h3, h4, h5, h6, p, ol, ul, li,blockquote, pre, a,div{
+	margin: 0;
+	padding: 0;
+	font-size:100%;
+	line-height: inherit;
+	box-sizing: border-box;
+}
+body {
+	line-height: 1;
+	word-break:break-all;
+}
+
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+th, td {
+	vertical-align: top;
+	text-align:left;
+	font-weight: normal;
+}
+img {
+	border: 0;
+	vertical-align: bottom;
+}
+
+:focus { outline: 0;}
+a{ color:#4A66A0;}
+
+/* ! ----------  ---------- ---------- ---------- ---------- */
+
+._left{ float: left;}
+._right{ float: right;}
+.clear{ clear:both; }
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+/* ! ----------  ---------- ---------- ---------- ---------- */
+
+body {
+	line-height:1;
+	font-size:14px;
+	background: #dbe1eb;
+}
+body,
+input,
+textarea{
+	font-family: Helvetica , Arial , Verdana , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "メイリオ" , Meiryo , sans-serif;
+}
+
+body .CodeMirror{
+	font-family: Menlo , Verdana , "メイリオ" , Meiryo;
+}
+
+/* ! ----------  ---------- ---------- ---------- ---------- */
+
+._replaceAreaGrid,
+._freeLayoutRoot,
+#CMS_LOCK,
+#CMS_Header,
+#CMS_PageListView,
+#CMS_PagesView ._page_header,
+#CMS_SidePreview,
+#CMS_SidePreviewClose,
+#CMS_AssetStage,
+#FreeLayoutInfoView,
+#MiniEditer,
+#ImageMapView{
+	user-select: none;
+}

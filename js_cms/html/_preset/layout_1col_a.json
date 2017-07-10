@@ -1,0 +1,517 @@
+{
+	"meta": {},
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>H3</em> タイトル",
+										"link": null
+									},
+									"right": {
+										"text": "サブタイトル",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": "default m0 line",
+									"narrow": "",
+									"class": "default m0 line",
+									"hide": "",
+									"style": ""
+								}
+							},
+							{
+								"type": "tag.p",
+								"attr": {
+									"class": "sizeM default",
+									"css": "sizeM default",
+									"narrow": "",
+									"hide": "",
+									"style": ""
+								},
+								"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+							}
+						],
+						"attr": {
+							"class": " default p20 waku",
+							"css": " default p20 waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>H3</em> タイトル",
+										"link": null
+									},
+									"right": {
+										"text": "サブタイトル",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": "default m0 glay",
+									"narrow": "",
+									"class": "default m0 glay",
+									"hide": "",
+									"style": ""
+								}
+							},
+							{
+								"type": "tag.p",
+								"attr": {
+									"class": "sizeM default",
+									"css": "sizeM default",
+									"narrow": "",
+									"hide": "",
+									"style": ""
+								},
+								"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+							}
+						],
+						"attr": {
+							"class": " default p20 waku",
+							"css": " default p20 waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>H3</em> タイトル",
+										"link": null
+									},
+									"right": {
+										"text": "サブタイトル",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": "default black m0",
+									"narrow": "",
+									"class": "default black m0",
+									"hide": "",
+									"style": ""
+								}
+							},
+							{
+								"type": "tag.p",
+								"attr": {
+									"class": "sizeM default",
+									"css": "sizeM default",
+									"narrow": "",
+									"hide": "",
+									"style": ""
+								},
+								"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+							}
+						],
+						"attr": {
+							"class": " default p20 waku",
+							"css": " default p20 waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>H3</em> タイトル",
+										"link": null
+									},
+									"right": {
+										"text": "サブタイトル",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": " m0 default line-b",
+									"narrow": "",
+									"class": " m0 default line-b",
+									"hide": "",
+									"style": "padding:20px;"
+								}
+							},
+							{
+								"type": "layout.div",
+								"data": [
+									{
+										"type": "tag.p",
+										"attr": {
+											"class": "sizeM default",
+											"css": "sizeM default",
+											"narrow": "",
+											"hide": "",
+											"style": "margin-top:0px;"
+										},
+										"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+									}
+								],
+								"attr": {
+									"class": "p20",
+									"css": "p20",
+									"style": ""
+								},
+								"extra": {
+									"bg": {
+										"img": "",
+										"color": "",
+										"use": false
+									}
+								}
+							}
+						],
+						"attr": {
+							"class": " default waku",
+							"css": " default waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>H3</em> タイトル",
+										"link": null
+									},
+									"right": {
+										"text": "サブタイトル",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": " m0 glay default line-b",
+									"narrow": "",
+									"class": " m0 glay default line-b",
+									"hide": "",
+									"style": "padding:20px;"
+								}
+							},
+							{
+								"type": "layout.div",
+								"data": [
+									{
+										"type": "tag.p",
+										"attr": {
+											"class": "sizeM default",
+											"css": "sizeM default",
+											"narrow": "",
+											"hide": "",
+											"style": "margin-top:0px;"
+										},
+										"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+									}
+								],
+								"attr": {
+									"class": "p20",
+									"css": "p20",
+									"style": ""
+								},
+								"extra": {
+									"bg": {
+										"img": "",
+										"color": "",
+										"use": false
+									}
+								}
+							}
+						],
+						"attr": {
+							"class": " default waku",
+							"css": " default waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>H3</em> タイトル",
+										"link": null
+									},
+									"right": {
+										"text": "サブタイトル",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": "black m0 default",
+									"narrow": "",
+									"class": "black m0 default",
+									"hide": "",
+									"style": "padding:20px;\n"
+								}
+							},
+							{
+								"type": "layout.div",
+								"data": [
+									{
+										"type": "tag.p",
+										"attr": {
+											"class": "sizeM default",
+											"css": "sizeM default",
+											"narrow": "",
+											"hide": "",
+											"style": "margin-top:0px;"
+										},
+										"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+									}
+								],
+								"attr": {
+									"class": "p20",
+									"css": "p20",
+									"style": ""
+								},
+								"extra": {
+									"bg": {
+										"img": "",
+										"color": "",
+										"use": false
+									}
+								}
+							}
+						],
+						"attr": {
+							"class": " default waku",
+							"css": " default waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>H3</em> タイトル",
+										"link": null
+									},
+									"right": {
+										"text": "サブタイトル",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": "black m0 default",
+									"narrow": "",
+									"class": "black m0 default",
+									"hide": "",
+									"style": "padding:20px;\n"
+								}
+							},
+							{
+								"type": "tag.img",
+								"data": {
+									"img": "width:200,height:140",
+									"link": null,
+									"isZoom": false,
+									"isLayoutMode": false,
+									"layout": {},
+									"onlyImgTag": true
+								},
+								"extra": {
+									"caption": "",
+									"width": "100%",
+									"margin": "",
+									"layout_width": "",
+									"height": "4:1"
+								},
+								"attr": {
+									"css": "default ",
+									"class": "default "
+								}
+							},
+							{
+								"type": "layout.div",
+								"data": [
+									{
+										"type": "tag.p",
+										"attr": {
+											"class": "sizeM default",
+											"css": "sizeM default",
+											"narrow": "",
+											"hide": "",
+											"style": "margin-top:0px;"
+										},
+										"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+									}
+								],
+								"attr": {
+									"class": "p20",
+									"css": "p20",
+									"style": ""
+								},
+								"extra": {
+									"bg": {
+										"img": "",
+										"color": "",
+										"use": false
+									}
+								}
+							}
+						],
+						"attr": {
+							"class": " default waku",
+							"css": " default waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					}
+				]
+			}
+		]
+	}
+}

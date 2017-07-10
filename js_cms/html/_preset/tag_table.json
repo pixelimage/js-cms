@@ -1,0 +1,294 @@
+{
+	"meta": {},
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.p",
+						"data": ".default",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.table",
+						"data": {
+							"setting": {
+								"texts": {
+									"row1": "1",
+									"col1": "1"
+								},
+								"grid": []
+							},
+							"table": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "項目名"
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください\n <a href='http://www.google.co.jp'><i class='fa fa-caret-right '></i> リンク</a> "
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください"
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください"
+									}
+								],
+								"_state": {
+									"currentRow": 0,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": "default w100p",
+							"style": "",
+							"class": "default w100p"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".big",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.table",
+						"data": {
+							"setting": {
+								"texts": {
+									"row1": "1",
+									"col1": "1"
+								},
+								"grid": []
+							},
+							"table": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "項目名"
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください\n <a href='http://www.google.co.jp'><i class='fa fa-caret-right '></i> リンク</a> "
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください"
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください"
+									}
+								],
+								"_state": {
+									"currentRow": 0,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": "default w100p big",
+							"style": "",
+							"class": "default w100p big"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".small",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.table",
+						"data": {
+							"setting": {
+								"texts": {
+									"row1": "1",
+									"col1": "1"
+								},
+								"grid": []
+							},
+							"table": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "項目名"
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください\n <a href='http://www.google.co.jp'><i class='fa fa-caret-right '></i> リンク</a> "
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください"
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください"
+									}
+								],
+								"_state": {
+									"currentRow": 0,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": "w100p default small",
+							"style": "",
+							"class": "w100p default small"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".wide",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.table",
+						"data": {
+							"setting": {
+								"texts": {
+									"row1": "1",
+									"col1": "1"
+								},
+								"grid": []
+							},
+							"table": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "項目名"
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください\n <a href='http://www.google.co.jp'><i class='fa fa-caret-right '></i> リンク</a> "
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください"
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください"
+									}
+								],
+								"_state": {
+									"currentRow": 0,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": "default w100p wide",
+							"style": "",
+							"class": "default w100p wide"
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": ".narrow",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "object.table",
+						"data": {
+							"setting": {
+								"texts": {
+									"row1": "1",
+									"col1": "1"
+								},
+								"grid": []
+							},
+							"table": {
+								"texts": {},
+								"grid": [
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "項目名"
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください\n <a href='http://www.google.co.jp'><i class='fa fa-caret-right '></i> リンク</a> "
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください"
+									},
+									{
+										"publicData": "1",
+										"c1": "項目名",
+										"c2": "サンプルの文書ですので、ご注意ください"
+									}
+								],
+								"_state": {
+									"currentRow": 0,
+									"currentPage": 0,
+									"fitWide": true,
+									"hideCols": ""
+								}
+							}
+						},
+						"attr": {
+							"css": "default w100p narrow",
+							"style": "",
+							"class": "default w100p narrow"
+						}
+					}
+				]
+			}
+		]
+	}
+}

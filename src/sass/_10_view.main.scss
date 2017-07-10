@@ -1,0 +1,184 @@
+
+/* ! ---------- body ---------- ---------- ---------- ---------- */
+
+html,body { height: 100%; overflow: hidden;}
+
+/* ! ---------- _loading ---------- ---------- ---------- ---------- */
+
+._loading{padding: 20px;color: #4A66A0;}
+
+/* ! ---------- #NO_CMS ---------- ---------- ---------- ---------- */
+
+#NO_CMS { 
+	padding: 60px; color: #4A66A0; line-height: 2; 
+	._title { font-size: 32px; font-weight: bold; font-family: 'Roboto',sans-serif; }
+	._title ._small{ font-size: 18px; }
+	._h2 { margin: 2em 0 0.5em 0;font-size: 18px; font-weight: bold; font-family: 'Roboto',sans-serif; }
+	li { list-style-type: disc; margin: 0 0 0 30px; }
+}
+
+/* ! ---------- #DemoView ---------- ---------- ---------- ---------- */
+
+#CMS_DemoView {
+	display: none; position: fixed; top:0px;right: 250px; padding: 3px; font: 12px; z-index: 50000; background:red;margin: 0 0 0 -100px;color: #ff0;
+	span { font-size: 10px; padding: 5px 0 0 5px;}
+}
+
+
+/* ! ---------- #CMS_LOCK ---------- ---------- ---------- ---------- */
+
+#CMS_LOCK { 
+	position: fixed; top: 0px; right:0px; cursor: pointer;
+	._btn { cursor: pointer;}
+	i { font-size: 18px;}
+	._btn_lock,
+	._btn_unlock { width:40px; height:40px; background: #222; color: #888; text-align: center; padding: 5px 0 0 0; box-sizing: border-box; font-size: 10px;}
+
+	._btn_unlock {background: #222;}
+	._btn_lock i { color: yellow;}
+	._btn_unlock i { color: #888;}
+	span { margin: 2px 0 0 0; display: block;}
+
+	._btn_unlock {display: none;}
+	._btn_lock {display: block;}
+
+	&._unlock  ._btn_unlock {display: block;}
+	&._unlock  ._btn_lock {display: none;}
+}
+
+/* ! ---------- #CheckedView ---------- ---------- ---------- ---------- */
+
+#CMS_CheckedView { 
+	display: none; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background: #4A66A0; color:#e7ebf2; color:#6FF; padding:50px 50px 0 50px ; font-family: Arial; font-size: 16px; line-height: 1.6;
+	._title { font-size: 24px; font-weight: bold; color:#ff6600;}
+	._errorList { padding: 5px 5px 5px 25px; color:red;}
+	._attention { color:yellow;}
+	._h {border-bottom: 1px dotted #00ffff;padding: 5px 0;margin:20px 0 5px 0;display: block;}
+	._small { font-size:12px;}
+	._box-sett { border-left: 1px dotted #00ffff;padding: 0 0 0 1em;margin: 1em 1em 2em 2em;}
+	
+	a { color:#fff;}
+}
+
+/* ! ---------- #CMS_LoginView ---------- ---------- ---------- ---------- */
+
+#CMS_LoginView { 
+ 	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: #4A66A0;
+	color:#e7ebf2;
+	color:#6FF;
+	padding:200px 0 0 50px ;
+	font-family: Arial;
+	font-weight: bold;
+	
+	._title {font-size: 36px; padding: 5px 0 10px 48px; }
+	input { font-size: 16px; font-weight: bold; color:#4A66A0; width: 150px;}
+	a { color:#e7ebf2; color:#6FF;}
+	._read { font-size: 12px; padding: 5px 0 5px 48px; line-height: 1.6;}
+	table { margin: 40px 0;}
+	th { padding: 15px 5px 0 0; text-align: right;}
+	td { padding: 5px;}
+	._t_message { color:#f60;}
+	._btn_login { padding: 10px 5px; background: #6FF; color: #4A66A0; width: 140px; text-align: center; border-radius:5px; font-weight: bold; box-shadow:0px 0px 5px rgba(0,0,0,0.2);}
+
+}
+
+/* ! ---------- #CMS_RootView ---------- ---------- ---------- ---------- */
+
+#CMS_RootView { display: none; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; }
+#CMS_RootView,
+._modalView { min-width: 800px; }
+
+
+/* ! ---------- #CMS_Header ---------- ---------- ---------- ---------- */
+
+#CMS_Header {
+	 position: fixed; top: 0; left: 0; right: 40px; height: 40px; background: #4A66A0; line-height: 1; font-size: 12px; color: #6FF;
+	a { color: #6FF; text-decoration: none;}
+
+	._sitename { position: absolute; top: 14px; left: 10px; font-size:14px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+	._freeBlock{
+		position: absolute;
+		top: 0px;
+		right: 135px;
+		height: 40px;
+		 ._menuset {
+			position: relative;
+			float: left;
+			._menu {
+				position: relative;
+				display: block;
+				text-align: center;
+				line-height: 40px;
+				padding: 0 7px;
+			}
+			&:hover ._menu { background: #333366;}
+			 ._float {
+				display: none;
+				position: absolute;
+				top: 40px;
+				left: 0px;
+				width: 150px;
+				background: #4A66A0;
+				padding:10px 5px 10px 10px;
+				._item { padding: 7px 0; line-height: 1.2;}
+			}
+		}
+	}
+
+	._cmsBlock {
+		position: absolute;
+		top: 0px;
+		right: 5px;
+		width: 130px;
+		height: 40px;
+		._menu {
+			display: block;
+			text-align: center;
+			line-height: 40px;
+			padding: 0 7px;
+		}
+		&:hover ._menu { background: #333366;}
+		 ._float {
+			display: none;
+			position: absolute;
+			top: 40px;
+			left: 0px;
+			width: 130px;
+			background: #4A66A0;
+			padding:10px 10px 10px 10px;
+			 ._item {
+				padding: 7px 0;
+				line-height: 1.2;
+				&._btn_logout{
+					border: 1px solid rgba(#6ff,0.5);
+					margin: 5px 0;
+					padding: 7px; 
+				}
+				&._btn_cms {
+					text-align: center;
+					line-height: 1.6;
+					font-size:10px;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	._header_btns { position: absolute; top: 5px; left: 200px;}
+	._header_btns > div { float: left; margin:0 15px 0 0;}
+	._header_btns > div:after { display: block; clear: both; height: 0; content: ''; }
+	._header_btns > div .ss_icon { display: block;float: left;}
+	._header_btns > div ._t { display: block; padding: 10px 0; float: left}
+}
+#CMS_HeaderRight { position: fixed; top: 0; right: 0; height: 40px; width: 40px; background: #222;}
+
+/* ! ---------- #FormCandidates ---------- ---------- ---------- ---------- */
+
+#FormCandidates { display: none }
+

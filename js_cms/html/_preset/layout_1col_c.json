@@ -1,0 +1,1018 @@
+{
+	"meta": {},
+	"head": {},
+	"body": {
+		"free": [
+			{
+				"type": "layout.div",
+				"attr": {},
+				"data": [
+					{
+						"type": "tag.p",
+						"data": "画像回り込み",
+						"attr": {
+							"css": "_cms_test_h2 mt",
+							"class": "_cms_test_h2 mt"
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.img",
+								"data": {
+									"img": "width:200,height:140",
+									"link": null,
+									"layout": {},
+									"isLayoutMode": false
+								},
+								"attr": {
+									"css": "right",
+									"narrow": "",
+									"class": "right",
+									"hide": ""
+								},
+								"extra": {
+									"caption": "キャプション",
+									"width": "200px",
+									"height": "3:2"
+								}
+							},
+							{
+								"type": "tag.p",
+								"attr": {
+									"class": "default mt0",
+									"css": "default mt0",
+									"narrow": "",
+									"hide": ""
+								},
+								"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。\n\nサンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。\n\nサンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+							},
+							{
+								"type": "tag.btn",
+								"data": {
+									"href": "#",
+									"target": "",
+									"attr": "",
+									"text": "ボタン名",
+									"class_": "cms-btn-text-box  cms-btn-size-l  ",
+									"image": ""
+								},
+								"attr": {
+									"narrow": "",
+									"class": "",
+									"hide": ""
+								}
+							}
+						],
+						"attr": {
+							"class": "default clearfix",
+							"css": "default clearfix",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "左右分割",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "layout.cols",
+						"data": [
+							{
+								"type": "layout.div",
+								"attr": {
+									"style": "",
+									"narrow": "",
+									"class": "",
+									"hide": ""
+								},
+								"data": [
+									{
+										"type": "tag.p",
+										"attr": {
+											"class": "default mt0",
+											"css": "default mt0",
+											"narrow": "",
+											"hide": ""
+										},
+										"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。\n\nサンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。\n\nサンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+									},
+									{
+										"type": "tag.btn",
+										"data": {
+											"href": "#",
+											"target": "",
+											"attr": "",
+											"text": "ボタン名",
+											"class_": "cms-btn-text-box  cms-btn-size-l  ",
+											"image": ""
+										},
+										"attr": {
+											"narrow": "",
+											"class": "",
+											"hide": ""
+										}
+									}
+								]
+							},
+							{
+								"type": "layout.div",
+								"attr": {
+									"style": ""
+								},
+								"data": [
+									{
+										"type": "tag.img",
+										"data": {
+											"img": "width:200,height:140",
+											"link": null,
+											"layout": {},
+											"isLayoutMode": false
+										},
+										"attr": {
+											"css": "",
+											"narrow": "",
+											"class": "",
+											"hide": ""
+										},
+										"extra": {
+											"caption": "キャプション",
+											"width": "200px",
+											"height": "3:2"
+										}
+									}
+								]
+							}
+						],
+						"attr": {
+							"css": " col-p20",
+							"narrow": "",
+							"class": " col-p20",
+							"hide": ""
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "枠付き+見出付き-A",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>h3</em> 中見出し",
+										"link": null
+									},
+									"right": {
+										"text": "",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": "default mt0 line",
+									"narrow": "",
+									"class": "default mt0 line",
+									"hide": "",
+									"style": "padding:20px;"
+								}
+							},
+							{
+								"type": "layout.cols",
+								"data": [
+									{
+										"type": "layout.div",
+										"attr": {
+											"style": "",
+											"narrow": "",
+											"class": "",
+											"hide": ""
+										},
+										"data": [
+											{
+												"type": "tag.p",
+												"attr": {
+													"class": "default m0",
+													"css": "default m0",
+													"narrow": "",
+													"hide": ""
+												},
+												"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+											},
+											{
+												"type": "tag.btn",
+												"data": {
+													"href": "#",
+													"target": "",
+													"attr": "",
+													"text": "ボタン名",
+													"class_": "cms-btn-text-box  cms-btn-size-l  ",
+													"image": ""
+												},
+												"attr": {
+													"narrow": "",
+													"class": "",
+													"hide": ""
+												}
+											}
+										]
+									},
+									{
+										"type": "layout.div",
+										"attr": {
+											"style": ""
+										},
+										"data": [
+											{
+												"type": "tag.img",
+												"data": {
+													"img": "width:200,height:140",
+													"link": null,
+													"layout": {},
+													"isLayoutMode": false
+												},
+												"attr": {
+													"css": "",
+													"narrow": "",
+													"class": "",
+													"hide": ""
+												},
+												"extra": {
+													"caption": "キャプション",
+													"width": "200px",
+													"height": "3:2"
+												}
+											}
+										]
+									}
+								],
+								"attr": {
+									"css": " col-p20",
+									"narrow": "",
+									"class": " col-p20",
+									"hide": ""
+								}
+							}
+						],
+						"attr": {
+							"class": "default waku p20",
+							"css": "default waku p20",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "枠付き+見出付き-B",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>h3</em> 中見出し",
+										"link": null
+									},
+									"right": {
+										"text": "",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": "default m0 line-b",
+									"narrow": "",
+									"class": "default m0 line-b",
+									"hide": "",
+									"style": "padding:20px;"
+								}
+							},
+							{
+								"type": "layout.div",
+								"data": [
+									{
+										"type": "layout.cols",
+										"data": [
+											{
+												"type": "layout.div",
+												"attr": {
+													"style": "",
+													"narrow": "",
+													"class": "",
+													"hide": ""
+												},
+												"data": [
+													{
+														"type": "tag.p",
+														"attr": {
+															"class": "default",
+															"css": "default",
+															"narrow": "",
+															"hide": ""
+														},
+														"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+													},
+													{
+														"type": "tag.btn",
+														"data": {
+															"href": "#",
+															"target": "",
+															"attr": "",
+															"text": "ボタン名",
+															"class_": "cms-btn-text-box  cms-btn-size-l  ",
+															"image": ""
+														},
+														"attr": {
+															"narrow": "",
+															"class": "",
+															"hide": ""
+														}
+													}
+												]
+											},
+											{
+												"type": "layout.div",
+												"attr": {
+													"style": ""
+												},
+												"data": [
+													{
+														"type": "tag.img",
+														"data": {
+															"img": "width:200,height:140",
+															"link": null,
+															"layout": {},
+															"isLayoutMode": false
+														},
+														"attr": {
+															"css": "",
+															"narrow": "",
+															"class": "",
+															"hide": ""
+														},
+														"extra": {
+															"caption": "キャプション",
+															"width": "200px",
+															"height": "3:2"
+														}
+													}
+												]
+											}
+										],
+										"attr": {
+											"css": " col-p20",
+											"narrow": "",
+											"class": " col-p20",
+											"hide": ""
+										}
+									}
+								],
+								"attr": {
+									"class": "clearfix p20 default mt0",
+									"css": "clearfix p20 default mt0",
+									"style": "",
+									"narrow": "",
+									"hide": ""
+								},
+								"extra": {
+									"bg": {
+										"img": "",
+										"color": "",
+										"use": false
+									}
+								}
+							}
+						],
+						"attr": {
+							"class": "default waku",
+							"css": "default waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "枠付き+見出付き-B-グレー",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>h3</em> 中見出し",
+										"link": null
+									},
+									"right": {
+										"text": "",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": "default m0 line-b glay",
+									"narrow": "",
+									"class": "default m0 line-b glay",
+									"hide": "",
+									"style": "padding:20px;"
+								}
+							},
+							{
+								"type": "layout.div",
+								"data": [
+									{
+										"type": "layout.cols",
+										"data": [
+											{
+												"type": "layout.div",
+												"attr": {
+													"style": "",
+													"narrow": "",
+													"class": "",
+													"hide": ""
+												},
+												"data": [
+													{
+														"type": "tag.p",
+														"attr": {
+															"class": "default",
+															"css": "default",
+															"narrow": "",
+															"hide": ""
+														},
+														"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+													},
+													{
+														"type": "tag.btn",
+														"data": {
+															"href": "#",
+															"target": "",
+															"attr": "",
+															"text": "ボタン名",
+															"class_": "cms-btn-text-box  cms-btn-size-l  ",
+															"image": ""
+														},
+														"attr": {
+															"narrow": "",
+															"class": "",
+															"hide": ""
+														}
+													}
+												]
+											},
+											{
+												"type": "layout.div",
+												"attr": {
+													"style": ""
+												},
+												"data": [
+													{
+														"type": "tag.img",
+														"data": {
+															"img": "width:200,height:140",
+															"link": null,
+															"layout": {},
+															"isLayoutMode": false
+														},
+														"attr": {
+															"css": "",
+															"narrow": "",
+															"class": "",
+															"hide": ""
+														},
+														"extra": {
+															"caption": "キャプション",
+															"width": "200px",
+															"height": "3:2"
+														}
+													}
+												]
+											}
+										],
+										"attr": {
+											"css": " col-p20",
+											"narrow": "",
+											"class": " col-p20",
+											"hide": ""
+										}
+									}
+								],
+								"attr": {
+									"class": "clearfix p20 default mt0",
+									"css": "clearfix p20 default mt0",
+									"style": "",
+									"narrow": "",
+									"hide": ""
+								},
+								"extra": {
+									"bg": {
+										"img": "",
+										"color": "",
+										"use": false
+									}
+								}
+							}
+						],
+						"attr": {
+							"class": "default waku",
+							"css": "default waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "枠付き+見出付き-B-黒",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "tag.heading",
+								"data": {
+									"heading": "h3",
+									"main": {
+										"text": "<em>h3</em> 中見出し",
+										"link": null
+									},
+									"right": {
+										"text": "",
+										"link": null
+									},
+									"top": {
+										"text": "",
+										"link": null
+									},
+									"bottom": {
+										"text": "",
+										"link": null
+									}
+								},
+								"attr": {
+									"css": "default m0 black",
+									"narrow": "",
+									"class": "default m0 black",
+									"hide": "",
+									"style": "padding:20px;"
+								}
+							},
+							{
+								"type": "layout.div",
+								"data": [
+									{
+										"type": "layout.cols",
+										"data": [
+											{
+												"type": "layout.div",
+												"attr": {
+													"style": "",
+													"narrow": "",
+													"class": "",
+													"hide": ""
+												},
+												"data": [
+													{
+														"type": "tag.p",
+														"attr": {
+															"class": "default",
+															"css": "default",
+															"narrow": "",
+															"hide": ""
+														},
+														"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。"
+													},
+													{
+														"type": "tag.btn",
+														"data": {
+															"href": "#",
+															"target": "",
+															"attr": "",
+															"text": "ボタン名",
+															"class_": "cms-btn-text-box  cms-btn-size-l  ",
+															"image": ""
+														},
+														"attr": {
+															"narrow": "",
+															"class": "",
+															"hide": ""
+														}
+													}
+												]
+											},
+											{
+												"type": "layout.div",
+												"attr": {
+													"style": ""
+												},
+												"data": [
+													{
+														"type": "tag.img",
+														"data": {
+															"img": "width:200,height:140",
+															"link": null,
+															"layout": {},
+															"isLayoutMode": false
+														},
+														"attr": {
+															"css": "",
+															"narrow": "",
+															"class": "",
+															"hide": ""
+														},
+														"extra": {
+															"caption": "キャプション",
+															"width": "200px",
+															"height": "3:2"
+														}
+													}
+												]
+											}
+										],
+										"attr": {
+											"css": " col-p20",
+											"narrow": "",
+											"class": " col-p20",
+											"hide": ""
+										}
+									}
+								],
+								"attr": {
+									"class": "clearfix p20 default mt0",
+									"css": "clearfix p20 default mt0",
+									"style": "",
+									"narrow": "",
+									"hide": ""
+								},
+								"extra": {
+									"bg": {
+										"img": "",
+										"color": "",
+										"use": false
+									}
+								}
+							}
+						],
+						"attr": {
+							"class": "default waku",
+							"css": "default waku",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "見出しも右へ",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "layout.cols",
+								"data": [
+									{
+										"type": "layout.div",
+										"attr": {
+											"style": "",
+											"narrow": "",
+											"class": "",
+											"hide": ""
+										},
+										"data": [
+											{
+												"type": "tag.heading",
+												"data": {
+													"heading": "h3",
+													"main": {
+														"text": "中見出し",
+														"link": null
+													},
+													"right": {
+														"text": "",
+														"link": null
+													},
+													"top": {
+														"text": "",
+														"link": null
+													},
+													"bottom": {
+														"text": "",
+														"link": null
+													}
+												},
+												"attr": {
+													"css": "mt0 line-b",
+													"narrow": "",
+													"class": "mt0 line-b",
+													"hide": ""
+												}
+											},
+											{
+												"type": "tag.p",
+												"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+												"attr": {
+													"css": "default",
+													"narrow": "",
+													"class": "default",
+													"hide": ""
+												}
+											},
+											{
+												"type": "tag.btn",
+												"data": {
+													"href": "#",
+													"target": "",
+													"attr": "",
+													"text": "ボタン名",
+													"class_": "cms-btn-text-box  cms-btn-size-l  ",
+													"image": ""
+												},
+												"attr": {
+													"narrow": "",
+													"class": "",
+													"hide": ""
+												}
+											}
+										]
+									},
+									{
+										"type": "layout.div",
+										"attr": {
+											"style": ""
+										},
+										"data": [
+											{
+												"type": "tag.img",
+												"data": {
+													"img": "width:200,height:140",
+													"link": null,
+													"layout": {},
+													"isLayoutMode": false
+												},
+												"attr": {
+													"css": "",
+													"narrow": "",
+													"class": "",
+													"hide": ""
+												},
+												"extra": {
+													"caption": "キャプション",
+													"width": "200px",
+													"height": "3:2"
+												}
+											}
+										]
+									}
+								],
+								"attr": {
+									"css": " col-p20",
+									"narrow": "",
+									"class": " col-p20",
+									"hide": ""
+								}
+							}
+						],
+						"attr": {
+							"class": "default waku p20",
+							"css": "default waku p20",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					},
+					{
+						"type": "tag.p",
+						"data": "見出しも右へ-黒",
+						"attr": {
+							"css": "_cms_test_h2",
+							"class": "_cms_test_h2"
+						}
+					},
+					{
+						"type": "layout.div",
+						"data": [
+							{
+								"type": "layout.cols",
+								"data": [
+									{
+										"type": "layout.div",
+										"attr": {
+											"style": "",
+											"narrow": "",
+											"class": "",
+											"hide": ""
+										},
+										"data": [
+											{
+												"type": "tag.heading",
+												"data": {
+													"heading": "h3",
+													"main": {
+														"text": "中見出し",
+														"link": null
+													},
+													"right": {
+														"text": "",
+														"link": null
+													},
+													"top": {
+														"text": "",
+														"link": null
+													},
+													"bottom": {
+														"text": "",
+														"link": null
+													}
+												},
+												"attr": {
+													"css": "mt0 line-b",
+													"narrow": "",
+													"class": "mt0 line-b",
+													"hide": ""
+												}
+											},
+											{
+												"type": "tag.p",
+												"data": "サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。サンプルの文書ですので、ご注意ください。",
+												"attr": {
+													"css": "default",
+													"narrow": "",
+													"class": "default",
+													"hide": ""
+												}
+											},
+											{
+												"type": "tag.btn",
+												"data": {
+													"href": "#",
+													"target": "",
+													"attr": "",
+													"text": "ボタン名",
+													"class_": "cms-btn-text-box  cms-btn-size-l  ",
+													"image": ""
+												},
+												"attr": {
+													"narrow": "",
+													"class": "",
+													"hide": ""
+												}
+											}
+										]
+									},
+									{
+										"type": "layout.div",
+										"attr": {
+											"style": ""
+										},
+										"data": [
+											{
+												"type": "tag.img",
+												"data": {
+													"img": "width:200,height:140",
+													"link": null,
+													"layout": {},
+													"isLayoutMode": false
+												},
+												"attr": {
+													"css": "",
+													"narrow": "",
+													"class": "",
+													"hide": ""
+												},
+												"extra": {
+													"caption": "キャプション",
+													"width": "200px",
+													"height": "3:2"
+												}
+											}
+										]
+									}
+								],
+								"attr": {
+									"css": " col-p20",
+									"narrow": "",
+									"class": " col-p20",
+									"hide": ""
+								}
+							}
+						],
+						"attr": {
+							"class": "default waku p20",
+							"css": "default waku p20",
+							"style": "",
+							"narrow": "",
+							"hide": ""
+						},
+						"extra": {
+							"bg": {
+								"img": "",
+								"color": "",
+								"use": false
+							}
+						}
+					}
+				]
+			}
+		]
+	}
+}

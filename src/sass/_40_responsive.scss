@@ -1,0 +1,72 @@
+
+#CMS_Header ._header_btns,
+#CMS_PagesView,
+#CMS_IntroView,
+#AddElements,
+#CMS_Asset_FilesArea { left: 220px;}
+
+#CMS_PageListView,
+#CMS_Asset_DirArea,
+#CMS_AssetStageClose ._header { width: 220px;}
+
+._asset_list ._btn_page,
+._listItem ._btn_page,
+._listItem ._btn_dir { font-size: 12px;}
+
+/*
+#CMS_PageListView ._header ._header_title ._title { width: 150px;}
+*/
+#CMS_Header ._sitename { width: 200px;}
+
+@media screen and (max-width: $breakPointMM) {
+	
+	#CMS_Header ._header_btns,
+	#CMS_PagesView,
+	#CMS_IntroView,
+	#AddElements,
+	#CMS_Asset_FilesArea{ left: 170px;}
+	#CMS_PageListView,
+	#CMS_Asset_DirArea,
+	#CMS_AssetStageClose ._header { width: 170px;}
+	
+	/*
+	#CMS_PageListView ._header ._header_title ._title { width: 100px;}
+	*/
+	#CMS_Header ._sitename { width: 150px;}
+
+	._hide_S{display: none;}
+	._asset_list ._btn_page,
+	._listItem ._btn_page,
+	._listItem ._btn_dir { font-size: 11px;}
+}
+
+
+/* ---------- ---------- ---------- */
+
+#Float_PreviewFull,
+#Float_PreviewMini { left: 215px}
+
+body._wideNavi #Float_PreviewFull,
+body._wideNavi #Float_PreviewMini { left: 745px}
+
+
+@media screen and (max-width: $breakPointMM) {
+	#Float_PreviewFull,
+	#Float_PreviewMini { left: 165px}
+}
+
+
+/* ---------- ---------- ---------- */
+
+/* 汎用 */
+
+@media screen and (max-width: $breakPointMM) {
+	._cms_wide{ display: none!important;}
+}
+
+/* ---------- ---------- ---------- */
+/* プレビュー表示時に非表示*/
+._cms_hide_preview{}
+body._openPreview ._cms_hide_preview{display: none;}
+
+

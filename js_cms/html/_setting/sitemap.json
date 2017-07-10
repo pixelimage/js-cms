@@ -1,0 +1,130 @@
+{
+	"list": [
+		{
+			"id": "index",
+			"name": "HOME",
+			"type": "page",
+			"publicDate": "2016/10/04 01:25:07",
+			"saveDate": "2016/10/04 01:20:07",
+			"dir": "/"
+		},
+		{
+			"id": "company",
+			"name": "会社概要",
+			"type": "page",
+			"saveDate": "2016/09/06 18:23:04",
+			"publicDate": "2016/10/04 01:16:50",
+			"dir": ""
+		},
+		{
+			"id": "news",
+			"name": "お知らせ一覧",
+			"type": "page",
+			"saveDate": "2016/09/22 14:02:05",
+			"publicDate": "2016/10/04 01:16:50",
+			"dir": "",
+			"tag": "",
+			"date": ""
+		},
+		{
+			"id": "news_detail",
+			"name": "お知らせ詳細",
+			"list": [
+				{
+					"id": "news_20150505",
+					"name": "2015/05/05",
+					"type": "page",
+					"saveDate": "2016/09/06 17:45:37",
+					"publicDate": "2016/10/04 01:16:50",
+					"dir": "",
+					"tag": "",
+					"date": "",
+					"read": "",
+					"state": "0,0,0",
+					"stateCMS": "0,0,0",
+					"custom_a": "",
+					"extra": []
+				},
+				{
+					"id": "news_20150404",
+					"name": "2015/04/04",
+					"type": "page",
+					"saveDate": "2016/06/15 00:02:47",
+					"publicDate": "2016/10/04 01:16:50",
+					"dir": ""
+				},
+				{
+					"id": "news_20150303",
+					"name": "2015/03/03",
+					"type": "page",
+					"saveDate": "2016/06/15 00:02:21",
+					"publicDate": "2016/10/04 01:16:50",
+					"dir": "",
+					"tag": "",
+					"date": ""
+				},
+				{
+					"id": "news_20150202",
+					"name": "2015/02/02",
+					"type": "page",
+					"saveDate": "2016/06/15 00:01:58",
+					"publicDate": "2016/10/04 01:16:50",
+					"dir": "",
+					"tag": "",
+					"date": ""
+				},
+				{
+					"id": "news_20150101",
+					"name": "2015/01/01",
+					"type": "page",
+					"saveDate": "2016/06/15 00:01:32",
+					"publicDate": "2016/10/04 01:16:50",
+					"dir": "",
+					"tag": "",
+					"date": ""
+				}
+			],
+			"type": "dir",
+			"uid": "dir_20160905_z8c",
+			"state": "0,1,0"
+		},
+		{
+			"id": "products",
+			"name": "製品案内",
+			"type": "page",
+			"saveDate": "2016/09/22 14:04:06",
+			"publicDate": "2016/10/04 01:16:50",
+			"dir": "",
+			"tag": "",
+			"date": ""
+		},
+		{
+			"id": "recruit",
+			"name": "採用情報",
+			"type": "page",
+			"saveDate": "2016/09/23 19:18:26",
+			"publicDate": "2016/10/04 01:16:50",
+			"dir": ""
+		},
+		{
+			"id": "contact",
+			"name": "問い合わせ",
+			"type": "page",
+			"saveDate": "2016/09/22 15:20:16",
+			"publicDate": "2016/10/04 01:16:50",
+			"dir": "/",
+			"state": "0,1,0",
+			"tag": "",
+			"date": "",
+			"read": "",
+			"stateCMS": "0,0,0",
+			"custom_a": "",
+			"extra": []
+		}
+	],
+	"meta": {
+		"saveDate": "Wed Dec 25 2013 13:09:00 GMT+0900 (JST)"
+	},
+	"id": "sitemap_root",
+	"uid": "dir_index"
+}

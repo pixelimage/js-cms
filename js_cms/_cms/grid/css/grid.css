@@ -1,0 +1,1650 @@
+@charset "UTF-8";
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+/*
+$UI_COLOR_DARK3 : #333;
+$UI_COLOR_DARK2 : #444;
+$UI_COLOR_DARK : #666;
+$UI_COLOR_MIDDLE : #999;
+$UI_COLOR_LIGHT : #ccc;
+*/
+/* ! ---------- reset ---------- ---------- ---------- ---------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 0;
+}
+
+body {
+  font-family: "メイリオ", Meiryo,"Menlo";
+  line-height: 1;
+  background: #000;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+/* new clearfix */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* ! ----------  ---------- ---------- ---------- ---------- */
+.round50 {
+  border-radius: 50px;
+}
+
+._btn {
+  cursor: pointer;
+}
+
+._btn:hover {
+  opacity: 0.8;
+}
+
+._btn_round {
+  background: #809bd1;
+  padding: 5px 8px;
+  margin: 0 5px 0 0;
+  display: block;
+}
+
+body .w100 {
+  width: 100px;
+}
+
+body .w150 {
+  width: 150px;
+}
+
+body .w200 {
+  width: 200px;
+}
+
+body .w300 {
+  width: 300px;
+}
+
+body .c999 {
+  color: #999;
+}
+
+body .c666 {
+  color: #666;
+}
+
+body .offset-m50 {
+  margin-left: -50px;
+}
+
+body .fa-caret-down {
+  color: #809bd1;
+}
+
+body .hide {
+  display: none;
+}
+
+body ._fs9 {
+  font-size: 9px;
+}
+
+body ._fs10 {
+  font-size: 10px;
+}
+
+body ._fs12 {
+  font-size: 12px;
+}
+
+body ._fs14 {
+  font-size: 14px;
+}
+
+body ._fs16 {
+  font-size: 16px;
+}
+
+body ._fs18 {
+  font-size: 18px;
+}
+
+._time-sec_00-10 {
+  background: yellow;
+  font-weight: bold;
+}
+
+._time-sec_10-60 {
+  background: rgba(255, 255, 0, 0.9);
+  font-weight: bold;
+}
+
+._time-min_00-10 {
+  background: rgba(255, 255, 0, 0.8);
+}
+
+._time-min_10-60 {
+  background: rgba(255, 255, 0, 0.6);
+}
+
+._time-hour_01-06 {
+  background: rgba(255, 255, 0, 0.4);
+}
+
+._time-hour_06-12 {
+  background: rgba(255, 255, 0, 0.2);
+}
+
+._time-hour_12-24 {
+  background: rgba(255, 255, 0, 0.1);
+}
+
+._time-day_01-07 {
+  opacity: 1;
+}
+
+._time-day_07-31 {
+  opacity: 0.7;
+}
+
+._time-day_31-99 {
+  opacity: 0.4;
+}
+
+/* ! ----------  ---------- ---------- ---------- ---------- */
+html, body {
+  height: 100%;
+}
+
+body.grid {
+  overflow: hidden;
+  /* ! ----------  ---------- ---------- ---------- ---------- */
+  /* ! ---------- GridView ---------- ---------- ---------- ---------- */
+  /* ! ---------- ListView ---------- ---------- ---------- ---------- */
+  /* ! ---------- HeaderView ---------- ---------- ---------- ---------- */
+  /* ! ---------- ViewSelectView ---------- ---------- ---------- ---------- */
+  /* ! ---------- TabListView ---------- ---------- ---------- ---------- */
+  /* ! ---------- SettingEditView ---------- ---------- ---------- ---------- */
+  /* ! ---------- Slide_at_Preview ---------- ---------- ---------- ---------- */
+  /* ! ----------  ---------- ---------- ---------- ---------- */
+  /* ! ----------  ---------- ---------- ---------- ---------- */
+  /* ! ----------  ---------- ---------- ---------- ---------- */
+}
+
+body.grid #PreviewArea {
+  display: none;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 400px;
+  background: #444;
+  overflow: hidden;
+}
+
+body.grid #PreviewView {
+  position: absolute;
+  top: 40px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+body.grid #PreviewView .inner {
+  width: 100%;
+  height: 100%;
+}
+
+body.grid #PreviewView .btns {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  color: #000;
+  font-size: 12px;
+  padding: 2px 5px;
+  background: #333;
+  color: #fff;
+}
+
+body.grid #PreviewView .btns .item {
+  float: left;
+  padding: 2px;
+}
+
+body.grid #PreviewView iframe {
+  background: #fff;
+  transform-origin: 0 0;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+}
+
+body.grid #PreviewView .pageSet {
+  width: 100%;
+  height: 100%;
+}
+
+body.grid #PreviewView .pageSet .page {
+  width: 500px;
+  height: 100%;
+  float: left;
+}
+
+body.grid #PreviewView .pageSet .page .iframeView {
+  width: 100%;
+  height: 100%;
+}
+
+body.grid #PreviewViewHeader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+  height: 40px;
+  color: #fff;
+  background: #333;
+  border-bottom: 2px solid #fff;
+  font-size: 12px;
+}
+
+body.grid #PreviewViewHeader .inner {
+  padding: 10px 5px 0 5px;
+}
+
+body.grid #PreviewViewHeader .btns,
+body.grid #PreviewViewHeader .title_url {
+  float: left;
+}
+
+body.grid #PreviewViewHeader .btns-right {
+  float: right;
+}
+
+body.grid #PreviewViewHeader .btns .item {
+  float: left;
+  padding: 5px;
+}
+
+body.grid #PreviewViewHeader .btns-right .item {
+  float: left;
+  padding: 5px;
+}
+
+body.grid #PreviewViewHeader .title_url {
+  margin: 0 0 0 0;
+  padding: 5px 0 5px 5px;
+  background: #666;
+  width: 150px;
+  font-size: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+body.grid #PreviewViewHeader .title_url small {
+  color: #999;
+}
+
+body.grid #PreviewViewHeader .title_url td {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  font-size: 10px;
+}
+
+body.grid #PreviewViewHeader:hover .title_url:hover {
+  overflow: inherit;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.6;
+  font-size: 10px;
+}
+
+body.grid #MainArea {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+body.grid #GridView {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+body.grid #GridView iframe {
+  width: 100%;
+  height: 100%;
+}
+
+body.grid #ListView {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 12px;
+  background: #28498a;
+  overflow: scroll;
+}
+
+body.grid #ListView .inner {
+  padding: 20px;
+}
+
+body.grid #ListView table {
+  width: 100%;
+}
+
+body.grid #ListView td {
+  padding: 2px;
+  border-bottom: 1px dashed #4A66A0;
+  word-break: break-word;
+}
+
+body.grid #ListView td.no {
+  white-space: nowrap;
+  color: #809bd1;
+}
+
+body.grid #ListView td.name {
+  min-width: 100px;
+}
+
+body.grid #ListView td.date {
+  white-space: nowrap;
+  color: #000;
+  font-size: 10px;
+}
+
+body.grid #ListView td table.mylist {
+  width: auto;
+}
+
+body.grid #ListView td table.mylist td {
+  padding: 0 6px;
+}
+
+body.grid #ListView tr.pageItem {
+  cursor: pointer;
+}
+
+body.grid #ListView tr.pageItem:hover td {
+  background: #3a5998;
+}
+
+body.grid #ListView tr.pageItem.selected td {
+  color: #ffff00;
+  text-decoration: underline;
+}
+
+body.grid #ListView tr.pageItem.notMatchSearch {
+  opacity: 0.4;
+}
+
+body.grid #ListView tr.pageItem .wide {
+  width: 15px;
+  display: inline-block;
+}
+
+body.grid #ListView tr.pageItem .name {
+  cursor: pointer;
+}
+
+body.grid #ListView a {
+  font-size: 10px;
+  color: #809bd1;
+  text-decoration: none;
+}
+
+body.grid #ListView a .param_name {
+  background: #809bd1;
+  color: #28498a;
+  padding: 0px 3px;
+  font-weight: bold;
+}
+
+body.grid #ListView a .param_val {
+  padding: 2px;
+}
+
+body.grid #ListView a .param_hatena {
+  padding: 2px;
+  font-size: 130%;
+}
+
+body.grid #ListView a .param_and {
+  padding: 2px;
+  opacity: 0.5;
+}
+
+body.grid #ListView a .param_eq {
+  padding: 2px;
+  opacity: 0.5;
+}
+
+body.grid #ListView a:hover {
+  text-decoration: underline;
+}
+
+body.grid #ListView .h1 {
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+
+body.grid #ListView .h2 {
+  font-size: 14px;
+  margin: 2em 0 10px 0;
+}
+
+body.grid #ListView .base {
+  font-size: 12px;
+  margin: 0 0 10px 0;
+}
+
+body.grid #ListView .base_url {
+  opacity: 0.5;
+}
+
+body.grid #ListView .dir {
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+body.grid #ListView .dir_slash {
+  opacity: 0.25;
+}
+
+body.grid #ListView .date_icon {
+  opacity: 0.5;
+}
+
+body.grid #ListView .gloup {
+  background: #3a5998;
+  padding: 10px 5px 5px 5px;
+  color: #809bd1;
+  font-weight: bold;
+}
+
+body.grid #ListView .sub-gloup {
+  padding: 10px 5px 5px 5px;
+  color: #809bd1;
+}
+
+body.grid #ListView tr.pageItem.notMatchTag {
+  opacity: 0.4;
+}
+
+body.grid #ListView.hide_matched tr.pageItem.notMatchSearch {
+  display: none;
+}
+
+body.grid #ListView.hide_matched tr.pageItem.notMatchTag {
+  display: none;
+}
+
+body.grid #ListView .in_search {
+  width: 200px;
+}
+
+body.grid #ListView em {
+  color: #ffff00;
+  background: rgba(255, 255, 0, 0.2);
+}
+
+body.grid #ListView .searchArea {
+  text-align: right;
+  padding: 0 10px 10px 0;
+}
+
+body.grid #ListView .searchArea input {
+  border: none;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  color: #ffff00;
+}
+
+body.grid #ListView .btn_setMemori {
+  display: inline-block;
+  background: #fff;
+  color: #28498a;
+  margin: 10px 0 10px 0;
+  padding: 5px 25px;
+  font-weight: bold;
+}
+
+body.grid #SubFrame {
+  height: 3000px;
+}
+
+body.grid #HeaderView {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0px;
+  color: #66ffff;
+  background: #4A66A0;
+  transition-duration: 0.2s;
+  border-bottom: 2px solid #fff;
+  height: 40px;
+}
+
+body.grid #ViewSelectView {
+  float: left;
+}
+
+body.grid #ViewSelectView > * {
+  float: left;
+  border-left: 1px solid rgba(102, 255, 255, 0.5);
+}
+
+body.grid #ViewSelectView .logo {
+  color: #66ffff;
+  line-height: 30px;
+  margin: 0 10px 0 5px;
+  padding: 4px;
+  font-size: 12px;
+  border-left: none;
+}
+
+body.grid #ViewSelectView ._btn {
+  font-size: 14px;
+  padding: 12px;
+}
+
+body.grid #ViewSelectView .active {
+  color: #ffff00;
+}
+
+body.grid #TabListView {
+  position: absolute;
+  top: 12px;
+  left: 150px;
+  right: 10px;
+  overflow: scroll-y;
+  height: 30px;
+}
+
+body.grid #TabListView li {
+  color: #fff;
+  cursor: pointer;
+  margin: 0 2px 0 0;
+  padding: 7px 2px 7px 5px;
+  font-size: 12px;
+  display: inline-block;
+  background: #809bd1;
+  min-width: 25px;
+  max-width: 50px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body.grid #TabListView li.noData {
+  display: none;
+}
+
+body.grid #TabListView li.active {
+  color: #4A66A0;
+  background: #aec0e5;
+  background: #fff;
+}
+
+body.grid #SettingEditView {
+  display: none;
+  position: absolute;
+  top: 32px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  line-height: 1.6;
+  font-size: 12px;
+  background: #4A66A0;
+  overflow: scroll;
+}
+
+body.grid #SettingEditView .inner {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 55px;
+}
+
+body.grid #SettingEditView textarea {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background: #ffd;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.grid #SettingEditView .btns {
+  text-align: center;
+}
+
+body.grid #SettingEditView .btn_save {
+  margin: 5px 0 0 5px;
+  display: inline-block;
+  background: #fff;
+  color: #4A66A0;
+  padding: 5px 40px;
+}
+
+body.grid #Slide_at_Preview {
+  position: absolute;
+  bottom: 17px;
+  left: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+body.grid #Slide_at_Preview > * {
+  padding: 3px 4px;
+  display: table-cell;
+}
+
+body.grid #Slide_at_Preview .title {
+  font-size: 10px;
+}
+
+body.grid #Slide_at_Preview .pagenation {
+  width: 70px;
+  padding: 7px 0 0 0;
+  font-size: 12px;
+}
+
+body.grid #Slide_at_Preview .btn_prev,
+body.grid #Slide_at_Preview .btn_next {
+  font-size: 16px;
+}
+
+body.grid #RevalView {
+  display: none;
+  position: fixed;
+  top: 50%;
+  margin-top: 170px;
+  right: -185px;
+  width: 240px;
+  height: 172px;
+  font-size: 10px;
+  color: #4A66A0;
+  background: url(../images/grid_revalpanel_bg_ng.png);
+  transition-duration: 0.1s;
+}
+
+body.grid #RevalView .inner {
+  display: none;
+  padding: 20px 0 0  20px;
+}
+
+body.grid #RevalView.hover {
+  right: 0;
+  background: url(../images/grid_revalpanel_bg.png);
+}
+
+body.grid #RevalView.hover .inner {
+  display: block;
+}
+
+body.grid #RevalView .t1 {
+  width: 150px;
+  border: none;
+  background: #edf2ff;
+  border-top: 2px solid #e0eaff;
+  padding: 5px;
+  margin: 0 2px;
+}
+
+body.grid #RevalView .t2 {
+  display: none;
+}
+
+body.grid #RevalView .gloup {
+  padding: 5px 0;
+  display: block;
+}
+
+body.grid #RevalView ._btn {
+  padding: 6px;
+}
+
+body.grid #FloatPanelView {
+  display: none;
+}
+
+body.grid #FloatPanelView {
+  position: fixed;
+  top: 50%;
+  margin-top: -150px;
+  width: 210px;
+  height: 332px;
+  font-size: 10px;
+  color: #4A66A0;
+  background: rgba(255, 255, 255, 0.2);
+  background: url(../images/grid_controllpanel_bg_ng.png);
+  transition-duration: 0.1s;
+  right: -155px;
+}
+
+body.grid #FloatPanelView .inner {
+  display: none;
+}
+
+body.grid #FloatPanelView.hover {
+  right: 0;
+  background: url(../images/grid_controllpanel_bg.png);
+}
+
+body.grid #FloatPanelView.hover .inner {
+  display: block;
+}
+
+body.grid #FloatPanelView .ss_controller {
+  position: absolute;
+  cursor: pointer;
+}
+
+body.grid #FloatPanelView .ss_controller:hover {
+  opacity: 0.8;
+}
+
+body.grid #FloatPanelView .ss_controller {
+  background: url("../images/grid_controllpanel_ss.png") top left no-repeat;
+}
+
+body.grid #FloatPanelView .b_zoom_100 {
+  top: 25px;
+  left: 162px;
+  width: 30px;
+  height: 18px;
+  background-position: -162px -25px;
+}
+
+body.grid #FloatPanelView .b_zoom_15 {
+  top: 25px;
+  left: 66px;
+  width: 30px;
+  height: 18px;
+  background-position: -66px -25px;
+}
+
+body.grid #FloatPanelView .b_zoom_25 {
+  top: 25px;
+  left: 98px;
+  width: 30px;
+  height: 18px;
+  background-position: -98px -25px;
+}
+
+body.grid #FloatPanelView .b_zoom_50 {
+  top: 25px;
+  left: 130px;
+  width: 30px;
+  height: 18px;
+  background-position: -130px -25px;
+}
+
+body.grid #FloatPanelView .b_zoom_100 {
+  top: 25px;
+  left: 170px;
+  width: 25px;
+  height: 18px;
+  background-position: -170px -25px;
+}
+
+body.grid #FloatPanelView .b_zoom_50 {
+  top: 25px;
+  left: 144px;
+  width: 25px;
+  height: 18px;
+  background-position: -144px -25px;
+}
+
+body.grid #FloatPanelView .b_zoom_33 {
+  top: 25px;
+  left: 117px;
+  width: 25px;
+  height: 18px;
+  background-position: -117px -25px;
+}
+
+body.grid #FloatPanelView .b_zoom_25 {
+  top: 25px;
+  left: 90px;
+  width: 25px;
+  height: 18px;
+  background-position: -90px -25px;
+}
+
+body.grid #FloatPanelView .b_zoom_15 {
+  top: 25px;
+  left: 62px;
+  width: 25px;
+  height: 18px;
+  background-position: -62px -25px;
+}
+
+body.grid #FloatPanelView .b_zoom_up {
+  top: 20px;
+  left: 40px;
+  width: 21px;
+  height: 24px;
+  background-position: -40px -20px;
+}
+
+body.grid #FloatPanelView .b_zoom_down {
+  top: 20px;
+  left: 17px;
+  width: 21px;
+  height: 24px;
+  background-position: -17px -20px;
+}
+
+body.grid #FloatPanelView .b_misc_01 {
+  top: 216px;
+  left: 19px;
+  width: 90px;
+  height: 19px;
+  background-position: -19px -216px;
+}
+
+body.grid #FloatPanelView .b_misc_02 {
+  top: 236px;
+  left: 19px;
+  width: 90px;
+  height: 19px;
+  background-position: -19px -236px;
+}
+
+body.grid #FloatPanelView .b_mar_left {
+  top: 74px;
+  left: 22px;
+  width: 17px;
+  height: 21px;
+  background-position: -22px -74px;
+}
+
+body.grid #FloatPanelView .b_mar_right {
+  top: 74px;
+  left: 47px;
+  width: 17px;
+  height: 21px;
+  background-position: -47px -74px;
+}
+
+body.grid #FloatPanelView .b_w_left {
+  top: 100px;
+  left: 111px;
+  width: 25px;
+  height: 37px;
+  background-position: -111px -100px;
+}
+
+body.grid #FloatPanelView .b_w_right {
+  top: 100px;
+  left: 137px;
+  width: 24px;
+  height: 37px;
+  background-position: -137px -100px;
+}
+
+body.grid #FloatPanelView .b_w_320 {
+  top: 192px;
+  left: 18px;
+  width: 21px;
+  height: 18px;
+  background-position: -18px -192px;
+}
+
+body.grid #FloatPanelView .b_w_768 {
+  top: 192px;
+  left: 41px;
+  width: 23px;
+  height: 18px;
+  background-position: -41px -192px;
+}
+
+body.grid #FloatPanelView .b_w_1024 {
+  top: 192px;
+  left: 66px;
+  width: 26px;
+  height: 18px;
+  background-position: -66px -192px;
+}
+
+body.grid #FloatPanelView .b_w_1200 {
+  top: 192px;
+  left: 94px;
+  width: 26px;
+  height: 18px;
+  background-position: -94px -192px;
+}
+
+body.grid #FloatPanelView .b_w_2000 {
+  top: 192px;
+  left: 122px;
+  width: 26px;
+  height: 18px;
+  background-position: -122px -192px;
+}
+
+body.grid #FloatPanelView .b_w_320-1024 {
+  top: 192px;
+  left: 150px;
+  width: 43px;
+  height: 18px;
+  background-position: -150px -192px;
+}
+
+body.grid #FloatPanelView .b_h_up {
+  top: 141px;
+  left: 57px;
+  width: 36px;
+  height: 26px;
+  background-position: -57px -141px;
+}
+
+body.grid #FloatPanelView .b_h_down {
+  top: 168px;
+  left: 57px;
+  width: 36px;
+  height: 23px;
+  background-position: -57px -168px;
+}
+
+body.grid #FloatPanelView .b_h_500 {
+  top: 67px;
+  left: 171px;
+  width: 27px;
+  height: 18px;
+  background-position: -171px -67px;
+}
+
+body.grid #FloatPanelView .b_h_1000 {
+  top: 87px;
+  left: 171px;
+  width: 27px;
+  height: 18px;
+  background-position: -171px -87px;
+}
+
+body.grid #FloatPanelView .b_h_2000 {
+  top: 107px;
+  left: 171px;
+  width: 27px;
+  height: 18px;
+  background-position: -171px -107px;
+}
+
+body.grid #FloatPanelView .b_h_4000 {
+  top: 127px;
+  left: 171px;
+  width: 27px;
+  height: 18px;
+  background-position: -171px -127px;
+}
+
+body.grid #FloatPanelView .b_h_6000 {
+  top: 147px;
+  left: 171px;
+  width: 27px;
+  height: 18px;
+  background-position: -171px -147px;
+}
+
+body.grid #FloatPanelView .b_h_16000 {
+  top: 167px;
+  left: 171px;
+  width: 27px;
+  height: 18px;
+  background-position: -171px -167px;
+}
+
+body.grid #FloatPanelView .b_bg {
+  top: 260px;
+  left: 19px;
+  width: 54px;
+  height: 19px;
+  background-position: -19px -260px;
+}
+
+body.grid #FloatPanelView .b_col {
+  top: 260px;
+  left: 74px;
+  width: 54px;
+  height: 19px;
+  background-position: -74px -260px;
+}
+
+body.grid #FloatPanelView .b_bg_col {
+  left: 23px;
+  top: 264px;
+  width: 10px;
+  height: 10px;
+  background: #eee;
+}
+
+body.grid #FloatPanelView .b_col_col {
+  left: 78px;
+  top: 264px;
+  width: 10px;
+  height: 10px;
+  background: #eee;
+}
+
+body.grid #FloatPanelView .b_misc_01_ng {
+  top: 216px;
+  left: 19px;
+  width: 90px;
+  height: 19px;
+  background-position: -19px -287px;
+}
+
+body.grid #FloatPanelView .b_misc_02_ng {
+  top: 236px;
+  left: 19px;
+  width: 90px;
+  height: 19px;
+  background-position: -19px -307px;
+}
+
+body.grid #FloatPanelView .current {
+  position: absolute;
+  padding: 4px 2px 2px 2px;
+  background: #ffff00;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+body.grid #FloatPanelView .current:hover {
+  background: #dcdc00;
+}
+
+body.grid #FloatPanelView .current_s {
+  top: 49px;
+  left: 22px;
+}
+
+body.grid #FloatPanelView .current_w {
+  top: 109px;
+  right: 107px;
+}
+
+body.grid #FloatPanelView .current_h {
+  top: 159px;
+  right: 65px;
+}
+
+body.grid #FloatPanelView .current_m {
+  top: 75px;
+  left: 65px;
+}
+
+body.grid #FloatPanelView .memoris {
+  position: absolute;
+  top: 218px;
+  left: 135px;
+  width: 50px;
+  padding: 0 0 0 5px;
+  border-left: 1px solid #d1d9e6;
+}
+
+body.grid #FloatPanelView .memoris .t {
+  line-height: 1.6;
+}
+
+body.grid #FloatPanelView .memoris .btns-2 {
+  margin-top: 3px;
+}
+
+body.grid #FloatPanelView .memoris .btns-2:after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: '';
+}
+
+body.grid #FloatPanelView .memoris .btns-2 .btn_memori_save,
+body.grid #FloatPanelView .memoris .btns-2 .btn_memori_reset {
+  width: 40px;
+  line-height: 16px;
+  float: left;
+  margin: 1px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+body.grid #FloatPanelView .memoris .btns-2 .btn_memori_save {
+  background: #ff0;
+}
+
+body.grid #FloatPanelView .memoris .btns-2 .disable {
+  color: #ccc;
+  background: none;
+}
+
+body.grid #LogView {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  font-size: 12px;
+  background: #000;
+  color: #fff;
+}
+
+body.grid #LogView {
+  display: none;
+}
+
+body.grid #ScrollView {
+  position: fixed;
+  top: 70px;
+  right: 5px;
+  width: 40px;
+  height: 200px;
+}
+
+body.grid #ScrollView .ss_controller {
+  position: absolute;
+  cursor: pointer;
+}
+
+body.grid #ScrollView .ss_controller:hover {
+  opacity: 0.8;
+}
+
+body.grid #ScrollView .ss_controller {
+  background: url("../images/grid_controllpanel_ss.png") top left no-repeat;
+}
+
+body.grid #ScrollView .b_all_sc_top {
+  top: 7px;
+  left: 0;
+  width: 40px;
+  height: 36px;
+  background-position: -204px -7px;
+}
+
+body.grid #ScrollView .b_all_sc_m500 {
+  top: 44px;
+  left: 0;
+  width: 40px;
+  height: 26px;
+  background-position: -204px -44px;
+}
+
+body.grid #ScrollView .b_all_sc_m100 {
+  top: 71px;
+  left: 0;
+  width: 40px;
+  height: 26px;
+  background-position: -204px -71px;
+}
+
+body.grid #ScrollView .b_all_sc_100 {
+  top: 98px;
+  left: 0;
+  width: 40px;
+  height: 26px;
+  background-position: -204px -98px;
+}
+
+body.grid #ScrollView .b_all_sc_500 {
+  top: 125px;
+  left: 0;
+  width: 40px;
+  height: 26px;
+  background-position: -204px -125px;
+}
+
+body.grid #ScrollView .b_all_sc_bottom {
+  top: 152px;
+  left: 0;
+  width: 40px;
+  height: 36px;
+  background-position: -204px -152px;
+}
+
+body.grid #StateMemoriView {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+
+body.grid #StateMemoriView:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+body.grid #StateMemoriView .inner {
+  position: relative;
+  text-align: center;
+  height: 15px;
+  width: 200px;
+  border-bottom: 1px dotted #fff;
+}
+
+body.grid #StateMemoriView .inner span {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.grid #StateMemoriView .inner:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  bottom: 0px;
+  width: 1px;
+  height: 15px;
+  background: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.grid #StateMemoriView .inner:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  bottom: 0px;
+  width: 1px;
+  height: 15px;
+  background: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.grid #StateRectsView {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+  height: 40px;
+  width: 250px;
+  overflow: hidden;
+  background: #28498a;
+  background: #333;
+  padding: 0 0 0 5px;
+  border-bottom: 2px solid #ccc;
+}
+
+body.grid #StateRectsView.hover {
+  overflow: visible;
+}
+
+body.grid #StateRectsView .rect {
+  position: relative;
+  float: left;
+  color: #fff;
+  overflow: hidden;
+  margin: 7px 0  5px  7px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+body.grid #StateRectsView .rect .num {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  right: 0px;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  color: #888;
+  transform: scale(0.7);
+}
+
+body.grid #StateRectsView .rect.current {
+  overflow: visible;
+}
+
+body.grid #StateRectsView .rect.current .num {
+  color: #fff;
+}
+
+body.grid #StateRectsView .rect .item {
+  float: left;
+  border-top: 3px solid #666;
+  border-right: 1px solid #666;
+  border-bottom: 1px solid #666;
+  background: rgba(51, 51, 51, 0.9);
+}
+
+body.grid #StateRectsView .rect .item:nth-child(1) {
+  border-left: 1px solid #666;
+}
+
+body.grid #StateRectsView .rect.current {
+  background: #000;
+}
+
+body.grid #StateRectsView .rect.current .item {
+  border-top: 3px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+body.grid #StateRectsView .rect.current .item:nth-child(1) {
+  border-left: 1px solid #ccc;
+}
+
+/* ! ----------  ---------- ---------- ---------- ---------- */
+body.previewBody {
+  transform-origin: 0 0;
+  transform: scale(0.5);
+  background: #999;
+  background-image: url(../images/grid_grid.png);
+  margin: 10px 0 0 10px;
+}
+
+body.previewBody #FrameView {
+  margin: 0 0 400px 0;
+}
+
+body.previewBody .gloup {
+  display: inline;
+}
+
+body.previewBody .gloup.disable {
+  display: none;
+}
+
+body.previewBody .gloup-inner {
+  display: inline;
+}
+
+body.previewBody .pageSet {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+body.previewBody .pageSet iframe,
+body.previewBody .pageSet textarea {
+  transition-duration: 0.2s;
+}
+
+body.previewBody .pageSet.selected .t_name {
+  color: yellow;
+}
+
+body.previewBody .pageSet.disable {
+  display: none;
+}
+
+body.previewBody .pageSet .inner {
+  display: table;
+  width: 100%;
+}
+
+body.previewBody .pageSet .inner span {
+  display: table-cell;
+}
+
+body.previewBody .pageSet .inner span:first-child {
+  width: 50%;
+}
+
+body.previewBody .pageSet .inner span.btn_show {
+  display: none;
+}
+
+body.previewBody .pageSet.selected .inner span:first-child i {
+  color: #000;
+}
+
+body.previewBody .pageSet.hide {
+  width: 150px;
+  overflow: hidden;
+}
+
+body.previewBody .pageSet.hide .hideable {
+  display: none;
+}
+
+body.previewBody .pageSet.hide .page {
+  opacity: 0.25;
+}
+
+body.previewBody .pageSet.hide span.btn_show {
+  display: block;
+}
+
+body.previewBody .pageSet:hover .pageFloat {
+  display: block;
+}
+
+body.previewBody .pageSet.selected .pageFloat {
+  display: block;
+  background: rgba(255, 255, 0, 0.8);
+  color: #000000;
+}
+
+body.previewBody .pageSet.br {
+  display: none;
+}
+
+body.previewBody .pageFloat {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  z-index: 10;
+}
+
+body.previewBody .pageHeader {
+  overflow-x: hidden;
+  width: 300px;
+  height: 20px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+body.previewBody .pageHeader .t_no {
+  background: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 0 0;
+  padding: 0 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+body.previewBody .pageHeader .t_date {
+  color: #000;
+  margin: 0 0 0 10px;
+  font-size: 80%;
+}
+
+body.previewBody .pageHeader .t_url {
+  font-size: 80%;
+  opacity: 0.5;
+}
+
+body.previewBody .page {
+  display: table-cell;
+  vertical-align: top;
+}
+
+body.previewBody .disable {
+  display: none;
+}
+
+body.previewBody h2 {
+  color: #fff;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.1);
+  line-height: 18px;
+  font-weight: bold;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.025) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+body.previewBody h2.slideMode {
+  display: none;
+}
+
+body.previewBody h3 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 10px 0;
+  line-height: 1;
+}
+
+body.previewBody.noBR h2 {
+  display: none;
+}
+
+body.previewBody.noBR h3 {
+  display: none;
+}
+
+body.previewBody.noTitle .pageHeader {
+  display: none;
+}
+
+body.previewBody iframe {
+  background: #fff;
+}
+
+body.previewBody #in_data {
+  width: 100%;
+  height: 500px;
+  font-size: 24px;
+}
+
+body.previewBody .btn_more {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  background: #555;
+  color: #ff6;
+}
+
+body.previewBody .btn_more i {
+  color: #ff6;
+}
+
+/*
+.blowser_ie{
+	body.previewBody{
+		.pageFloat {
+			display: block;
+		}
+	}
+}
+*/
+body::-webkit-scrollbar {
+  width: 7px;
+  background: #333;
+}
+
+body::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+body::-webkit-scrollbar-piece {
+  background: #444;
+}
+
+body::-webkit-scrollbar-piece:start {
+  background: #444;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+body::-webkit-scrollbar-corner {
+  background: none;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-face-color: #333;
+  scrollbar-track-color: #333;
+  scrollbar-highlight-color: #555;
+  scrollbar-3dlight-color: #555;
+  scrollbar-shadow-color: #555;
+  scrollbar-darkshadow-color: #fff;
+  scrollbar-arrow-color: #555;
+}
