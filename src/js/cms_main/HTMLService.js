@@ -229,19 +229,24 @@ var HTMLServiceU = (function(){
 	
 	//ブロック書き出しで使用。{{SITE_DIR}}を書き換える
 	function setSiteRoot(_s,_path){
-		function _core (_path){ 
+		function _core (_path){
 			var s = "";
 			if(_path.substr(0,2) =="./"){
 				_path = _path.substr(2,_path.length-1);
 			}
 			var dir = URL_U.getBaseDir(_path);
-			if(	dir == "../") return CMS_Path.SITE.DIR + "/";
 			if(	dir == "")  return s;
 			//
 			var a = dir.split("/");
 			var path = "";
 			for (var i = 0; i < a.length ; i++) {
 				if(a[i] != "") path+="../";
+			}
+			//2017-07-27 調整
+			if(dir.substr(0,3) == "../"){
+				if(path.substr(path.length-3,3) =="../"){
+					path = path.substr(0,path.length-3) + CMS_Path.SITE.DIR + "/";
+				}
 			}
 			return path;
 		}

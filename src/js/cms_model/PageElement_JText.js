@@ -22,7 +22,7 @@ PageElement_JText.resetJSON = (function(){
 					data: {
 						heading: "h1",
 						main: {
-							"text": "はじめに"
+							"text": "{{PAGE_NAME}}"
 						},
 						right: {
 							text: ""

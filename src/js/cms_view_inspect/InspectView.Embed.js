@@ -284,8 +284,8 @@ InspectView.Embed	 = (function(){
 		}
 		
 		var tag = PageElement_HTMLService.getExportTag(param);
-			tag = HTMLServiceU.getReplacedHTML(tag,_getParam(pubFile));//追加 20160901
 			tag = HTMLServiceU.setSiteRoot(tag , pubFile);
+			tag = HTMLServiceU.getReplacedHTML(tag,_getParam(pubFile));//追加 20160901
 		
 		if(!isEmbed) tag = "";
 		var out = _U.replaceEmbedText(data, pubID, tag);

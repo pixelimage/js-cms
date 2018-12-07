@@ -32,7 +32,7 @@ EditableView.InputEventImg = (function(){
 
 		// v.on("keyup","._in_image_ratio"		,function(){ _changeImage_input($(this),$(this).parent().parent().parent().parent().eq(0),this_,"ratio") });
 	}
-	
+
 	//画像の変更。モーダル
 	function _changeImage  (_this,this_){
 		var uid = _getDataVal(_this,this_);
@@ -50,7 +50,7 @@ EditableView.InputEventImg = (function(){
 		//
 		var uid = _getDataVal(_this,this_);
 		var val = InputTagTempDatas.getData(uid);
-		
+
 		if(DummyImageService.isMock(val.path)) val.path = CMS_Path.UPLOAD.ABS;
 		//
 		CMS_MainController.openAssetSelectRel("image", val.path ,function(_s){
@@ -71,7 +71,7 @@ EditableView.InputEventImg = (function(){
 		//
 		var uid = _getDataVal(_this,this_);
 		var val = InputTagTempDatas.getData(uid);
-		
+
 		if(DummyImageService.isMock(val.path) == false) val.path = "";
 		DummyImageView.stageIn(val.path,function(_s){
 			o[id].mode = "simple";
@@ -82,7 +82,7 @@ EditableView.InputEventImg = (function(){
 			_changeImage_update(_this, o, id, o[id]);
 		});
 	}
-	
+
 	//画像の変更。prompt
 	function _changeImage_t(_this,this_){
 		var no = _getDataNo(_this,this_);
@@ -91,7 +91,7 @@ EditableView.InputEventImg = (function(){
 		//
 		var uid = _getDataVal(_this,this_);
 		var val = InputTagTempDatas.getData(uid);
-		
+
 		var _s = prompt("画像URLを入力してください", val.path);
  		if(_s == val.path) return;
 	 	if(_s == null) return;
@@ -108,7 +108,7 @@ EditableView.InputEventImg = (function(){
 		var o  = _getRecord(_this,this_,no);
 		//
 		var uid = _getDataVal(_this,this_);
-		
+
 	 	o[id].mode = "simple";
 	 	o[id].path = "width:100,height:100";
 	 	this_.changeData(o,no);
@@ -116,7 +116,7 @@ EditableView.InputEventImg = (function(){
 		InputTagTempDatas.addData(uid, o[id]);
 		_changeImage_update(_this, o, id, o[id]);
 	}
-	
+
 	//レイアウト
 	function _changeImage_layout(_this,this_){
 		var no = _getDataNo(_this,this_);
@@ -125,11 +125,11 @@ EditableView.InputEventImg = (function(){
 		//
 		var uid = _getDataVal(_this,this_);
 		var val = InputTagTempDatas.getData(uid);
-		
+
 		if(val.mode != "layout"){
 			val.path = {};
 		}
-		ImageMapView.stageIn(val.path,function(_s){ 
+		ImageMapView.stageIn(val.path,function(_s){
 			o[id].mode = "layout";
 			o[id].path = _s;
 			this_.changeData(o,no);
@@ -138,7 +138,7 @@ EditableView.InputEventImg = (function(){
 			_changeImage_update(_this, o, id, o[id]);
 		});
 	}
-	
+
 	//画像変更後の共通処理
 	function _changeImage_update(_this,_o,_id,_s){
 		var imgTag = '<div class="_no-photo">画像未設定</div>'
@@ -151,13 +151,13 @@ EditableView.InputEventImg = (function(){
 				alt		: "",
 				attr	: ""
 			});
-		} 
+		}
 		$(_this).find("._btn_image").html(imgTag);
 		$(_this).find("._btn_image_t").html(_s.path);
 		_setEdited($(_this).parent(),_o,_id);
 	}
-	
-	
+
+
 	//幅とratio
 	function _changeImage_input(_in,_this,this_,_type){
 		var no = _getDataNo(_this,this_);
@@ -166,7 +166,7 @@ EditableView.InputEventImg = (function(){
 		//
 		var uid = _getDataVal(_this,this_);
 		var val = InputTagTempDatas.getData(uid);
-		
+
 		var _s = _in.val();
 		o[id][_type] = _s;
 		this_.changeData(o,no);
@@ -189,14 +189,14 @@ EditableView.InputEventImg = (function(){
 			parent.find("._body_img_layout").slideDown();
 		}
 	}
-	
+
 	//IMGタグのみ表示
 	/*
 	function _changeImage_onlyImg(_this,this_,_b){
 		var no = _getDataNo(_this,this_);
 		var id = _getDataID(_this,this_);
 		var o  = _getRecord(_this,this_,no);
-		
+
 		var parent = _this.parent().parent();
 		if(_b){
 			parent.find('._btn_image_tag_ac').hide();
@@ -208,13 +208,13 @@ EditableView.InputEventImg = (function(){
 	 	o[id].onlyImgTag = _b;
 	 	this_.changeData(o,no);
 	}*/
-	
+
 	 /* ! ---------- 共通 ---------- ---------- ---------- ---------- */
-	 
+
 	 //セルを編集したら、背景を黄色くする
 	function _setEdited (_view,_o,_id) {
 		_view.addClass("_edited");
-		
+
 		//編集ステートをアップデートする グリッド再描画時に、編集ステートを引き継ぐ
 		if(_o[CELL_TYPE.STATE] === undefined) _o[CELL_TYPE.STATE] = [];
 		var editState = _o[CELL_TYPE.STATE]
@@ -224,7 +224,7 @@ EditableView.InputEventImg = (function(){
 		}
 		if(b == false) editState.push(_id);
 	}
-	function _getXY 		(_this){ return [ $(_this).offset().left +20, $(_this).offset().top - $("body").scrollTop() +20 ] }
+	function _getXY 		(_this){ return [ $(_this).offset().left +20, $(_this).offset().top - $(window).scrollTop() +20 ] }
 	function _getDataNo 	(_this,this_){ return Number($(_this).attr("data-no")) }
 	function _getDataID 	(_this,this_){ return $(_this).attr("data-id") }
 	function _getDataVal 	(_this,this_){ return $(_this).attr("data-val") }
@@ -239,24 +239,24 @@ EditableView.InputEventText = (function(){
 
 	//イベントアサイン まとめて行う
 	function assign (v,this_){
-		
+
 		//リンク
 		v.on("click","._btn_anchor"			,function(event){ _changeA(this,this_,event) });
 		v.on("click","._btn_textAnchor"		,function(event){ _changeBtn(this,this_,event) });
-		
+
 		//基本UI
 		v.on("keyup","textarea"				,function(){ _changeInput(this,this_) });
 		v.on("keyup","input"				,function(){ _changeInput(this,this_) });
 		v.on("change","select"				,function(){ _changeInput(this,this_) });
 		v.on("change","input.checkbox"		,function(){ _changeCheck(this,this_,$(this).prop("checked")) });
-		
+
 		//テーブルセル
 		v.on("click","._editYYYYMMDD"		,function(){ _changeYYYYMMDD(this,this_) });
 		v.on("click","._editableTD"			,function(){ _changeTableText(this,this_) });
 		v.on("click","._editableTDHide"		,function(){ _changeTableText(this,this_,true) });
 		v.on("click","._editableTD a" 		,function(event){ event.preventDefault(); });
 	}
-	
+
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
@@ -281,12 +281,12 @@ EditableView.InputEventText = (function(){
 			_setEdited($(_this).parent(),o,id);
 		})
 	}
-	
+
 	//ボタンの変更。モーダル
 	function _changeBtn(_this,this_,event){
 		event.stopPropagation();
 		event.preventDefault();
-		
+
 		var no = _getDataNo(_this,this_);
 		var id = _getDataID(_this,this_);
 		var o  = _getRecord(_this,this_,no);
@@ -302,7 +302,7 @@ EditableView.InputEventText = (function(){
 			_setEdited($(_this).parent(),o,id);
 		})
 	}
-	
+
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
@@ -318,7 +318,7 @@ EditableView.InputEventText = (function(){
 			this_.changeData(o,no);
 		}catch( e ){}
 	}
-	
+
 	//checkboxで値を変更
 	function _changeCheck(_this,this_,_checked){
 		var no = _getDataNo(_this,this_);
@@ -333,11 +333,11 @@ EditableView.InputEventText = (function(){
 			_setEdited($(_this).parent(),o,id);
 		}catch( e ){}
 	}
-	
+
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
-	
+
 	function _changeYYYYMMDD(_this,this_,_isHideCell){
 		var no = _getDataNo(_this,this_);
 		var id = _getDataID(_this,this_);
@@ -354,13 +354,13 @@ EditableView.InputEventText = (function(){
 				_setEdited($(_this).parent(),o,id);
 			},200);
 		},_getXY(_this) );
-	
+
 	}
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
 	//グリッドセルの編集時の動作
-	
+
 	//tdで編集した場合（普通のセル） 改行は<BR>へ
 	function _changeTableText(_this,this_,_isHideCell){
 		var no = _getDataNo(_this,this_);
@@ -371,7 +371,7 @@ EditableView.InputEventText = (function(){
 		//
 		var def = o[id];
 		var type = inputType+ ":" + $(_this).attr("data-type");
-		
+
 		MiniEditer.stageIn(def,function(_s){
 			o[id] = _s;
 			this_.changeData(o,no);
@@ -383,7 +383,7 @@ EditableView.InputEventText = (function(){
 			_setEdited($(_this),o,id);
 		}, type);
 	}
-	
+
 	/* ---------- ---------- ---------- */
 
 	 //セルを編集したら、表示をアップデートする
@@ -400,13 +400,13 @@ EditableView.InputEventText = (function(){
 			_view.html(CMS_E.PARSE_ERROR);
 		}
 	}
-	 
+
 	 /* ! ---------- 共通 ---------- ---------- ---------- ---------- */
-	 
+
 	 //セルを編集したら、背景を黄色くする
 	function _setEdited (_view,_o,_id) {
 		_view.addClass("_edited");
-		
+
 		//編集ステートをアップデートする グリッド再描画時に、編集ステートを引き継ぐ
 		if(_o[CELL_TYPE.STATE] === undefined) _o[CELL_TYPE.STATE] = [];
 		var editState = _o[CELL_TYPE.STATE];
@@ -416,7 +416,7 @@ EditableView.InputEventText = (function(){
 		}
 		if(b == false) editState.push(_id);
 	}
-	function _getXY 		(_this){ return [ $(_this).offset().left +20, $(_this).offset().top - $("body").scrollTop() +20 ] }
+	function _getXY 		(_this){ return [ $(_this).offset().left +20, $(_this).offset().top - $(window).scrollTop() +20 ] }
 	function _getDataNo 	(_this,this_){ return Number($(_this).attr("data-no")) }
 	function _getDataID 	(_this,this_){ return $(_this).attr("data-id") }
 	function _getDataVal 	(_this,this_){ return $(_this).attr("data-val") }
@@ -427,25 +427,25 @@ EditableView.InputEventText = (function(){
 	}
 })();
 
-	
+
 //グリッド編集時に、オブジェクトのような値を一時的に保存しておく
 var InputTagTempDatas = (function(){
 	var data = {};
-	
+
 	function addData(_id,_val){
 		data[_id] = _val
 	}
 	function getData(_id){
 		return data[_id]
 	}
-	
+
 	function reset(){
 		data = {}
 	}
 	function trace(){
 		console.log(data);
 	}
-	
+
 	return {
 		addData : addData,
 		getData : getData,

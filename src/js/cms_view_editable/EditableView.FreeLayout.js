@@ -228,46 +228,48 @@ EditableView.FreeLayout  = (function() {
 		
 		//createViews
 		for (var i = 0; i < list.length ; i++) {
-			this.v.replaceView.append(DragController.getDropTag(i));
-			
-			var targetReplaceV = this.v.replaceView
-			if(this.v.replaceView.length >1){
-				targetReplaceV = this.v.replaceView.eq(i);
-			}
-			var type = list[i].type;
-			if (type == "layout.div" || type == "replace.div" ) {
-				var node = new EditableView.FreeLayout();
-					node.registParent(this,targetReplaceV,this.pageParam,this.deep +1);
-					node.initData(list[i],i);
-					node.view.click(function(event){
-						event.stopPropagation();
-						InspectView.setPageData(this.pageParam);
-						InspectView.setData("layout.div",$(this) , self ,null, $(this).find("> div").eq(0));
-					});
-			} else if(type == "layout.cols"){
-				var node = new EditableView.FreeLayoutCols();
-					node.registParent(this,targetReplaceV,this.pageParam,this.deep +1);
-					node.initData(list[i],i);
-					node.view.click(function(event){
-						event.stopPropagation();
-						InspectView.setPageData(this.pageParam);
-						InspectView.setData("col", $(this), self, $(this), $(this).find("> div").eq(0));
-					});
-			} else {
-				var _free = PageElement_Util.getPreview(list[i]);
-					_free = HTMLServiceU.getReplacedHTML(_free,this.pageParam,type,false);
-					
-				var tag = ""; 
-					tag += '<div class="_freeLayout '+'" data-no="'+i+'">';
-					tag += 		_free;
-					tag += 		CMS_BlockAttrU.getCommandTag(type);
-					tag += 		CMS_BlockAttrU.getMarkTag(list[i].attr,true);
-					tag += '	<span class="_btn_delete"></span>'
-					tag += '</div>';
-				try{
-					this.v.replaceView.append(tag);
-				}catch( e ){
-					this.v.replaceView.append(CMS_E.PARSE_ERROR);
+            if(list[i] !== null){
+				this.v.replaceView.append(DragController.getDropTag(i));
+				
+				var targetReplaceV = this.v.replaceView
+				if(this.v.replaceView.length >1){
+					targetReplaceV = this.v.replaceView.eq(i);
+				}
+				var type = list[i].type;
+				if (type == "layout.div" || type == "replace.div" ) {
+					var node = new EditableView.FreeLayout();
+						node.registParent(this,targetReplaceV,this.pageParam,this.deep +1);
+						node.initData(list[i],i);
+						node.view.click(function(event){
+							event.stopPropagation();
+							InspectView.setPageData(this.pageParam);
+							InspectView.setData("layout.div",$(this) , self ,null, $(this).find("> div").eq(0));
+						});
+				} else if(type == "layout.cols"){
+					var node = new EditableView.FreeLayoutCols();
+						node.registParent(this,targetReplaceV,this.pageParam,this.deep +1);
+						node.initData(list[i],i);
+						node.view.click(function(event){
+							event.stopPropagation();
+							InspectView.setPageData(this.pageParam);
+							InspectView.setData("col", $(this), self, $(this), $(this).find("> div").eq(0));
+						});
+				} else {
+					var _free = PageElement_Util.getPreview(list[i]);
+						_free = HTMLServiceU.getReplacedHTML(_free,this.pageParam,type,false);
+						
+					var tag = ""; 
+						tag += '<div class="_freeLayout '+'" data-no="'+i+'">';
+						tag += 		_free;
+						tag += 		CMS_BlockAttrU.getCommandTag(type);
+						tag += 		CMS_BlockAttrU.getMarkTag(list[i].attr,true);
+						tag += '	<span class="_btn_delete"></span>'
+						tag += '</div>';
+					try{
+						this.v.replaceView.append(tag);
+					}catch( e ){
+						this.v.replaceView.append(CMS_E.PARSE_ERROR);
+					}
 				}
 			}
 		}

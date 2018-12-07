@@ -1,12 +1,12 @@
 //PageElement.object.imageTexts 20150515 delete
 
-PageElement.object.images = (function(){ 
+PageElement.object.images = (function(){
     var _ = new PageModel.Object_();
-    
+
 	/* ---------- ---------- ---------- */
-	
-    _.pageInfo = new PageModel.Object_Info({ 
-			id 		: "object.images", 
+
+    _.pageInfo = new PageModel.Object_Info({
+			id 		: "object.images",
 			name	: "イメージリスト",
 			name2	: "＜UL＞＜LI＞＜IMG＞",
 		inputs	: ["CLASS","CSS","DETAIL"],
@@ -17,12 +17,12 @@ PageElement.object.images = (function(){
 	/* ---------- ---------- ---------- */
 
 	var defImage = { mode:"simple" , path: "width:150,height:100", width: "", ratio: "" }
-	
+
 	_.grids = [
 		/* ---------- ---------- ---------- */
 		new PageModel.Object_Grid({
 			gridType:Dic.GridType.BASE,
-			gridInfo:new PageModel.OG_info({ 
+			gridInfo:new PageModel.OG_info({
 				id		: "list",
 				name	: "リスト",
 				note 	: ""
@@ -69,7 +69,7 @@ PageElement.object.images = (function(){
 	_.getInitData = function(){
 		var o = {};
 		o.type = _.pageInfo.id;
-		
+
 		var def = {
 			setting: {
 				texts: {
@@ -131,12 +131,12 @@ PageElement.object.images = (function(){
 		} else{
 			var _cs = 'cms-images clearfix ' + ((extra["float"] == "1") ? " floats " :"");
 			attr = attr.split('class="').join('class="' + _cs);
-			
+
 			var isSetW = (extra["width"]) ? true:false;
 			var style_li = "";
 				if(extra["width"]) style_li += 'width:'+getWidth(extra.width)+';';
 				if(extra["margin"]) style_li += 'margin:'+extra.margin+';';
-			
+
 			var tag = "";
 			tag += '<ul ' + attr + '>\n'
 			for (var i = 0; i < list.length ; i++) {
@@ -153,10 +153,9 @@ PageElement.object.images = (function(){
 					alt		: list[i].alt,
 					attr	: ""
 				});
-				
 				//リンクあれば設定
-				var link = CMS_AnchorU.getZoomLink(list[i].anchor , path , list[i].isZoom);
-				
+				var link = CMS_AnchorU.getZoomLink(list[i].anchor , img.path , list[i].isZoom);
+
 				//Aタグをwrap
 				imgTag 	= CMS_AnchorU.getWapperTag(link, imgTag );
 				tag += '<li style="'+style_li+'">'
@@ -176,7 +175,7 @@ PageElement.object.images = (function(){
 		if(list.length == 0)return ""
 		return this.getPreview(_o,true);
 	}
-	
+
 	function getWidth(_s){
 		if(!_s)return ""
 		if(_s.indexOf("px") != -1) return _s;

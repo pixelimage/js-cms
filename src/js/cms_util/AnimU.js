@@ -1,11 +1,11 @@
 
 var AnimU = (function(){
-
+	
 	var func_;
 	function attention(_param){
 		var v = _param.v;
 		var d = (_param.d) ? _param.d/1000:0;
-
+		
 		if(func_)func_.remove();
 		func_ = new serial_([
 			d , function () {
@@ -17,7 +17,7 @@ var AnimU = (function(){
 		]);
 		func_.start();
 	}
-
+	
 	var serial_ = (function() {
 		var c = function(_args) {
 			this.args = _args;
@@ -81,7 +81,7 @@ var AnimU = (function(){
 		}
 		return c;
 	})();
-
+	
 	return {
 		attention: attention,
 		serial_: serial_

@@ -25,7 +25,7 @@ var CMS_AnchorU = (function(){
 			o.target = ''
 		return o;
 	}
-	
+
 	function getViewTag(val,_isPub){
 		if(_isPub == undefined) _isPub = true;
 		var tag = '<b>未リンク</b>';
@@ -38,7 +38,7 @@ var CMS_AnchorU = (function(){
 	}
 	/**
 	 * htmlコード取得
-	*/	
+	*/
 	function getAnchorTag(_o,_attr,_isPub,_isSingleBtn){
 		if(!_o)return "";
 		if(_attr == undefined) _attr = "";
@@ -80,7 +80,7 @@ var CMS_AnchorU = (function(){
 			}
 		return tag;
 	}
-	
+
 	/**
 	 * 画像にリンクが設定されてる場合
 	 */
@@ -117,14 +117,18 @@ var CMS_AnchorU = (function(){
 		if(_zoom){
 			if(DummyImageService.isMock(_img)){
 			} else {
-				o.href = _img
+        if(typeof _img == "string"){
+          o.href = _img;
+        } else{
+          if(_img.path) o.href = _img.path;
+        }
 				o.target = "innerWindow({})";
 				o.attr = "";
 			}
 		}
 		return o;
 	}
-	
+
 	function defaultVal(_v,_def){
 		var s = (_def != undefined) ? _def:"";
 		if(_v != undefined){
@@ -135,11 +139,11 @@ var CMS_AnchorU = (function(){
 		return s
 	}
 
-	return { 
+	return {
 		getInitData:getInitData,
 		getInitData_Blank:getInitData_Blank,
 		getInitDataS:getInitDataS,
-		
+
 		getViewTag:getViewTag,
 		getAnchorTag:getAnchorTag,
 		getWapperTag:getWapperTag,

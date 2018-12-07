@@ -24,6 +24,7 @@ var PageElement_HTMLService = (function(){
 	function _core(o,_extra,_deep){
 		var tag = ""
 		//if (o.attr == undefined) return;
+        if(o == null) return tag;
 		if (o.attr.hide) return tag;
 		if(_extra == "export"){
 			//

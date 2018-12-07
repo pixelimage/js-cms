@@ -181,10 +181,12 @@ CMS_Data.HinagataSearvice = (function(){
 	//tag.jsからもコールされる
 	function replace(_s,_type){
 		if(!list) return _s;
-		for (var i = 0; i < list.length ; i++) { 
-			var id = list[i].id;
-			var val = list[i].val;
-			_s = _s.split(id).join( CMS_TagU.t_2_tag(val) );
+		if(typeof _s === "string"){
+			for (var i = 0; i < list.length ; i++) { 
+				var id = list[i].id.split(" ").join("");
+				var val = list[i].val;
+				_s = _s.split(id).join( CMS_TagU.t_2_tag(val) );
+			}
 		}
 		return _s;
 	}

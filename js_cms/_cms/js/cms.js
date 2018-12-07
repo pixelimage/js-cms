@@ -1,15 +1,15 @@
 /**
  * JS_CMS -- realtime website development web application
  * http://js-cms.jp/
- * Copyright 2017 Shige Tanaka - tanaka@pixelimage.jp
+ * Copyright 2018 Shige Tanaka - tanaka@pixelimage.jp
  * licensed under the MIT licenses.
  */
- 
+
  
 var CMS_INFO = {
 	name:"JS CMS",
-	lastUpdate:"2017-07-10 16:07:51",
-	version:"4.1.5.0",
+	lastUpdate:"2018-10-12 22:56:41",
+	version:"4.1.5.3",
 	url:"http://www.js-cms.jp/",
 	loginAbout:'<a href="http://js-cms.jp/" target="_blank">CMS紹介サイト</a>'
 }
@@ -73,7 +73,7 @@ var Env_ = {
 	isOpera 	: false,
 	isSafari 	: false,
 	isChrome 	: false,
-	
+
 	isWin		: false,
 	isMac		: false,
 	isMobile	: false,
@@ -81,12 +81,12 @@ var Env_ = {
 	isIPhone	: false,
 	isAndroid	: false,
 	isAndroidTablet : false,
-	
+
 	isSmartPhone:false,
 	isTablet:false,
-	
-	init:function (){ 
-	
+
+	init:function (){
+
 		var ua = navigator.userAgent;
 		{
 			if(ua.indexOf('MSIE') != -1) this.isIE = true;
@@ -117,7 +117,7 @@ var Env_ = {
 				} else{
 					this.isAndroidTablet = true;
 				}
-			}	
+			}
 		}
 		{
 			if(this.isSafari) 	this.isFirefox = false;
@@ -3116,14 +3116,14 @@ var CMS_AlertView			 = (function(){
 var CMS_AlertLockView			 = (function(){
 	var view;
 	var v = {};
-
+	
 	function init(){
 		view = $('#CMS_AlertLockView');
 		stageInit();
 	}
-
-	/* ---------- ---------- ---------- */
-
+	
+	/* ---------- ---------- ---------- */	
+	
 	function createlayout(){
 		var tag = ""
 			tag += '<div class="_bg"></div>'
@@ -3135,14 +3135,14 @@ var CMS_AlertLockView			 = (function(){
 		view.html(tag)
 		setBtn();
 	}
-
+		
 	function setBtn(){
 		view.click(function(){ stageOut() });
 		// view.find('._btn_close').click(function(){ stageOut() });
 	}
-
+	
 	/* ---------- ---------- ---------- */
-
+	
 	var isOpen = false;
 	var isFirst = true;
 	var callback;
@@ -10628,19 +10628,24 @@ var HTMLServiceU = (function(){
 	
 	//ブロック書き出しで使用。{{SITE_DIR}}を書き換える
 	function setSiteRoot(_s,_path){
-		function _core (_path){ 
+		function _core (_path){
 			var s = "";
 			if(_path.substr(0,2) =="./"){
 				_path = _path.substr(2,_path.length-1);
 			}
 			var dir = URL_U.getBaseDir(_path);
-			if(	dir == "../") return CMS_Path.SITE.DIR + "/";
 			if(	dir == "")  return s;
 			//
 			var a = dir.split("/");
 			var path = "";
 			for (var i = 0; i < a.length ; i++) {
 				if(a[i] != "") path+="../";
+			}
+			//2017-07-27 調整
+			if(dir.substr(0,3) == "../"){
+				if(path.substr(path.length-3,3) =="../"){
+					path = path.substr(0,path.length-3) + CMS_Path.SITE.DIR + "/";
+				}
 			}
 			return path;
 		}
@@ -10733,7 +10738,17 @@ var DragController 			 = (function(){
 		currentNo 	 = _no;
 		currentClass   = _tar;
 	}
+	
+	var isDroping = false;
 	function dropped(_no,_tar){
+		
+		//二重ドラッグスルー処理
+		if(isDroping) return;
+		isDroping = true;
+		setTimeout(function(){
+			isDroping = false;
+		},200);
+		//
 		targetNo =  _no;
 		targetClass  = _tar;
 		
@@ -11578,10 +11593,12 @@ CMS_Data.HinagataSearvice = (function(){
 	//tag.jsからもコールされる
 	function replace(_s,_type){
 		if(!list) return _s;
-		for (var i = 0; i < list.length ; i++) { 
-			var id = list[i].id;
-			var val = list[i].val;
-			_s = _s.split(id).join( CMS_TagU.t_2_tag(val) );
+		if(typeof _s === "string"){
+			for (var i = 0; i < list.length ; i++) { 
+				var id = list[i].id.split(" ").join("");
+				var val = list[i].val;
+				_s = _s.split(id).join( CMS_TagU.t_2_tag(val) );
+			}
 		}
 		return _s;
 	}
@@ -12521,11 +12538,11 @@ CMS_Data.FreeFile = (function(){
 CMS_Data.AssetFile = (function(){
 	/* ---------- ---------- ---------- */
 	//テンプレートHTMLロード
-
+	
 	function init(){}
-
+	
 	/* ---------- ---------- ---------- */
-
+	
 	//アセットファイルのリストをつくる
 	var files = [];
 	function addFile(_dir,_file) {
@@ -12536,7 +12553,7 @@ CMS_Data.AssetFile = (function(){
 			r:"",
 		})
 	}
-
+	
 	/* ---------- ---------- ---------- */
 
 	//アセットファイルが保存された場合にコールされる。
@@ -12553,17 +12570,17 @@ CMS_Data.AssetFile = (function(){
 			}
 		}
 	}
-
+	
 	function _reload(_file){
 		//CSSリロード
 		CMS_Data.InspectCSS.reload(_file);
 		CMS_Data.AssetCSSManager.reload(_file);
 	}
-
+	
 	/* ---------- ---------- ---------- */
-
+	
 	//CSSパスを、ユニークに書き換え、プレビュー時にCSSをキャッシュからロードしないように
-
+	
 	function overridePath(_s){
 		for (var i = 0; i <  files.length ; i++) {
 			var d = files[i];
@@ -12575,7 +12592,7 @@ CMS_Data.AssetFile = (function(){
 				}
 			}
 		}
-		return _s;
+		return _s; 
 	}
 
 	return {
@@ -12604,7 +12621,7 @@ CMS_Data.AssetCSSManager = (function(){
 			}catch( e ){}
 		}
 	}
-
+	
 	function reload(_s){
 		if(isFirst){
 			init();
@@ -12617,7 +12634,7 @@ CMS_Data.AssetCSSManager = (function(){
 				eles[i].setAttribute( 'href', href  + "?r="+ new Date().getTime() );
 			}
 		}
-
+		
 	}
 	return { reload:reload }
 })();
@@ -14583,7 +14600,7 @@ var CMS_AnchorU = (function(){
 			o.target = ''
 		return o;
 	}
-	
+
 	function getViewTag(val,_isPub){
 		if(_isPub == undefined) _isPub = true;
 		var tag = '<b>未リンク</b>';
@@ -14596,7 +14613,7 @@ var CMS_AnchorU = (function(){
 	}
 	/**
 	 * htmlコード取得
-	*/	
+	*/
 	function getAnchorTag(_o,_attr,_isPub,_isSingleBtn){
 		if(!_o)return "";
 		if(_attr == undefined) _attr = "";
@@ -14638,7 +14655,7 @@ var CMS_AnchorU = (function(){
 			}
 		return tag;
 	}
-	
+
 	/**
 	 * 画像にリンクが設定されてる場合
 	 */
@@ -14675,14 +14692,18 @@ var CMS_AnchorU = (function(){
 		if(_zoom){
 			if(DummyImageService.isMock(_img)){
 			} else {
-				o.href = _img
+        if(typeof _img == "string"){
+          o.href = _img;
+        } else{
+          if(_img.path) o.href = _img.path;
+        }
 				o.target = "innerWindow({})";
 				o.attr = "";
 			}
 		}
 		return o;
 	}
-	
+
 	function defaultVal(_v,_def){
 		var s = (_def != undefined) ? _def:"";
 		if(_v != undefined){
@@ -14693,11 +14714,11 @@ var CMS_AnchorU = (function(){
 		return s
 	}
 
-	return { 
+	return {
 		getInitData:getInitData,
 		getInitData_Blank:getInitData_Blank,
 		getInitDataS:getInitDataS,
-		
+
 		getViewTag:getViewTag,
 		getAnchorTag:getAnchorTag,
 		getWapperTag:getWapperTag,
@@ -15878,12 +15899,12 @@ var NumberU 			 = (function(){
 
 
 var AnimU = (function(){
-
+	
 	var func_;
 	function attention(_param){
 		var v = _param.v;
 		var d = (_param.d) ? _param.d/1000:0;
-
+		
 		if(func_)func_.remove();
 		func_ = new serial_([
 			d , function () {
@@ -15895,7 +15916,7 @@ var AnimU = (function(){
 		]);
 		func_.start();
 	}
-
+	
 	var serial_ = (function() {
 		var c = function(_args) {
 			this.args = _args;
@@ -15959,7 +15980,7 @@ var AnimU = (function(){
 		}
 		return c;
 	})();
-
+	
 	return {
 		attention: attention,
 		serial_: serial_
@@ -19409,6 +19430,10 @@ EditableView.InputU = (function(){
 			if(typeof cell.def == "function") {
 				val = cell.def()
 			}
+			//2017-08-28 19:12:47
+			if(typeof cell.def == "object") {
+				val = JSON.parse(JSON.stringify(cell.def));
+			}
 			if(val == ""){
 				if(cell.type == CELL_TYPE.SELECT){
 					for (var g = 0; g < cell.vals.length ; g++) {
@@ -19933,7 +19958,7 @@ EditableView.InputEventImg = (function(){
 
 		// v.on("keyup","._in_image_ratio"		,function(){ _changeImage_input($(this),$(this).parent().parent().parent().parent().eq(0),this_,"ratio") });
 	}
-	
+
 	//画像の変更。モーダル
 	function _changeImage  (_this,this_){
 		var uid = _getDataVal(_this,this_);
@@ -19951,7 +19976,7 @@ EditableView.InputEventImg = (function(){
 		//
 		var uid = _getDataVal(_this,this_);
 		var val = InputTagTempDatas.getData(uid);
-		
+
 		if(DummyImageService.isMock(val.path)) val.path = CMS_Path.UPLOAD.ABS;
 		//
 		CMS_MainController.openAssetSelectRel("image", val.path ,function(_s){
@@ -19972,7 +19997,7 @@ EditableView.InputEventImg = (function(){
 		//
 		var uid = _getDataVal(_this,this_);
 		var val = InputTagTempDatas.getData(uid);
-		
+
 		if(DummyImageService.isMock(val.path) == false) val.path = "";
 		DummyImageView.stageIn(val.path,function(_s){
 			o[id].mode = "simple";
@@ -19983,7 +20008,7 @@ EditableView.InputEventImg = (function(){
 			_changeImage_update(_this, o, id, o[id]);
 		});
 	}
-	
+
 	//画像の変更。prompt
 	function _changeImage_t(_this,this_){
 		var no = _getDataNo(_this,this_);
@@ -19992,7 +20017,7 @@ EditableView.InputEventImg = (function(){
 		//
 		var uid = _getDataVal(_this,this_);
 		var val = InputTagTempDatas.getData(uid);
-		
+
 		var _s = prompt("画像URLを入力してください", val.path);
  		if(_s == val.path) return;
 	 	if(_s == null) return;
@@ -20009,7 +20034,7 @@ EditableView.InputEventImg = (function(){
 		var o  = _getRecord(_this,this_,no);
 		//
 		var uid = _getDataVal(_this,this_);
-		
+
 	 	o[id].mode = "simple";
 	 	o[id].path = "width:100,height:100";
 	 	this_.changeData(o,no);
@@ -20017,7 +20042,7 @@ EditableView.InputEventImg = (function(){
 		InputTagTempDatas.addData(uid, o[id]);
 		_changeImage_update(_this, o, id, o[id]);
 	}
-	
+
 	//レイアウト
 	function _changeImage_layout(_this,this_){
 		var no = _getDataNo(_this,this_);
@@ -20026,11 +20051,11 @@ EditableView.InputEventImg = (function(){
 		//
 		var uid = _getDataVal(_this,this_);
 		var val = InputTagTempDatas.getData(uid);
-		
+
 		if(val.mode != "layout"){
 			val.path = {};
 		}
-		ImageMapView.stageIn(val.path,function(_s){ 
+		ImageMapView.stageIn(val.path,function(_s){
 			o[id].mode = "layout";
 			o[id].path = _s;
 			this_.changeData(o,no);
@@ -20039,7 +20064,7 @@ EditableView.InputEventImg = (function(){
 			_changeImage_update(_this, o, id, o[id]);
 		});
 	}
-	
+
 	//画像変更後の共通処理
 	function _changeImage_update(_this,_o,_id,_s){
 		var imgTag = '<div class="_no-photo">画像未設定</div>'
@@ -20052,13 +20077,13 @@ EditableView.InputEventImg = (function(){
 				alt		: "",
 				attr	: ""
 			});
-		} 
+		}
 		$(_this).find("._btn_image").html(imgTag);
 		$(_this).find("._btn_image_t").html(_s.path);
 		_setEdited($(_this).parent(),_o,_id);
 	}
-	
-	
+
+
 	//幅とratio
 	function _changeImage_input(_in,_this,this_,_type){
 		var no = _getDataNo(_this,this_);
@@ -20067,7 +20092,7 @@ EditableView.InputEventImg = (function(){
 		//
 		var uid = _getDataVal(_this,this_);
 		var val = InputTagTempDatas.getData(uid);
-		
+
 		var _s = _in.val();
 		o[id][_type] = _s;
 		this_.changeData(o,no);
@@ -20090,14 +20115,14 @@ EditableView.InputEventImg = (function(){
 			parent.find("._body_img_layout").slideDown();
 		}
 	}
-	
+
 	//IMGタグのみ表示
 	/*
 	function _changeImage_onlyImg(_this,this_,_b){
 		var no = _getDataNo(_this,this_);
 		var id = _getDataID(_this,this_);
 		var o  = _getRecord(_this,this_,no);
-		
+
 		var parent = _this.parent().parent();
 		if(_b){
 			parent.find('._btn_image_tag_ac').hide();
@@ -20109,13 +20134,13 @@ EditableView.InputEventImg = (function(){
 	 	o[id].onlyImgTag = _b;
 	 	this_.changeData(o,no);
 	}*/
-	
+
 	 /* ! ---------- 共通 ---------- ---------- ---------- ---------- */
-	 
+
 	 //セルを編集したら、背景を黄色くする
 	function _setEdited (_view,_o,_id) {
 		_view.addClass("_edited");
-		
+
 		//編集ステートをアップデートする グリッド再描画時に、編集ステートを引き継ぐ
 		if(_o[CELL_TYPE.STATE] === undefined) _o[CELL_TYPE.STATE] = [];
 		var editState = _o[CELL_TYPE.STATE]
@@ -20125,7 +20150,7 @@ EditableView.InputEventImg = (function(){
 		}
 		if(b == false) editState.push(_id);
 	}
-	function _getXY 		(_this){ return [ $(_this).offset().left +20, $(_this).offset().top - $("body").scrollTop() +20 ] }
+	function _getXY 		(_this){ return [ $(_this).offset().left +20, $(_this).offset().top - $(window).scrollTop() +20 ] }
 	function _getDataNo 	(_this,this_){ return Number($(_this).attr("data-no")) }
 	function _getDataID 	(_this,this_){ return $(_this).attr("data-id") }
 	function _getDataVal 	(_this,this_){ return $(_this).attr("data-val") }
@@ -20140,24 +20165,24 @@ EditableView.InputEventText = (function(){
 
 	//イベントアサイン まとめて行う
 	function assign (v,this_){
-		
+
 		//リンク
 		v.on("click","._btn_anchor"			,function(event){ _changeA(this,this_,event) });
 		v.on("click","._btn_textAnchor"		,function(event){ _changeBtn(this,this_,event) });
-		
+
 		//基本UI
 		v.on("keyup","textarea"				,function(){ _changeInput(this,this_) });
 		v.on("keyup","input"				,function(){ _changeInput(this,this_) });
 		v.on("change","select"				,function(){ _changeInput(this,this_) });
 		v.on("change","input.checkbox"		,function(){ _changeCheck(this,this_,$(this).prop("checked")) });
-		
+
 		//テーブルセル
 		v.on("click","._editYYYYMMDD"		,function(){ _changeYYYYMMDD(this,this_) });
 		v.on("click","._editableTD"			,function(){ _changeTableText(this,this_) });
 		v.on("click","._editableTDHide"		,function(){ _changeTableText(this,this_,true) });
 		v.on("click","._editableTD a" 		,function(event){ event.preventDefault(); });
 	}
-	
+
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
@@ -20182,12 +20207,12 @@ EditableView.InputEventText = (function(){
 			_setEdited($(_this).parent(),o,id);
 		})
 	}
-	
+
 	//ボタンの変更。モーダル
 	function _changeBtn(_this,this_,event){
 		event.stopPropagation();
 		event.preventDefault();
-		
+
 		var no = _getDataNo(_this,this_);
 		var id = _getDataID(_this,this_);
 		var o  = _getRecord(_this,this_,no);
@@ -20203,7 +20228,7 @@ EditableView.InputEventText = (function(){
 			_setEdited($(_this).parent(),o,id);
 		})
 	}
-	
+
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
@@ -20219,7 +20244,7 @@ EditableView.InputEventText = (function(){
 			this_.changeData(o,no);
 		}catch( e ){}
 	}
-	
+
 	//checkboxで値を変更
 	function _changeCheck(_this,this_,_checked){
 		var no = _getDataNo(_this,this_);
@@ -20234,11 +20259,11 @@ EditableView.InputEventText = (function(){
 			_setEdited($(_this).parent(),o,id);
 		}catch( e ){}
 	}
-	
+
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
-	
+
 	function _changeYYYYMMDD(_this,this_,_isHideCell){
 		var no = _getDataNo(_this,this_);
 		var id = _getDataID(_this,this_);
@@ -20255,13 +20280,13 @@ EditableView.InputEventText = (function(){
 				_setEdited($(_this).parent(),o,id);
 			},200);
 		},_getXY(_this) );
-	
+
 	}
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
 	/* ---------- ---------- ---------- */
 	//グリッドセルの編集時の動作
-	
+
 	//tdで編集した場合（普通のセル） 改行は<BR>へ
 	function _changeTableText(_this,this_,_isHideCell){
 		var no = _getDataNo(_this,this_);
@@ -20272,7 +20297,7 @@ EditableView.InputEventText = (function(){
 		//
 		var def = o[id];
 		var type = inputType+ ":" + $(_this).attr("data-type");
-		
+
 		MiniEditer.stageIn(def,function(_s){
 			o[id] = _s;
 			this_.changeData(o,no);
@@ -20284,7 +20309,7 @@ EditableView.InputEventText = (function(){
 			_setEdited($(_this),o,id);
 		}, type);
 	}
-	
+
 	/* ---------- ---------- ---------- */
 
 	 //セルを編集したら、表示をアップデートする
@@ -20301,13 +20326,13 @@ EditableView.InputEventText = (function(){
 			_view.html(CMS_E.PARSE_ERROR);
 		}
 	}
-	 
+
 	 /* ! ---------- 共通 ---------- ---------- ---------- ---------- */
-	 
+
 	 //セルを編集したら、背景を黄色くする
 	function _setEdited (_view,_o,_id) {
 		_view.addClass("_edited");
-		
+
 		//編集ステートをアップデートする グリッド再描画時に、編集ステートを引き継ぐ
 		if(_o[CELL_TYPE.STATE] === undefined) _o[CELL_TYPE.STATE] = [];
 		var editState = _o[CELL_TYPE.STATE];
@@ -20317,7 +20342,7 @@ EditableView.InputEventText = (function(){
 		}
 		if(b == false) editState.push(_id);
 	}
-	function _getXY 		(_this){ return [ $(_this).offset().left +20, $(_this).offset().top - $("body").scrollTop() +20 ] }
+	function _getXY 		(_this){ return [ $(_this).offset().left +20, $(_this).offset().top - $(window).scrollTop() +20 ] }
 	function _getDataNo 	(_this,this_){ return Number($(_this).attr("data-no")) }
 	function _getDataID 	(_this,this_){ return $(_this).attr("data-id") }
 	function _getDataVal 	(_this,this_){ return $(_this).attr("data-val") }
@@ -20328,25 +20353,25 @@ EditableView.InputEventText = (function(){
 	}
 })();
 
-	
+
 //グリッド編集時に、オブジェクトのような値を一時的に保存しておく
 var InputTagTempDatas = (function(){
 	var data = {};
-	
+
 	function addData(_id,_val){
 		data[_id] = _val
 	}
 	function getData(_id){
 		return data[_id]
 	}
-	
+
 	function reset(){
 		data = {}
 	}
 	function trace(){
 		console.log(data);
 	}
-	
+
 	return {
 		addData : addData,
 		getData : getData,
@@ -20586,46 +20611,48 @@ EditableView.FreeLayout  = (function() {
 		
 		//createViews
 		for (var i = 0; i < list.length ; i++) {
-			this.v.replaceView.append(DragController.getDropTag(i));
-			
-			var targetReplaceV = this.v.replaceView
-			if(this.v.replaceView.length >1){
-				targetReplaceV = this.v.replaceView.eq(i);
-			}
-			var type = list[i].type;
-			if (type == "layout.div" || type == "replace.div" ) {
-				var node = new EditableView.FreeLayout();
-					node.registParent(this,targetReplaceV,this.pageParam,this.deep +1);
-					node.initData(list[i],i);
-					node.view.click(function(event){
-						event.stopPropagation();
-						InspectView.setPageData(this.pageParam);
-						InspectView.setData("layout.div",$(this) , self ,null, $(this).find("> div").eq(0));
-					});
-			} else if(type == "layout.cols"){
-				var node = new EditableView.FreeLayoutCols();
-					node.registParent(this,targetReplaceV,this.pageParam,this.deep +1);
-					node.initData(list[i],i);
-					node.view.click(function(event){
-						event.stopPropagation();
-						InspectView.setPageData(this.pageParam);
-						InspectView.setData("col", $(this), self, $(this), $(this).find("> div").eq(0));
-					});
-			} else {
-				var _free = PageElement_Util.getPreview(list[i]);
-					_free = HTMLServiceU.getReplacedHTML(_free,this.pageParam,type,false);
-					
-				var tag = ""; 
-					tag += '<div class="_freeLayout '+'" data-no="'+i+'">';
-					tag += 		_free;
-					tag += 		CMS_BlockAttrU.getCommandTag(type);
-					tag += 		CMS_BlockAttrU.getMarkTag(list[i].attr,true);
-					tag += '	<span class="_btn_delete"></span>'
-					tag += '</div>';
-				try{
-					this.v.replaceView.append(tag);
-				}catch( e ){
-					this.v.replaceView.append(CMS_E.PARSE_ERROR);
+            if(list[i] !== null){
+				this.v.replaceView.append(DragController.getDropTag(i));
+				
+				var targetReplaceV = this.v.replaceView
+				if(this.v.replaceView.length >1){
+					targetReplaceV = this.v.replaceView.eq(i);
+				}
+				var type = list[i].type;
+				if (type == "layout.div" || type == "replace.div" ) {
+					var node = new EditableView.FreeLayout();
+						node.registParent(this,targetReplaceV,this.pageParam,this.deep +1);
+						node.initData(list[i],i);
+						node.view.click(function(event){
+							event.stopPropagation();
+							InspectView.setPageData(this.pageParam);
+							InspectView.setData("layout.div",$(this) , self ,null, $(this).find("> div").eq(0));
+						});
+				} else if(type == "layout.cols"){
+					var node = new EditableView.FreeLayoutCols();
+						node.registParent(this,targetReplaceV,this.pageParam,this.deep +1);
+						node.initData(list[i],i);
+						node.view.click(function(event){
+							event.stopPropagation();
+							InspectView.setPageData(this.pageParam);
+							InspectView.setData("col", $(this), self, $(this), $(this).find("> div").eq(0));
+						});
+				} else {
+					var _free = PageElement_Util.getPreview(list[i]);
+						_free = HTMLServiceU.getReplacedHTML(_free,this.pageParam,type,false);
+						
+					var tag = ""; 
+						tag += '<div class="_freeLayout '+'" data-no="'+i+'">';
+						tag += 		_free;
+						tag += 		CMS_BlockAttrU.getCommandTag(type);
+						tag += 		CMS_BlockAttrU.getMarkTag(list[i].attr,true);
+						tag += '	<span class="_btn_delete"></span>'
+						tag += '</div>';
+					try{
+						this.v.replaceView.append(tag);
+					}catch( e ){
+						this.v.replaceView.append(CMS_E.PARSE_ERROR);
+					}
 				}
 			}
 		}
@@ -23493,8 +23520,9 @@ InspectView.Export	 = (function(){
 		CMS_ProccessView.stageIn();
 		
 		var tag = PageElement_HTMLService.getExportTag(param);
-			tag = HTMLServiceU.getReplacedHTML(tag,_getParam(pubFile));//追加 20160901
 			tag = HTMLServiceU.setSiteRoot(tag,pubFile);
+			tag = HTMLServiceU.getReplacedHTML(tag,_getParam(pubFile));//追加 20160901
+			
 		if(tID_write) clearTimeout(tID_write);
 		tID_write = setTimeout(function(){
 			Storage.Embed.writeFile(pubFile, tag, publicBlock_writed);
@@ -23837,8 +23865,8 @@ InspectView.Embed	 = (function(){
 		}
 		
 		var tag = PageElement_HTMLService.getExportTag(param);
-			tag = HTMLServiceU.getReplacedHTML(tag,_getParam(pubFile));//追加 20160901
 			tag = HTMLServiceU.setSiteRoot(tag , pubFile);
+			tag = HTMLServiceU.getReplacedHTML(tag,_getParam(pubFile));//追加 20160901
 		
 		if(!isEmbed) tag = "";
 		var out = _U.replaceEmbedText(data, pubID, tag);
@@ -42372,7 +42400,7 @@ PageElement_JText.resetJSON = (function(){
 					data: {
 						heading: "h1",
 						main: {
-							"text": "はじめに"
+							"text": "{{PAGE_NAME}}"
 						},
 						right: {
 							text: ""
@@ -42700,6 +42728,7 @@ var PageElement_HTMLService = (function(){
 	function _core(o,_extra,_deep){
 		var tag = ""
 		//if (o.attr == undefined) return;
+        if(o == null) return tag;
 		if (o.attr.hide) return tag;
 		if(_extra == "export"){
 			//
@@ -45188,13 +45217,13 @@ PageElement.object.newsB = (function(){
 
 //PageElement.object.imageTexts 20150515 delete
 
-PageElement.object.images = (function(){ 
+PageElement.object.images = (function(){
     var _ = new PageModel.Object_();
-    
+
 	/* ---------- ---------- ---------- */
-	
-    _.pageInfo = new PageModel.Object_Info({ 
-			id 		: "object.images", 
+
+    _.pageInfo = new PageModel.Object_Info({
+			id 		: "object.images",
 			name	: "イメージリスト",
 			name2	: "＜UL＞＜LI＞＜IMG＞",
 		inputs	: ["CLASS","CSS","DETAIL"],
@@ -45205,12 +45234,12 @@ PageElement.object.images = (function(){
 	/* ---------- ---------- ---------- */
 
 	var defImage = { mode:"simple" , path: "width:150,height:100", width: "", ratio: "" }
-	
+
 	_.grids = [
 		/* ---------- ---------- ---------- */
 		new PageModel.Object_Grid({
 			gridType:Dic.GridType.BASE,
-			gridInfo:new PageModel.OG_info({ 
+			gridInfo:new PageModel.OG_info({
 				id		: "list",
 				name	: "リスト",
 				note 	: ""
@@ -45257,7 +45286,7 @@ PageElement.object.images = (function(){
 	_.getInitData = function(){
 		var o = {};
 		o.type = _.pageInfo.id;
-		
+
 		var def = {
 			setting: {
 				texts: {
@@ -45319,12 +45348,12 @@ PageElement.object.images = (function(){
 		} else{
 			var _cs = 'cms-images clearfix ' + ((extra["float"] == "1") ? " floats " :"");
 			attr = attr.split('class="').join('class="' + _cs);
-			
+
 			var isSetW = (extra["width"]) ? true:false;
 			var style_li = "";
 				if(extra["width"]) style_li += 'width:'+getWidth(extra.width)+';';
 				if(extra["margin"]) style_li += 'margin:'+extra.margin+';';
-			
+
 			var tag = "";
 			tag += '<ul ' + attr + '>\n'
 			for (var i = 0; i < list.length ; i++) {
@@ -45341,10 +45370,9 @@ PageElement.object.images = (function(){
 					alt		: list[i].alt,
 					attr	: ""
 				});
-				
 				//リンクあれば設定
-				var link = CMS_AnchorU.getZoomLink(list[i].anchor , path , list[i].isZoom);
-				
+				var link = CMS_AnchorU.getZoomLink(list[i].anchor , img.path , list[i].isZoom);
+
 				//Aタグをwrap
 				imgTag 	= CMS_AnchorU.getWapperTag(link, imgTag );
 				tag += '<li style="'+style_li+'">'
@@ -45364,7 +45392,7 @@ PageElement.object.images = (function(){
 		if(list.length == 0)return ""
 		return this.getPreview(_o,true);
 	}
-	
+
 	function getWidth(_s){
 		if(!_s)return ""
 		if(_s.indexOf("px") != -1) return _s;

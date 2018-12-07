@@ -180,8 +180,9 @@ InspectView.Export	 = (function(){
 		CMS_ProccessView.stageIn();
 		
 		var tag = PageElement_HTMLService.getExportTag(param);
-			tag = HTMLServiceU.getReplacedHTML(tag,_getParam(pubFile));//追加 20160901
 			tag = HTMLServiceU.setSiteRoot(tag,pubFile);
+			tag = HTMLServiceU.getReplacedHTML(tag,_getParam(pubFile));//追加 20160901
+			
 		if(tID_write) clearTimeout(tID_write);
 		tID_write = setTimeout(function(){
 			Storage.Embed.writeFile(pubFile, tag, publicBlock_writed);

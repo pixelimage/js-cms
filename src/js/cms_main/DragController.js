@@ -42,7 +42,17 @@ var DragController 			 = (function(){
 		currentNo 	 = _no;
 		currentClass   = _tar;
 	}
+	
+	var isDroping = false;
 	function dropped(_no,_tar){
+		
+		//二重ドラッグスルー処理
+		if(isDroping) return;
+		isDroping = true;
+		setTimeout(function(){
+			isDroping = false;
+		},200);
+		//
 		targetNo =  _no;
 		targetClass  = _tar;
 		

@@ -15,6 +15,10 @@ EditableView.InputU = (function(){
 			if(typeof cell.def == "function") {
 				val = cell.def()
 			}
+			//2017-08-28 19:12:47
+			if(typeof cell.def == "object") {
+				val = JSON.parse(JSON.stringify(cell.def));
+			}
 			if(val == ""){
 				if(cell.type == CELL_TYPE.SELECT){
 					for (var g = 0; g < cell.vals.length ; g++) {

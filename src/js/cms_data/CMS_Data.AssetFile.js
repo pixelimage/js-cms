@@ -4,11 +4,11 @@
 CMS_Data.AssetFile = (function(){
 	/* ---------- ---------- ---------- */
 	//テンプレートHTMLロード
-
+	
 	function init(){}
-
+	
 	/* ---------- ---------- ---------- */
-
+	
 	//アセットファイルのリストをつくる
 	var files = [];
 	function addFile(_dir,_file) {
@@ -19,7 +19,7 @@ CMS_Data.AssetFile = (function(){
 			r:"",
 		})
 	}
-
+	
 	/* ---------- ---------- ---------- */
 
 	//アセットファイルが保存された場合にコールされる。
@@ -36,17 +36,17 @@ CMS_Data.AssetFile = (function(){
 			}
 		}
 	}
-
+	
 	function _reload(_file){
 		//CSSリロード
 		CMS_Data.InspectCSS.reload(_file);
 		CMS_Data.AssetCSSManager.reload(_file);
 	}
-
+	
 	/* ---------- ---------- ---------- */
-
+	
 	//CSSパスを、ユニークに書き換え、プレビュー時にCSSをキャッシュからロードしないように
-
+	
 	function overridePath(_s){
 		for (var i = 0; i <  files.length ; i++) {
 			var d = files[i];
@@ -58,7 +58,7 @@ CMS_Data.AssetFile = (function(){
 				}
 			}
 		}
-		return _s;
+		return _s; 
 	}
 
 	return {
@@ -87,7 +87,7 @@ CMS_Data.AssetCSSManager = (function(){
 			}catch( e ){}
 		}
 	}
-
+	
 	function reload(_s){
 		if(isFirst){
 			init();
@@ -100,7 +100,7 @@ CMS_Data.AssetCSSManager = (function(){
 				eles[i].setAttribute( 'href', href  + "?r="+ new Date().getTime() );
 			}
 		}
-
+		
 	}
 	return { reload:reload }
 })();

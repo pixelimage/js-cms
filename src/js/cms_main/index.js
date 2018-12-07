@@ -1,7 +1,7 @@
 var CMS_INFO = {
 	name:"JS CMS",
-	lastUpdate:"2017-07-10 16:07:51",
-	version:"4.1.5.0",
+	lastUpdate:"2018-10-12 22:56:41",
+	version:"4.1.5.3",
 	url:"http://www.js-cms.jp/",
 	loginAbout:'<a href="http://js-cms.jp/" target="_blank">CMS紹介サイト</a>'
 }
@@ -65,7 +65,7 @@ var Env_ = {
 	isOpera 	: false,
 	isSafari 	: false,
 	isChrome 	: false,
-	
+
 	isWin		: false,
 	isMac		: false,
 	isMobile	: false,
@@ -73,12 +73,12 @@ var Env_ = {
 	isIPhone	: false,
 	isAndroid	: false,
 	isAndroidTablet : false,
-	
+
 	isSmartPhone:false,
 	isTablet:false,
-	
-	init:function (){ 
-	
+
+	init:function (){
+
 		var ua = navigator.userAgent;
 		{
 			if(ua.indexOf('MSIE') != -1) this.isIE = true;
@@ -109,7 +109,7 @@ var Env_ = {
 				} else{
 					this.isAndroidTablet = true;
 				}
-			}	
+			}
 		}
 		{
 			if(this.isSafari) 	this.isFirefox = false;

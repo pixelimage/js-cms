@@ -2,14 +2,14 @@
 var CMS_AlertLockView			 = (function(){
 	var view;
 	var v = {};
-
+	
 	function init(){
 		view = $('#CMS_AlertLockView');
 		stageInit();
 	}
-
-	/* ---------- ---------- ---------- */
-
+	
+	/* ---------- ---------- ---------- */	
+	
 	function createlayout(){
 		var tag = ""
 			tag += '<div class="_bg"></div>'
@@ -21,14 +21,14 @@ var CMS_AlertLockView			 = (function(){
 		view.html(tag)
 		setBtn();
 	}
-
+		
 	function setBtn(){
 		view.click(function(){ stageOut() });
 		// view.find('._btn_close').click(function(){ stageOut() });
 	}
-
+	
 	/* ---------- ---------- ---------- */
-
+	
 	var isOpen = false;
 	var isFirst = true;
 	var callback;
