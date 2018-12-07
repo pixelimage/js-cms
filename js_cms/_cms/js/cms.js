@@ -12517,7 +12517,7 @@ CMS_Data.FreeFile = (function(){
 
 
 //サイト設定のアセットCSSやJSなどの管理を行う
-サンプルのタイトル
+
 CMS_Data.AssetFile = (function(){
 	/* ---------- ---------- ---------- */
 	//テンプレートHTMLロード
